@@ -9,6 +9,9 @@ from .encoding import canonical_json
 from .identity import initialize_identity, write_new
 from .logging_utils import get_logger
 
+# Divan: vault setup imported here; never reads member signing private keys.
+from .vault import VAULT_DEFAULT_CONTENT, vault_setup
+
 
 def issue_certificates(root: Path, n: int, t: int, log) -> None:
     if not 1 <= t <= n:
@@ -28,8 +31,12 @@ def issue_certificates(root: Path, n: int, t: int, log) -> None:
         log.info("issued certificate name=%s group=%s expires=%s sig=%s", name, GROUP,
                  CERTIFICATE_EXPIRY, cert.sig[:8])
     write_new(root / "public" / "setup.json", canonical_json({"group": GROUP, "n": n, "t": t}))
-    log.info("certificate setup complete n=%d t=%d; vault/shares pending Divan", n, t)
-    # Integration: Divan extends founder setup here without reading owner keys.
+    log.info("certificate setup complete n=%d t=%d", n, t)
+
+    # Divan vault setup: extend founder setup here without reading member signing keys.
+    # vault_setup generates the secret, distributes shares, and erases the secret.
+    vault_setup(root, t, n, VAULT_DEFAULT_CONTENT, log)
+    log.info("vault and shares created; founder secret erased")
 
 
 def main() -> None:
