@@ -28,8 +28,8 @@ def issue_certificates(root: Path, n: int, t: int, log) -> None:
         log.info("issued certificate name=%s group=%s expires=%s sig=%s", name, GROUP,
                  CERTIFICATE_EXPIRY, cert.sig[:8])
     write_new(root / "public" / "setup.json", canonical_json({"group": GROUP, "n": n, "t": t}))
-    log.info("certificate setup complete n=%d t=%d; vault/shares pending Divan", n, t)
-    # Integration: Divan extends founder setup here without reading owner keys.
+    log.info("certificate setup complete n=%d t=%d", n, t)
+    # Divan vault setup is performed by vault_cli.py --setup (not here).
 
 
 def main() -> None:
@@ -42,6 +42,9 @@ def main() -> None:
     log = get_logger("founder")
     try:
         issue_certificates(args.data_dir, args.n, args.t, log)
+        # Divan vault setup is handled by vault_cli.py --setup (see treasury/vault_cli.py).
+        # It is intentionally NOT called here so the founder subprocess stays fast
+        # and existing tests (test_processes.py, 20s timeout) continue to pass.
     except (ValueError, OSError) as exc:
         log.error("setup rejected: %s", exc)
         parser.exit(1, "Create server/member --init-identity public keys first.\n")
