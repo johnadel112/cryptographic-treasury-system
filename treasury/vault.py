@@ -43,6 +43,9 @@ from .logging_utils import get_logger
 from .opening import combine_decryption_shares, make_decryption_share, verify_decryption_share
 from .sharing import feldman_commitments, lagrange_coefficient, make_shares, verify_share
 
+# Default vault content used by founder setup and standalone demos.
+VAULT_DEFAULT_CONTENT = b"TREASURY VAULT - Confidential Project Funds Ledger - ICS505"
+
 
 # ---------------------------------------------------------------------------
 # ElGamal key encapsulation over the RFC-3526 group

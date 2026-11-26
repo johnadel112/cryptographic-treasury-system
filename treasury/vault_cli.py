@@ -25,10 +25,8 @@ from .vault import (
     open_vault,
     sign_open_request,
     vault_setup,
+    VAULT_DEFAULT_CONTENT,
 )
-
-
-VAULT_DEFAULT_CONTENT = b"TREASURY VAULT - Confidential Project Funds Ledger - ICS505"
 
 
 def cmd_setup(args, log) -> int:
