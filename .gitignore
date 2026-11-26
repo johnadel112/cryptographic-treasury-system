@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.py[cod]
+*.log
+runtime/
+*.pem
+*.key
+*.secret
+*.share
+*.pcapng
