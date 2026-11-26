@@ -9,9 +9,6 @@ from .encoding import canonical_json
 from .identity import initialize_identity, write_new
 from .logging_utils import get_logger
 
-# Divan: vault setup imported here; never reads member signing private keys.
-from .vault import VAULT_DEFAULT_CONTENT, vault_setup
-
 
 def issue_certificates(root: Path, n: int, t: int, log) -> None:
     if not 1 <= t <= n:
@@ -31,12 +28,8 @@ def issue_certificates(root: Path, n: int, t: int, log) -> None:
         log.info("issued certificate name=%s group=%s expires=%s sig=%s", name, GROUP,
                  CERTIFICATE_EXPIRY, cert.sig[:8])
     write_new(root / "public" / "setup.json", canonical_json({"group": GROUP, "n": n, "t": t}))
-    log.info("certificate setup complete n=%d t=%d", n, t)
-
-    # Divan vault setup: extend founder setup here without reading member signing keys.
-    # vault_setup generates the secret, distributes shares, and erases the secret.
-    vault_setup(root, t, n, VAULT_DEFAULT_CONTENT, log)
-    log.info("vault and shares created; founder secret erased")
+    log.info("certificate setup complete n=%d t=%d; vault shares pending", n, t)
+    # Divan: vault_setup() is called from main() after certificates are issued.
 
 
 def main() -> None:
@@ -49,6 +42,10 @@ def main() -> None:
     log = get_logger("founder")
     try:
         issue_certificates(args.data_dir, args.n, args.t, log)
+        # Divan vault setup: runs after certificates; never reads member signing keys.
+        from .vault import VAULT_DEFAULT_CONTENT, vault_setup
+        vault_setup(args.data_dir, args.t, args.n, VAULT_DEFAULT_CONTENT, log)
+        log.info("vault and shares created; founder secret erased")
     except (ValueError, OSError) as exc:
         log.error("setup rejected: %s", exc)
         parser.exit(1, "Create server/member --init-identity public keys first.\n")
