@@ -123,3 +123,7 @@ updates to three branches. No push occurred and no PR was opened. Instructor PDF
 runtime secrets were excluded from the proposed push. John subsequently explicitly approved publishing these commits to the linked repository
 and merging into main. Publication can now proceed under that authorization. The original
 rejection above records the earlier attempt, not a current approval blocker.
+
+CI compatibility follow-up: the initial Python 3.10 install rejected pycparser 3.12
+(requires Python >=3.11). The lock now selects pycparser 2.23 below Python 3.11 and
+retains 3.12 on newer interpreters. Matrix jobs run independently to report all results.
