@@ -112,3 +112,14 @@ login/requests first so Divan and Yassin can use authenticated sessions. Then ve
 milestone live demos and signed-request protection under A1, collect evidence, assemble
 the <=4-page design sheet, and only then start the dashboard branch. Do not merge main
 without John's approval.
+
+## Publication status
+
+Local commits are complete and the working tree was clean after verification.
+An attempted atomic push of main/develop starter baselines plus the feature branch
+was rejected by automatic approval review before execution. The stated reason was
+publication of potentially nonpublic assignment/project implementation and documentation
+to a public repository without explicit confirmation of public exposure, together with
+updates to three branches. No push occurred and no PR was opened. Instructor PDFs and
+runtime secrets were excluded from the proposed push. Confirm public publication or
+provide a private destination before retrying; do not bypass the rejection.
