@@ -2,8 +2,8 @@
 
 Date: 26 November 2026. Working branch: `feature/john-secure-channel`.
 The official starter is preserved in baseline commit `5f0867f`; code/tests/CI are in
-`ec87f8c`. Main and develop initially point at that starter baseline. No merge into
-main has been performed. Documentation is committed separately.
+`ec87f8c`. Main and develop initially point at that starter baseline. At initial verification, no merge into
+main had been performed. John subsequently authorized publication and merging into main. Documentation is committed separately.
 
 ## Delivered
 
@@ -107,11 +107,10 @@ The repository was public at inspection; arrange private submission visibility a
 
 ## Recommended next steps
 
-Review/merge this feature into develop after CI and team review. Essam should integrate
+John has authorized publishing this feature and merging into main after CI. Essam should integrate
 login/requests first so Divan and Yassin can use authenticated sessions. Then verify all
 milestone live demos and signed-request protection under A1, collect evidence, assemble
-the <=4-page design sheet, and only then start the dashboard branch. Do not merge main
-without John's approval.
+the <=4-page design sheet, and only then start the dashboard branch.
 
 ## Publication status
 
@@ -121,5 +120,6 @@ was rejected by automatic approval review before execution. The stated reason wa
 publication of potentially nonpublic assignment/project implementation and documentation
 to a public repository without explicit confirmation of public exposure, together with
 updates to three branches. No push occurred and no PR was opened. Instructor PDFs and
-runtime secrets were excluded from the proposed push. Confirm public publication or
-provide a private destination before retrying; do not bypass the rejection.
+runtime secrets were excluded from the proposed push. John subsequently explicitly approved publishing these commits to the linked repository
+and merging into main. Publication can now proceed under that authorization. The original
+rejection above records the earlier attempt, not a current approval blocker.
