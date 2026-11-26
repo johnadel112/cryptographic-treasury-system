@@ -18,3 +18,4 @@ runtime/
 *.secret
 *.share
 *.pcapng
+data_cap/

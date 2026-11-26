@@ -1,0 +1,7 @@
+2026-11-26 12:46:31,921 [mallory:A3] INFO Attempt 1 failed (guess e'=15)
+2026-11-26 12:46:31,978 [mallory:A3] INFO Attempt 2 failed (guess e'=12)
+2026-11-26 12:46:32,040 [mallory:A3] INFO Attempt 3 failed (guess e'=5)
+2026-11-26 12:46:32,101 [mallory:A3] INFO Attempt 4 failed (guess e'=11)
+2026-11-26 12:46:32,136 [mallory:A3] INFO Attempt 5 failed (guess e'=1)
+2026-11-26 12:46:32,173 [mallory:A3] INFO Attempt 6 failed (guess e'=11)
+2026-11-26 12:46:32,225 [mallory:A3] INFO Attack A3 SUCCEEDED on attempt 7 (guessed e'=0)

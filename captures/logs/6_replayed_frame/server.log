@@ -1,0 +1,6 @@
+2026-11-26 12:46:36,571 [server:5050] INFO Server listening on 127.0.0.1:5050 (group=GROUP_1)
+2026-11-26 12:46:36,586 [server:5050] INFO Handshake OK with M1 from ('127.0.0.1', 51891)
+2026-11-26 12:46:36,587 [server:5050] INFO Register M1 -> OK (Registered)
+2026-11-26 12:46:36,623 [server:5050] INFO login M1 OK (interactive)
+2026-11-26 12:46:36,624 [server:5050] INFO Accepted request member=M1 seq=1 op=spend
+2026-11-26 12:46:36,625 [server:5050] WARNING Channel closed for M1: Nonce counter mismatch: got 3, expected 4

@@ -1,0 +1,6 @@
+2026-11-26 12:46:27,010 [server:5050] INFO Server listening on 127.0.0.1:5050 (group=GROUP_1)
+2026-11-26 12:46:27,023 [server:5050] INFO Handshake OK with M1 from ('127.0.0.1', 61135)
+2026-11-26 12:46:27,024 [server:5050] INFO Register M1 -> OK (Registered)
+2026-11-26 12:46:27,059 [server:5050] INFO login M1 OK (interactive)
+2026-11-26 12:46:27,061 [server:5050] WARNING Request signature invalid for M1 seq=1 op=spend
+2026-11-26 12:46:27,062 [server:5050] WARNING Channel closed for M1: Connection closed by peer

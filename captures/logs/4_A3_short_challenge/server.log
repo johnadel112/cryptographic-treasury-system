@@ -1,0 +1,25 @@
+2026-11-26 12:46:31,277 [server:5050] INFO Server listening on 127.0.0.1:5050 (group=GROUP_1)
+2026-11-26 12:46:31,288 [server:5050] INFO Handshake OK with M3 from ('127.0.0.1', 61161)
+2026-11-26 12:46:31,289 [server:5050] INFO Register M3 -> OK (Registered)
+2026-11-26 12:46:31,289 [server:5050] WARNING Channel closed for M3: Connection closed by peer
+2026-11-26 12:46:31,903 [server:5050] INFO Handshake OK with M3 from ('127.0.0.1', 61162)
+2026-11-26 12:46:31,921 [server:5050] WARNING login M3 FAIL (interactive)
+2026-11-26 12:46:31,922 [server:5050] WARNING Channel closed for M3: Connection closed by peer
+2026-11-26 12:46:31,958 [server:5050] INFO Handshake OK with M3 from ('127.0.0.1', 61163)
+2026-11-26 12:46:31,977 [server:5050] WARNING login M3 FAIL (interactive)
+2026-11-26 12:46:31,978 [server:5050] WARNING Channel closed for M3: Connection closed by peer
+2026-11-26 12:46:32,022 [server:5050] INFO Handshake OK with M3 from ('127.0.0.1', 61164)
+2026-11-26 12:46:32,039 [server:5050] WARNING login M3 FAIL (interactive)
+2026-11-26 12:46:32,040 [server:5050] WARNING Channel closed for M3: Connection closed by peer
+2026-11-26 12:46:32,084 [server:5050] INFO Handshake OK with M3 from ('127.0.0.1', 61165)
+2026-11-26 12:46:32,100 [server:5050] WARNING login M3 FAIL (interactive)
+2026-11-26 12:46:32,101 [server:5050] WARNING Channel closed for M3: Connection closed by peer
+2026-11-26 12:46:32,120 [server:5050] INFO Handshake OK with M3 from ('127.0.0.1', 61166)
+2026-11-26 12:46:32,135 [server:5050] WARNING login M3 FAIL (interactive)
+2026-11-26 12:46:32,136 [server:5050] WARNING Channel closed for M3: Connection closed by peer
+2026-11-26 12:46:32,138 [server:5050] INFO Handshake OK with M3 from ('127.0.0.1', 61167)
+2026-11-26 12:46:32,172 [server:5050] WARNING login M3 FAIL (interactive)
+2026-11-26 12:46:32,173 [server:5050] WARNING Channel closed for M3: Connection closed by peer
+2026-11-26 12:46:32,206 [server:5050] INFO Handshake OK with M3 from ('127.0.0.1', 61168)
+2026-11-26 12:46:32,224 [server:5050] INFO login M3 OK (interactive)
+2026-11-26 12:46:32,225 [server:5050] WARNING Channel closed for M3: Connection closed by peer
