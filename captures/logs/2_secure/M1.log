@@ -1,0 +1,4 @@
+2026-11-26 12:46:22,250 [client:M1] INFO Connected & handshake complete with 127.0.0.1:5050
+2026-11-26 12:46:22,251 [client:M1] INFO Register response: {'ok': True, 'reason': 'Registered'}
+2026-11-26 12:46:22,286 [client:M1] INFO Interactive login response: {'ok': True}
+2026-11-26 12:46:22,287 [client:M1] INFO Request op=spend seq=1 -> True
