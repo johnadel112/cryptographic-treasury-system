@@ -1,3 +1,3 @@
-cryptography>=41.0
-# Install ecdsa only if implementing optional bonus attack A2:
-# ecdsa>=0.19
+# Python >=3.10. Tested with cryptography 50.0.2; bounded major upgrades.
+cryptography>=41.0,<51
+# Optional A2 only (not implemented by John): ecdsa>=0.19

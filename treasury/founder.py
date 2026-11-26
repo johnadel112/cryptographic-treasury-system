@@ -1,20 +1,50 @@
-"""Founder setup entry point. Implement key/certificate/share/vault setup."""
+"""Create the founder identity and issue certificates for published program keys."""
 import argparse
-from .config import validate_group
+from pathlib import Path
+
+from .certificates import create_certificate
+from .config import (CERTIFICATE_EXPIRY, DATA_DIR, DEFAULT_N, DEFAULT_T,
+                     GROUP, member_names, validate_group)
+from .encoding import canonical_json
+from .identity import initialize_identity, write_new
 from .logging_utils import get_logger
 
 
-def main():
-    parser = argparse.ArgumentParser(description="Treasury founder setup")
-    parser.add_argument("--t", type=int, default=3)
-    parser.add_argument("--n", type=int, default=5)
+def issue_certificates(root: Path, n: int, t: int, log) -> None:
+    if not 1 <= t <= n:
+        raise ValueError("require 1 <= t <= n")
+    key = initialize_identity("founder", root)
+    names = ("server", *member_names(n))
+    # Preflight all public inputs before writing any certificate.
+    certs = {name: create_certificate(key, name,
+             (root / "public" / (name + ".pub")).read_text("ascii"), CERTIFICATE_EXPIRY)
+             for name in names}
+    destinations = [root / "public" / (name + ".cert.json") for name in names]
+    destinations.append(root / "public" / "setup.json")
+    if any(path.exists() for path in destinations):
+        raise ValueError("setup already exists; use a fresh --data-dir for new setup")
+    for name, cert in certs.items():
+        write_new(root / "public" / (name + ".cert.json"), canonical_json(cert.to_dict()))
+        log.info("issued certificate name=%s group=%s expires=%s sig=%s", name, GROUP,
+                 CERTIFICATE_EXPIRY, cert.sig[:8])
+    write_new(root / "public" / "setup.json", canonical_json({"group": GROUP, "n": n, "t": t}))
+    log.info("certificate setup complete n=%d t=%d; vault/shares pending Divan", n, t)
+    # Integration: Divan extends founder setup here without reading owner keys.
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description="Treasury founder certificate setup")
+    parser.add_argument("--t", type=int, default=DEFAULT_T)
+    parser.add_argument("--n", type=int, default=DEFAULT_N)
+    parser.add_argument("--data-dir", type=Path, default=DATA_DIR)
     args = parser.parse_args()
     validate_group()
     log = get_logger("founder")
-    if not (1 <= args.t <= args.n):
-        parser.error("require 1 <= t <= n")
-    log.info("setup requested for threshold t=%d, n=%d", args.t, args.n)
-    log.info("TODO: create founder key, certificates, member shares, commitments and encrypted vault")
+    try:
+        issue_certificates(args.data_dir, args.n, args.t, log)
+    except (ValueError, OSError) as exc:
+        log.error("setup rejected: %s", exc)
+        parser.exit(1, "Create server/member --init-identity public keys first.\n")
 
 
 if __name__ == "__main__":

@@ -1,0 +1,5 @@
+# Reproducible dependencies for supported Python versions.
+cryptography==50.0.2
+cffi==2.1.1
+pycparser==2.23; python_version < "3.11"
+pycparser==3.12; python_version >= "3.11"

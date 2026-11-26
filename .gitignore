@@ -1,4 +1,14 @@
 .venv/
+.venv*/
+.vscode/
+.pytest_cache/
+.coverage
+htmlcov/
+.env
+.env.*
+*.pcap
+# Instructor handouts are local references, not published course material.
+docs/*.pdf
 __pycache__/
 *.py[cod]
 *.log
