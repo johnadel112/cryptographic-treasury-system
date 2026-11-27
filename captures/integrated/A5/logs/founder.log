@@ -1,0 +1,8 @@
+founder  2026-11-27 19:32:23+0200  issued certificate name=server group=16002216-16003727-16004417-16005162 expires=2026-12-31 sig=30440220
+founder  2026-11-27 19:32:23+0200  issued certificate name=M1 group=16002216-16003727-16004417-16005162 expires=2026-12-31 sig=30440220
+founder  2026-11-27 19:32:23+0200  issued certificate name=M2 group=16002216-16003727-16004417-16005162 expires=2026-12-31 sig=30450220
+founder  2026-11-27 19:32:23+0200  issued certificate name=M3 group=16002216-16003727-16004417-16005162 expires=2026-12-31 sig=30440220
+founder  2026-11-27 19:32:23+0200  issued certificate name=M4 group=16002216-16003727-16004417-16005162 expires=2026-12-31 sig=30460221
+founder  2026-11-27 19:32:23+0200  issued certificate name=M5 group=16002216-16003727-16004417-16005162 expires=2026-12-31 sig=30450220
+founder  2026-11-27 19:32:23+0200  certificate setup complete n=5 t=3
+founder  2026-11-27 19:32:23+0200  signed vault setup ready n=5 t=3 C0=250a8509; no secret retained

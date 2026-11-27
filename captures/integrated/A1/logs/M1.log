@@ -1,0 +1,36 @@
+M1       2026-11-27 19:29:11+0200  owner-local identity and independent login secret ready
+M1       2026-11-27 19:29:14+0200  EDUCATIONAL WEAK MODE: unsigned-handshake
+M1       2026-11-27 19:29:14+0200  handshake sent member hello X=04a39446
+M1       2026-11-27 19:29:14+0200  certificate verification OK peer=server group=16002216-16003727-16004417-16005162 sig=30460221
+M1       2026-11-27 19:29:14+0200  DEMO handshake signatures omitted
+M1       2026-11-27 19:29:14+0200  channel ready peer=server; login still required
+M1       2026-11-27 19:29:14+0200  encrypted send peer=server nonce=0 bytes=15
+M1       2026-11-27 19:29:14+0200  decrypted receive peer=server nonce=0 validation OK tag OK
+M1       2026-11-27 19:29:14+0200  encrypted send peer=server nonce=1 bytes=540
+M1       2026-11-27 19:29:14+0200  decrypted receive peer=server nonce=1 validation OK tag OK
+M1       2026-11-27 19:29:14+0200  encrypted send peer=server nonce=2 bytes=553
+M1       2026-11-27 19:29:14+0200  decrypted receive peer=server nonce=2 validation OK tag OK
+M1       2026-11-27 19:29:14+0200  encrypted send peer=server nonce=3 bytes=554
+M1       2026-11-27 19:29:14+0200  decrypted receive peer=server nonce=3 validation OK tag OK
+M1       2026-11-27 19:29:14+0200  interactive login result=True
+M1       2026-11-27 19:29:14+0200  connection closed peer=server
+M1       2026-11-27 19:29:15+0200  EDUCATIONAL WEAK MODE: unsigned-handshake
+M1       2026-11-27 19:29:15+0200  handshake sent member hello X=04a08f13
+M1       2026-11-27 19:29:15+0200  certificate verification OK peer=server group=16002216-16003727-16004417-16005162 sig=30460221
+M1       2026-11-27 19:29:15+0200  DEMO handshake signatures omitted
+M1       2026-11-27 19:29:15+0200  channel ready peer=server; login still required
+M1       2026-11-27 19:29:15+0200  encrypted send peer=server nonce=0 bytes=15
+M1       2026-11-27 19:29:15+0200  decrypted receive peer=server nonce=0 validation OK tag OK
+M1       2026-11-27 19:29:15+0200  encrypted send peer=server nonce=1 bytes=553
+M1       2026-11-27 19:29:15+0200  decrypted receive peer=server nonce=1 validation OK tag OK
+M1       2026-11-27 19:29:15+0200  encrypted send peer=server nonce=2 bytes=554
+M1       2026-11-27 19:29:15+0200  decrypted receive peer=server nonce=2 validation OK tag OK
+M1       2026-11-27 19:29:15+0200  interactive login result=True
+M1       2026-11-27 19:29:15+0200  encrypted send peer=server nonce=3 bytes=221
+M1       2026-11-27 19:29:15+0200  decrypted receive peer=server nonce=3 validation OK tag OK
+M1       2026-11-27 19:29:15+0200  connection closed peer=server
+M1       2026-11-27 19:29:17+0200  handshake sent member hello X=049ac7f4
+M1       2026-11-27 19:29:17+0200  certificate verification OK peer=server group=16002216-16003727-16004417-16005162 sig=30460221
+M1       2026-11-27 19:29:17+0200  hs-server signature verification FAILED X=049ac7f4 Y=048d7029
+M1       2026-11-27 19:29:17+0200  handshake security rejection: hs-server signature verification FAILED
+M1       2026-11-27 19:29:17+0200  member rejected: hs-server signature verification FAILED

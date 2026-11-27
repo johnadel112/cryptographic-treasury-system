@@ -1,0 +1,46 @@
+server   2026-11-27 19:28:25+0200  owner-local server key ready; public key published
+server   2026-11-27 19:28:27+0200  founder commitments signature OK C0=4fa565e6 t=3 n=5
+server   2026-11-27 19:28:27+0200  EDUCATIONAL WEAK MODE: no-encryption
+server   2026-11-27 19:28:27+0200  listening on 127.0.0.1:5050 mode=no-encryption n=5 t=3
+server   2026-11-27 19:28:28+0200  connection accepted from 127.0.0.1:64408
+server   2026-11-27 19:28:28+0200  EDUCATIONAL WEAK MODE: no-encryption
+server   2026-11-27 19:28:28+0200  certificate verification OK peer=M1 group=16002216-16003727-16004417-16005162 sig=30450220
+server   2026-11-27 19:28:28+0200  handshake sent server hello X=042674d0 Y=04b30914
+server   2026-11-27 19:28:28+0200  hs-member signature verification OK X=042674d0 Y=04b30914 sig=30440220
+server   2026-11-27 19:28:28+0200  session established peer=M1; login still required
+server   2026-11-27 19:28:28+0200  DEMO plaintext receive bytes=15
+server   2026-11-27 19:28:28+0200  DEMO plaintext send type=None
+server   2026-11-27 19:28:28+0200  DEMO plaintext receive bytes=540
+server   2026-11-27 19:28:28+0200  registration M1 OK X=ffd19470
+server   2026-11-27 19:28:28+0200  DEMO plaintext send type=None
+server   2026-11-27 19:28:28+0200  DEMO plaintext receive bytes=553
+server   2026-11-27 19:28:28+0200  login M1 challenge R=cdff03d0 e=287393a5
+server   2026-11-27 19:28:28+0200  DEMO plaintext send type=None
+server   2026-11-27 19:28:28+0200  DEMO plaintext receive bytes=554
+server   2026-11-27 19:28:28+0200  login M1 R=cdff03d0 e=287393a5 z=11eab780 g^z=R*X^e: OK
+server   2026-11-27 19:28:28+0200  DEMO plaintext send type=None
+server   2026-11-27 19:28:28+0200  DEMO plaintext receive bytes=213
+server   2026-11-27 19:28:28+0200  request M1 seq=1 op=spend signature OK; accepted ledger entry
+server   2026-11-27 19:28:28+0200  DEMO plaintext send type=None
+server   2026-11-27 19:28:28+0200  connection closed peer=M1
+server   2026-11-27 19:28:28+0200  connection accepted from 127.0.0.1:64409
+server   2026-11-27 19:28:28+0200  EDUCATIONAL WEAK MODE: no-encryption
+server   2026-11-27 19:28:28+0200  certificate verification OK peer=M2 group=16002216-16003727-16004417-16005162 sig=30460221
+server   2026-11-27 19:28:28+0200  handshake sent server hello X=049dd650 Y=049259cd
+server   2026-11-27 19:28:28+0200  hs-member signature verification OK X=049dd650 Y=049259cd sig=30450220
+server   2026-11-27 19:28:28+0200  session established peer=M2; login still required
+server   2026-11-27 19:28:28+0200  DEMO plaintext receive bytes=15
+server   2026-11-27 19:28:28+0200  DEMO plaintext send type=None
+server   2026-11-27 19:28:28+0200  DEMO plaintext receive bytes=540
+server   2026-11-27 19:28:28+0200  registration M2 OK X=35b30127
+server   2026-11-27 19:28:28+0200  DEMO plaintext send type=None
+server   2026-11-27 19:28:28+0200  DEMO plaintext receive bytes=37
+server   2026-11-27 19:28:29+0200  login M2 fresh nonce N=fe059899
+server   2026-11-27 19:28:29+0200  DEMO plaintext send type=None
+server   2026-11-27 19:28:29+0200  DEMO plaintext receive bytes=1069
+server   2026-11-27 19:28:29+0200  login M2 R=122828ce e=f388f855 z=5e4b0786 g^z=R*X^e: OK
+server   2026-11-27 19:28:29+0200  DEMO plaintext send type=None
+server   2026-11-27 19:28:29+0200  DEMO plaintext receive bytes=209
+server   2026-11-27 19:28:29+0200  request M2 seq=1 op=spend signature OK; accepted ledger entry
+server   2026-11-27 19:28:29+0200  DEMO plaintext send type=None
+server   2026-11-27 19:28:29+0200  connection closed peer=M2

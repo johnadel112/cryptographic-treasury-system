@@ -1,0 +1,5 @@
+{
+  "scenario": "A3",
+  "weak_attempts": 30,
+  "secure_rejected_attempts": 8
+}

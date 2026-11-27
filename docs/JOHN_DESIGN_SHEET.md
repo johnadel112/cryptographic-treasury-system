@@ -1,3 +1,5 @@
+> Historical John-only milestone document. See FINAL_IMPLEMENTATION_REPORT.md and DESIGN_SHEET.pdf for the integrated application.
+
 # Design sheet ? John's portion (allocate one of four final pages)
 
 GROUP: `16002216-16003727-16004417-16005162`. Team: John (infrastructure/channel/A1),

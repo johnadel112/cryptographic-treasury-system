@@ -1,0 +1,4 @@
+mallory  2026-11-27 19:30:47+0200  listening on 127.0.0.1:6000 attack=replay-frame mode=secure comparison
+mallory  2026-11-27 19:30:47+0200  two local TCP connections: member=('127.0.0.1', 56666) server=127.0.0.1:5050
+mallory  2026-11-27 19:30:47+0200  resent exact encrypted frame nonce=0
+mallory  2026-11-27 19:30:47+0200  peer closed; proxy connection ends

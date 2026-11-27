@@ -1,0 +1,18 @@
+M1       2026-11-27 19:28:25+0200  owner-local identity and independent login secret ready
+M1       2026-11-27 19:28:28+0200  EDUCATIONAL WEAK MODE: no-encryption
+M1       2026-11-27 19:28:28+0200  handshake sent member hello X=042674d0
+M1       2026-11-27 19:28:28+0200  certificate verification OK peer=server group=16002216-16003727-16004417-16005162 sig=30450221
+M1       2026-11-27 19:28:28+0200  hs-server signature verification OK X=042674d0 Y=04b30914 sig=30460221
+M1       2026-11-27 19:28:28+0200  channel ready peer=server; login still required
+M1       2026-11-27 19:28:28+0200  DEMO plaintext send type=info
+M1       2026-11-27 19:28:28+0200  DEMO plaintext receive bytes=3646
+M1       2026-11-27 19:28:28+0200  DEMO plaintext send type=register
+M1       2026-11-27 19:28:28+0200  DEMO plaintext receive bytes=11
+M1       2026-11-27 19:28:28+0200  DEMO plaintext send type=login_interactive_start
+M1       2026-11-27 19:28:28+0200  DEMO plaintext receive bytes=50
+M1       2026-11-27 19:28:28+0200  DEMO plaintext send type=login_interactive_finish
+M1       2026-11-27 19:28:28+0200  DEMO plaintext receive bytes=24
+M1       2026-11-27 19:28:28+0200  interactive login result=True
+M1       2026-11-27 19:28:28+0200  DEMO plaintext send type=spend
+M1       2026-11-27 19:28:28+0200  DEMO plaintext receive bytes=152
+M1       2026-11-27 19:28:28+0200  connection closed peer=server

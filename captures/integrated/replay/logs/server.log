@@ -1,0 +1,30 @@
+server   2026-11-27 19:30:43+0200  owner-local server key ready; public key published
+server   2026-11-27 19:30:46+0200  founder commitments signature OK C0=197dba63 t=3 n=5
+server   2026-11-27 19:30:46+0200  listening on 127.0.0.1:5050 mode=secure n=5 t=3
+server   2026-11-27 19:30:46+0200  connection accepted from 127.0.0.1:56665
+server   2026-11-27 19:30:46+0200  certificate verification OK peer=M1 group=16002216-16003727-16004417-16005162 sig=30440220
+server   2026-11-27 19:30:46+0200  handshake sent server hello X=0450b66d Y=04b11b6d
+server   2026-11-27 19:30:46+0200  hs-member signature verification OK X=0450b66d Y=04b11b6d sig=30460221
+server   2026-11-27 19:30:46+0200  session established peer=M1; login still required
+server   2026-11-27 19:30:46+0200  decrypted receive peer=M1 nonce=0 validation OK tag OK
+server   2026-11-27 19:30:46+0200  encrypted send peer=M1 nonce=0 bytes=3643
+server   2026-11-27 19:30:46+0200  decrypted receive peer=M1 nonce=1 validation OK tag OK
+server   2026-11-27 19:30:46+0200  registration M1 OK X=558cb8bf
+server   2026-11-27 19:30:46+0200  encrypted send peer=M1 nonce=1 bytes=11
+server   2026-11-27 19:30:46+0200  decrypted receive peer=M1 nonce=2 validation OK tag OK
+server   2026-11-27 19:30:46+0200  login M1 challenge R=ef5a84cb e=bd9405ff
+server   2026-11-27 19:30:46+0200  encrypted send peer=M1 nonce=2 bytes=50
+server   2026-11-27 19:30:46+0200  decrypted receive peer=M1 nonce=3 validation OK tag OK
+server   2026-11-27 19:30:46+0200  login M1 R=ef5a84cb e=bd9405ff z=587f9953 g^z=R*X^e: OK
+server   2026-11-27 19:30:46+0200  encrypted send peer=M1 nonce=3 bytes=24
+server   2026-11-27 19:30:46+0200  connection closed peer=M1
+server   2026-11-27 19:30:47+0200  connection accepted from 127.0.0.1:56667
+server   2026-11-27 19:30:47+0200  certificate verification OK peer=M1 group=16002216-16003727-16004417-16005162 sig=30440220
+server   2026-11-27 19:30:47+0200  handshake sent server hello X=04556d04 Y=0425af2a
+server   2026-11-27 19:30:47+0200  hs-member signature verification OK X=04556d04 Y=0425af2a sig=30440220
+server   2026-11-27 19:30:47+0200  session established peer=M1; login still required
+server   2026-11-27 19:30:47+0200  decrypted receive peer=M1 nonce=0 validation OK tag OK
+server   2026-11-27 19:30:47+0200  encrypted send peer=M1 nonce=0 bytes=4152
+server   2026-11-27 19:30:47+0200  security rejection on receive: nonce validation FAILED: expected 1, got 0
+server   2026-11-27 19:30:47+0200  connection closed peer=M1
+server   2026-11-27 19:30:47+0200  connection rejected: nonce validation FAILED: expected 1, got 0

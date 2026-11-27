@@ -1,0 +1,22 @@
+M4       2026-11-27 19:32:22+0200  owner-local identity and independent login secret ready
+M4       2026-11-27 19:32:36+0200  handshake sent member hello X=049ac5db
+M4       2026-11-27 19:32:36+0200  certificate verification OK peer=server group=16002216-16003727-16004417-16005162 sig=30440220
+M4       2026-11-27 19:32:36+0200  hs-server signature verification OK X=049ac5db Y=042d8c0a sig=30450220
+M4       2026-11-27 19:32:36+0200  channel ready peer=server; login still required
+M4       2026-11-27 19:32:36+0200  encrypted send peer=server nonce=0 bytes=15
+M4       2026-11-27 19:32:36+0200  decrypted receive peer=server nonce=0 validation OK tag OK
+M4       2026-11-27 19:32:36+0200  encrypted send peer=server nonce=1 bytes=540
+M4       2026-11-27 19:32:36+0200  decrypted receive peer=server nonce=1 validation OK tag OK
+M4       2026-11-27 19:32:36+0200  encrypted send peer=server nonce=2 bytes=553
+M4       2026-11-27 19:32:36+0200  decrypted receive peer=server nonce=2 validation OK tag OK
+M4       2026-11-27 19:32:36+0200  encrypted send peer=server nonce=3 bytes=553
+M4       2026-11-27 19:32:36+0200  decrypted receive peer=server nonce=3 validation OK tag OK
+M4       2026-11-27 19:32:36+0200  interactive login result=True
+M4       2026-11-27 19:32:36+0200  encrypted send peer=server nonce=4 bytes=15
+M4       2026-11-27 19:32:36+0200  decrypted receive peer=server nonce=4 validation OK tag OK
+M4       2026-11-27 19:32:36+0200  encrypted send peer=server nonce=5 bytes=234
+M4       2026-11-27 19:32:36+0200  decrypted receive peer=server nonce=5 validation OK tag OK
+M4       2026-11-27 19:32:36+0200  share verification OK member=M4 hi=bed3ac86
+M4       2026-11-27 19:32:37+0200  encrypted send peer=server nonce=6 bytes=2347
+M4       2026-11-27 19:32:38+0200  decrypted receive peer=server nonce=6 validation OK tag OK
+M4       2026-11-27 19:32:38+0200  connection closed peer=server

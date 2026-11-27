@@ -1,3 +1,5 @@
+> Historical John-only milestone document. See FINAL_IMPLEMENTATION_REPORT.md and DESIGN_SHEET.pdf for the integrated application.
+
 # Official requirements mapped to John's implementation
 
 Sources read in full before implementation: Overview (7 pages), Milestone 1 (3),

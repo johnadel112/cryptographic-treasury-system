@@ -1,0 +1,606 @@
+server   2026-11-27 19:29:57+0200  owner-local server key ready; public key published
+server   2026-11-27 19:29:59+0200  founder commitments signature OK C0=767afbf8 t=3 n=5
+server   2026-11-27 19:29:59+0200  EDUCATIONAL WEAK MODE: short-challenge
+server   2026-11-27 19:29:59+0200  listening on 127.0.0.1:5050 mode=short-challenge n=5 t=3
+server   2026-11-27 19:30:00+0200  connection accepted from 127.0.0.1:61436
+server   2026-11-27 19:30:00+0200  certificate verification OK peer=M3 group=16002216-16003727-16004417-16005162 sig=30450220
+server   2026-11-27 19:30:00+0200  handshake sent server hello X=040369ef Y=04333f24
+server   2026-11-27 19:30:00+0200  hs-member signature verification OK X=040369ef Y=04333f24 sig=30460221
+server   2026-11-27 19:30:00+0200  session established peer=M3; login still required
+server   2026-11-27 19:30:00+0200  decrypted receive peer=M3 nonce=0 validation OK tag OK
+server   2026-11-27 19:30:00+0200  encrypted send peer=M3 nonce=0 bytes=3644
+server   2026-11-27 19:30:00+0200  decrypted receive peer=M3 nonce=1 validation OK tag OK
+server   2026-11-27 19:30:00+0200  registration M3 OK X=7a301614
+server   2026-11-27 19:30:00+0200  encrypted send peer=M3 nonce=1 bytes=11
+server   2026-11-27 19:30:00+0200  decrypted receive peer=M3 nonce=2 validation OK tag OK
+server   2026-11-27 19:30:00+0200  login M3 challenge R=332f52f0 e=c
+server   2026-11-27 19:30:00+0200  encrypted send peer=M3 nonce=2 bytes=19
+server   2026-11-27 19:30:00+0200  decrypted receive peer=M3 nonce=3 validation OK tag OK
+server   2026-11-27 19:30:00+0200  login M3 R=332f52f0 e=c z=608f74b0 g^z=R*X^e: OK
+server   2026-11-27 19:30:00+0200  encrypted send peer=M3 nonce=3 bytes=24
+server   2026-11-27 19:30:00+0200  connection closed peer=M3
+server   2026-11-27 19:30:00+0200  connection accepted from 127.0.0.1:61437
+server   2026-11-27 19:30:00+0200  certificate verification OK peer=M3 group=16002216-16003727-16004417-16005162 sig=30450220
+server   2026-11-27 19:30:00+0200  handshake sent server hello X=04febfb5 Y=0403201a
+server   2026-11-27 19:30:00+0200  hs-member signature verification OK X=04febfb5 Y=0403201a sig=30450220
+server   2026-11-27 19:30:00+0200  session established peer=M3; login still required
+server   2026-11-27 19:30:00+0200  decrypted receive peer=M3 nonce=0 validation OK tag OK
+server   2026-11-27 19:30:00+0200  encrypted send peer=M3 nonce=0 bytes=4151
+server   2026-11-27 19:30:00+0200  decrypted receive peer=M3 nonce=1 validation OK tag OK
+server   2026-11-27 19:30:00+0200  login M3 challenge R=96982f74 e=5
+server   2026-11-27 19:30:00+0200  encrypted send peer=M3 nonce=1 bytes=19
+server   2026-11-27 19:30:00+0200  decrypted receive peer=M3 nonce=2 validation OK tag OK
+server   2026-11-27 19:30:01+0200  login M3 R=96982f74 e=5 z=22426e14 g^z=R*X^e: FAILED
+server   2026-11-27 19:30:01+0200  application rejection member=M3 reason=invalid Schnorr proof
+server   2026-11-27 19:30:01+0200  encrypted send peer=M3 nonce=2 bytes=44
+server   2026-11-27 19:30:01+0200  connection closed peer=M3
+server   2026-11-27 19:30:01+0200  connection accepted from 127.0.0.1:61438
+server   2026-11-27 19:30:01+0200  certificate verification OK peer=M3 group=16002216-16003727-16004417-16005162 sig=30450220
+server   2026-11-27 19:30:01+0200  handshake sent server hello X=04e01c61 Y=04d70469
+server   2026-11-27 19:30:01+0200  hs-member signature verification OK X=04e01c61 Y=04d70469 sig=30460221
+server   2026-11-27 19:30:01+0200  session established peer=M3; login still required
+server   2026-11-27 19:30:01+0200  decrypted receive peer=M3 nonce=0 validation OK tag OK
+server   2026-11-27 19:30:01+0200  encrypted send peer=M3 nonce=0 bytes=4151
+server   2026-11-27 19:30:01+0200  decrypted receive peer=M3 nonce=1 validation OK tag OK
+server   2026-11-27 19:30:01+0200  login M3 challenge R=e659df02 e=8
+server   2026-11-27 19:30:01+0200  encrypted send peer=M3 nonce=1 bytes=19
+server   2026-11-27 19:30:01+0200  decrypted receive peer=M3 nonce=2 validation OK tag OK
+server   2026-11-27 19:30:01+0200  login M3 R=e659df02 e=8 z=437e8bfa g^z=R*X^e: FAILED
+server   2026-11-27 19:30:01+0200  application rejection member=M3 reason=invalid Schnorr proof
+server   2026-11-27 19:30:01+0200  encrypted send peer=M3 nonce=2 bytes=44
+server   2026-11-27 19:30:01+0200  connection closed peer=M3
+server   2026-11-27 19:30:01+0200  connection accepted from 127.0.0.1:61439
+server   2026-11-27 19:30:01+0200  certificate verification OK peer=M3 group=16002216-16003727-16004417-16005162 sig=30450220
+server   2026-11-27 19:30:01+0200  handshake sent server hello X=04425409 Y=047dfd3f
+server   2026-11-27 19:30:01+0200  hs-member signature verification OK X=04425409 Y=047dfd3f sig=30450221
+server   2026-11-27 19:30:01+0200  session established peer=M3; login still required
+server   2026-11-27 19:30:01+0200  decrypted receive peer=M3 nonce=0 validation OK tag OK
+server   2026-11-27 19:30:01+0200  encrypted send peer=M3 nonce=0 bytes=4151
+server   2026-11-27 19:30:01+0200  decrypted receive peer=M3 nonce=1 validation OK tag OK
+server   2026-11-27 19:30:01+0200  login M3 challenge R=cbc31057 e=6
+server   2026-11-27 19:30:01+0200  encrypted send peer=M3 nonce=1 bytes=19
+server   2026-11-27 19:30:01+0200  decrypted receive peer=M3 nonce=2 validation OK tag OK
+server   2026-11-27 19:30:01+0200  login M3 R=cbc31057 e=6 z=7f3b80f5 g^z=R*X^e: FAILED
+server   2026-11-27 19:30:01+0200  application rejection member=M3 reason=invalid Schnorr proof
+server   2026-11-27 19:30:01+0200  encrypted send peer=M3 nonce=2 bytes=44
+server   2026-11-27 19:30:01+0200  connection closed peer=M3
+server   2026-11-27 19:30:01+0200  connection accepted from 127.0.0.1:61440
+server   2026-11-27 19:30:01+0200  certificate verification OK peer=M3 group=16002216-16003727-16004417-16005162 sig=30450220
+server   2026-11-27 19:30:01+0200  handshake sent server hello X=0404ced5 Y=041fe43e
+server   2026-11-27 19:30:01+0200  hs-member signature verification OK X=0404ced5 Y=041fe43e sig=30440220
+server   2026-11-27 19:30:01+0200  session established peer=M3; login still required
+server   2026-11-27 19:30:01+0200  decrypted receive peer=M3 nonce=0 validation OK tag OK
+server   2026-11-27 19:30:01+0200  encrypted send peer=M3 nonce=0 bytes=4151
+server   2026-11-27 19:30:01+0200  decrypted receive peer=M3 nonce=1 validation OK tag OK
+server   2026-11-27 19:30:01+0200  login M3 challenge R=61874ac0 e=8
+server   2026-11-27 19:30:01+0200  encrypted send peer=M3 nonce=1 bytes=19
+server   2026-11-27 19:30:01+0200  decrypted receive peer=M3 nonce=2 validation OK tag OK
+server   2026-11-27 19:30:02+0200  login M3 R=61874ac0 e=8 z=28fc34ac g^z=R*X^e: FAILED
+server   2026-11-27 19:30:02+0200  application rejection member=M3 reason=invalid Schnorr proof
+server   2026-11-27 19:30:02+0200  encrypted send peer=M3 nonce=2 bytes=44
+server   2026-11-27 19:30:02+0200  connection closed peer=M3
+server   2026-11-27 19:30:02+0200  connection accepted from 127.0.0.1:61441
+server   2026-11-27 19:30:02+0200  certificate verification OK peer=M3 group=16002216-16003727-16004417-16005162 sig=30450220
+server   2026-11-27 19:30:02+0200  handshake sent server hello X=0424f092 Y=04728c02
+server   2026-11-27 19:30:02+0200  hs-member signature verification OK X=0424f092 Y=04728c02 sig=30450221
+server   2026-11-27 19:30:02+0200  session established peer=M3; login still required
+server   2026-11-27 19:30:02+0200  decrypted receive peer=M3 nonce=0 validation OK tag OK
+server   2026-11-27 19:30:02+0200  encrypted send peer=M3 nonce=0 bytes=4151
+server   2026-11-27 19:30:02+0200  decrypted receive peer=M3 nonce=1 validation OK tag OK
+server   2026-11-27 19:30:02+0200  login M3 challenge R=44e53726 e=7
+server   2026-11-27 19:30:02+0200  encrypted send peer=M3 nonce=1 bytes=19
+server   2026-11-27 19:30:02+0200  decrypted receive peer=M3 nonce=2 validation OK tag OK
+server   2026-11-27 19:30:02+0200  login M3 R=44e53726 e=7 z=709e5147 g^z=R*X^e: FAILED
+server   2026-11-27 19:30:02+0200  application rejection member=M3 reason=invalid Schnorr proof
+server   2026-11-27 19:30:02+0200  encrypted send peer=M3 nonce=2 bytes=44
+server   2026-11-27 19:30:02+0200  connection closed peer=M3
+server   2026-11-27 19:30:02+0200  connection accepted from 127.0.0.1:61442
+server   2026-11-27 19:30:02+0200  certificate verification OK peer=M3 group=16002216-16003727-16004417-16005162 sig=30450220
+server   2026-11-27 19:30:02+0200  handshake sent server hello X=049cc2c0 Y=049cc413
+server   2026-11-27 19:30:02+0200  hs-member signature verification OK X=049cc2c0 Y=049cc413 sig=30460221
+server   2026-11-27 19:30:02+0200  session established peer=M3; login still required
+server   2026-11-27 19:30:02+0200  decrypted receive peer=M3 nonce=0 validation OK tag OK
+server   2026-11-27 19:30:02+0200  encrypted send peer=M3 nonce=0 bytes=4151
+server   2026-11-27 19:30:02+0200  decrypted receive peer=M3 nonce=1 validation OK tag OK
+server   2026-11-27 19:30:02+0200  login M3 challenge R=bef0361a e=4
+server   2026-11-27 19:30:02+0200  encrypted send peer=M3 nonce=1 bytes=19
+server   2026-11-27 19:30:02+0200  decrypted receive peer=M3 nonce=2 validation OK tag OK
+server   2026-11-27 19:30:02+0200  login M3 R=bef0361a e=4 z=39690650 g^z=R*X^e: FAILED
+server   2026-11-27 19:30:02+0200  application rejection member=M3 reason=invalid Schnorr proof
+server   2026-11-27 19:30:02+0200  encrypted send peer=M3 nonce=2 bytes=44
+server   2026-11-27 19:30:02+0200  connection closed peer=M3
+server   2026-11-27 19:30:02+0200  connection accepted from 127.0.0.1:61443
+server   2026-11-27 19:30:02+0200  certificate verification OK peer=M3 group=16002216-16003727-16004417-16005162 sig=30450220
+server   2026-11-27 19:30:02+0200  handshake sent server hello X=04b625cd Y=04130eb7
+server   2026-11-27 19:30:02+0200  hs-member signature verification OK X=04b625cd Y=04130eb7 sig=30460221
+server   2026-11-27 19:30:02+0200  session established peer=M3; login still required
+server   2026-11-27 19:30:02+0200  decrypted receive peer=M3 nonce=0 validation OK tag OK
+server   2026-11-27 19:30:02+0200  encrypted send peer=M3 nonce=0 bytes=4151
+server   2026-11-27 19:30:02+0200  decrypted receive peer=M3 nonce=1 validation OK tag OK
+server   2026-11-27 19:30:02+0200  login M3 challenge R=c4d1b968 e=2
+server   2026-11-27 19:30:02+0200  encrypted send peer=M3 nonce=1 bytes=19
+server   2026-11-27 19:30:02+0200  decrypted receive peer=M3 nonce=2 validation OK tag OK
+server   2026-11-27 19:30:02+0200  login M3 R=c4d1b968 e=2 z=387efc17 g^z=R*X^e: FAILED
+server   2026-11-27 19:30:02+0200  application rejection member=M3 reason=invalid Schnorr proof
+server   2026-11-27 19:30:02+0200  encrypted send peer=M3 nonce=2 bytes=44
+server   2026-11-27 19:30:02+0200  connection closed peer=M3
+server   2026-11-27 19:30:02+0200  connection accepted from 127.0.0.1:61444
+server   2026-11-27 19:30:03+0200  certificate verification OK peer=M3 group=16002216-16003727-16004417-16005162 sig=30450220
+server   2026-11-27 19:30:03+0200  handshake sent server hello X=042d9e9c Y=042a4aa9
+server   2026-11-27 19:30:03+0200  hs-member signature verification OK X=042d9e9c Y=042a4aa9 sig=30440220
+server   2026-11-27 19:30:03+0200  session established peer=M3; login still required
+server   2026-11-27 19:30:03+0200  decrypted receive peer=M3 nonce=0 validation OK tag OK
+server   2026-11-27 19:30:03+0200  encrypted send peer=M3 nonce=0 bytes=4151
+server   2026-11-27 19:30:03+0200  decrypted receive peer=M3 nonce=1 validation OK tag OK
+server   2026-11-27 19:30:03+0200  login M3 challenge R=35afb05c e=c
+server   2026-11-27 19:30:03+0200  encrypted send peer=M3 nonce=1 bytes=19
+server   2026-11-27 19:30:03+0200  decrypted receive peer=M3 nonce=2 validation OK tag OK
+server   2026-11-27 19:30:03+0200  login M3 R=35afb05c e=c z=457de594 g^z=R*X^e: FAILED
+server   2026-11-27 19:30:03+0200  application rejection member=M3 reason=invalid Schnorr proof
+server   2026-11-27 19:30:03+0200  encrypted send peer=M3 nonce=2 bytes=44
+server   2026-11-27 19:30:03+0200  connection closed peer=M3
+server   2026-11-27 19:30:03+0200  connection accepted from 127.0.0.1:61445
+server   2026-11-27 19:30:03+0200  certificate verification OK peer=M3 group=16002216-16003727-16004417-16005162 sig=30450220
+server   2026-11-27 19:30:03+0200  handshake sent server hello X=0416e75e Y=0473eea0
+server   2026-11-27 19:30:03+0200  hs-member signature verification OK X=0416e75e Y=0473eea0 sig=30450220
+server   2026-11-27 19:30:03+0200  session established peer=M3; login still required
+server   2026-11-27 19:30:03+0200  decrypted receive peer=M3 nonce=0 validation OK tag OK
+server   2026-11-27 19:30:03+0200  encrypted send peer=M3 nonce=0 bytes=4151
+server   2026-11-27 19:30:03+0200  decrypted receive peer=M3 nonce=1 validation OK tag OK
+server   2026-11-27 19:30:03+0200  login M3 challenge R=9ae48bf3 e=6
+server   2026-11-27 19:30:03+0200  encrypted send peer=M3 nonce=1 bytes=19
+server   2026-11-27 19:30:03+0200  decrypted receive peer=M3 nonce=2 validation OK tag OK
+server   2026-11-27 19:30:03+0200  login M3 R=9ae48bf3 e=6 z=279c246a g^z=R*X^e: FAILED
+server   2026-11-27 19:30:03+0200  application rejection member=M3 reason=invalid Schnorr proof
+server   2026-11-27 19:30:03+0200  encrypted send peer=M3 nonce=2 bytes=44
+server   2026-11-27 19:30:03+0200  connection closed peer=M3
+server   2026-11-27 19:30:03+0200  connection accepted from 127.0.0.1:61446
+server   2026-11-27 19:30:03+0200  certificate verification OK peer=M3 group=16002216-16003727-16004417-16005162 sig=30450220
+server   2026-11-27 19:30:03+0200  handshake sent server hello X=048af545 Y=04737480
+server   2026-11-27 19:30:03+0200  hs-member signature verification OK X=048af545 Y=04737480 sig=30460221
+server   2026-11-27 19:30:03+0200  session established peer=M3; login still required
+server   2026-11-27 19:30:03+0200  decrypted receive peer=M3 nonce=0 validation OK tag OK
+server   2026-11-27 19:30:03+0200  encrypted send peer=M3 nonce=0 bytes=4151
+server   2026-11-27 19:30:03+0200  decrypted receive peer=M3 nonce=1 validation OK tag OK
+server   2026-11-27 19:30:03+0200  login M3 challenge R=8e7eb10c e=c
+server   2026-11-27 19:30:03+0200  encrypted send peer=M3 nonce=1 bytes=19
+server   2026-11-27 19:30:03+0200  decrypted receive peer=M3 nonce=2 validation OK tag OK
+server   2026-11-27 19:30:03+0200  login M3 R=8e7eb10c e=c z=7ef77202 g^z=R*X^e: FAILED
+server   2026-11-27 19:30:03+0200  application rejection member=M3 reason=invalid Schnorr proof
+server   2026-11-27 19:30:03+0200  encrypted send peer=M3 nonce=2 bytes=44
+server   2026-11-27 19:30:03+0200  connection closed peer=M3
+server   2026-11-27 19:30:03+0200  connection accepted from 127.0.0.1:61447
+server   2026-11-27 19:30:03+0200  certificate verification OK peer=M3 group=16002216-16003727-16004417-16005162 sig=30450220
+server   2026-11-27 19:30:03+0200  handshake sent server hello X=0409cd62 Y=042796ac
+server   2026-11-27 19:30:03+0200  hs-member signature verification OK X=0409cd62 Y=042796ac sig=30450221
+server   2026-11-27 19:30:03+0200  session established peer=M3; login still required
+server   2026-11-27 19:30:03+0200  decrypted receive peer=M3 nonce=0 validation OK tag OK
+server   2026-11-27 19:30:03+0200  encrypted send peer=M3 nonce=0 bytes=4151
+server   2026-11-27 19:30:04+0200  decrypted receive peer=M3 nonce=1 validation OK tag OK
+server   2026-11-27 19:30:04+0200  login M3 challenge R=3bb347c9 e=c
+server   2026-11-27 19:30:04+0200  encrypted send peer=M3 nonce=1 bytes=19
+server   2026-11-27 19:30:04+0200  decrypted receive peer=M3 nonce=2 validation OK tag OK
+server   2026-11-27 19:30:04+0200  login M3 R=3bb347c9 e=c z=415a590d g^z=R*X^e: FAILED
+server   2026-11-27 19:30:04+0200  application rejection member=M3 reason=invalid Schnorr proof
+server   2026-11-27 19:30:04+0200  encrypted send peer=M3 nonce=2 bytes=44
+server   2026-11-27 19:30:04+0200  connection closed peer=M3
+server   2026-11-27 19:30:04+0200  connection accepted from 127.0.0.1:61448
+server   2026-11-27 19:30:04+0200  certificate verification OK peer=M3 group=16002216-16003727-16004417-16005162 sig=30450220
+server   2026-11-27 19:30:04+0200  handshake sent server hello X=0453dc4a Y=049cc807
+server   2026-11-27 19:30:04+0200  hs-member signature verification OK X=0453dc4a Y=049cc807 sig=30440220
+server   2026-11-27 19:30:04+0200  session established peer=M3; login still required
+server   2026-11-27 19:30:04+0200  decrypted receive peer=M3 nonce=0 validation OK tag OK
+server   2026-11-27 19:30:04+0200  encrypted send peer=M3 nonce=0 bytes=4151
+server   2026-11-27 19:30:04+0200  decrypted receive peer=M3 nonce=1 validation OK tag OK
+server   2026-11-27 19:30:04+0200  login M3 challenge R=1c73e112 e=3
+server   2026-11-27 19:30:04+0200  encrypted send peer=M3 nonce=1 bytes=19
+server   2026-11-27 19:30:04+0200  decrypted receive peer=M3 nonce=2 validation OK tag OK
+server   2026-11-27 19:30:04+0200  login M3 R=1c73e112 e=3 z=2dd986d9 g^z=R*X^e: FAILED
+server   2026-11-27 19:30:04+0200  application rejection member=M3 reason=invalid Schnorr proof
+server   2026-11-27 19:30:04+0200  encrypted send peer=M3 nonce=2 bytes=44
+server   2026-11-27 19:30:04+0200  connection closed peer=M3
+server   2026-11-27 19:30:04+0200  connection accepted from 127.0.0.1:61449
+server   2026-11-27 19:30:04+0200  certificate verification OK peer=M3 group=16002216-16003727-16004417-16005162 sig=30450220
+server   2026-11-27 19:30:04+0200  handshake sent server hello X=04362f2c Y=04f79e38
+server   2026-11-27 19:30:04+0200  hs-member signature verification OK X=04362f2c Y=04f79e38 sig=30450220
+server   2026-11-27 19:30:04+0200  session established peer=M3; login still required
+server   2026-11-27 19:30:04+0200  decrypted receive peer=M3 nonce=0 validation OK tag OK
+server   2026-11-27 19:30:04+0200  encrypted send peer=M3 nonce=0 bytes=4151
+server   2026-11-27 19:30:04+0200  decrypted receive peer=M3 nonce=1 validation OK tag OK
+server   2026-11-27 19:30:04+0200  login M3 challenge R=3fd71ce1 e=8
+server   2026-11-27 19:30:04+0200  encrypted send peer=M3 nonce=1 bytes=19
+server   2026-11-27 19:30:04+0200  decrypted receive peer=M3 nonce=2 validation OK tag OK
+server   2026-11-27 19:30:04+0200  login M3 R=3fd71ce1 e=8 z=16ab291e g^z=R*X^e: FAILED
+server   2026-11-27 19:30:04+0200  application rejection member=M3 reason=invalid Schnorr proof
+server   2026-11-27 19:30:04+0200  encrypted send peer=M3 nonce=2 bytes=44
+server   2026-11-27 19:30:04+0200  connection closed peer=M3
+server   2026-11-27 19:30:04+0200  connection accepted from 127.0.0.1:61450
+server   2026-11-27 19:30:04+0200  certificate verification OK peer=M3 group=16002216-16003727-16004417-16005162 sig=30450220
+server   2026-11-27 19:30:04+0200  handshake sent server hello X=047ea375 Y=040cc2ef
+server   2026-11-27 19:30:04+0200  hs-member signature verification OK X=047ea375 Y=040cc2ef sig=30440220
+server   2026-11-27 19:30:04+0200  session established peer=M3; login still required
+server   2026-11-27 19:30:04+0200  decrypted receive peer=M3 nonce=0 validation OK tag OK
+server   2026-11-27 19:30:04+0200  encrypted send peer=M3 nonce=0 bytes=4151
+server   2026-11-27 19:30:05+0200  decrypted receive peer=M3 nonce=1 validation OK tag OK
+server   2026-11-27 19:30:05+0200  login M3 challenge R=19a2a238 e=c
+server   2026-11-27 19:30:05+0200  encrypted send peer=M3 nonce=1 bytes=19
+server   2026-11-27 19:30:05+0200  decrypted receive peer=M3 nonce=2 validation OK tag OK
+server   2026-11-27 19:30:05+0200  login M3 R=19a2a238 e=c z=670eb9df g^z=R*X^e: FAILED
+server   2026-11-27 19:30:05+0200  application rejection member=M3 reason=invalid Schnorr proof
+server   2026-11-27 19:30:05+0200  encrypted send peer=M3 nonce=2 bytes=44
+server   2026-11-27 19:30:05+0200  connection closed peer=M3
+server   2026-11-27 19:30:05+0200  connection accepted from 127.0.0.1:61451
+server   2026-11-27 19:30:05+0200  certificate verification OK peer=M3 group=16002216-16003727-16004417-16005162 sig=30450220
+server   2026-11-27 19:30:05+0200  handshake sent server hello X=045355b8 Y=04f82404
+server   2026-11-27 19:30:05+0200  hs-member signature verification OK X=045355b8 Y=04f82404 sig=30440220
+server   2026-11-27 19:30:05+0200  session established peer=M3; login still required
+server   2026-11-27 19:30:05+0200  decrypted receive peer=M3 nonce=0 validation OK tag OK
+server   2026-11-27 19:30:05+0200  encrypted send peer=M3 nonce=0 bytes=4151
+server   2026-11-27 19:30:05+0200  decrypted receive peer=M3 nonce=1 validation OK tag OK
+server   2026-11-27 19:30:05+0200  login M3 challenge R=749da5de e=0
+server   2026-11-27 19:30:05+0200  encrypted send peer=M3 nonce=1 bytes=19
+server   2026-11-27 19:30:05+0200  decrypted receive peer=M3 nonce=2 validation OK tag OK
+server   2026-11-27 19:30:05+0200  login M3 R=749da5de e=0 z=23dbac83 g^z=R*X^e: FAILED
+server   2026-11-27 19:30:05+0200  application rejection member=M3 reason=invalid Schnorr proof
+server   2026-11-27 19:30:05+0200  encrypted send peer=M3 nonce=2 bytes=44
+server   2026-11-27 19:30:05+0200  connection closed peer=M3
+server   2026-11-27 19:30:05+0200  connection accepted from 127.0.0.1:61452
+server   2026-11-27 19:30:05+0200  certificate verification OK peer=M3 group=16002216-16003727-16004417-16005162 sig=30450220
+server   2026-11-27 19:30:05+0200  handshake sent server hello X=04c24f7d Y=0442e40d
+server   2026-11-27 19:30:05+0200  hs-member signature verification OK X=04c24f7d Y=0442e40d sig=30450220
+server   2026-11-27 19:30:05+0200  session established peer=M3; login still required
+server   2026-11-27 19:30:05+0200  decrypted receive peer=M3 nonce=0 validation OK tag OK
+server   2026-11-27 19:30:05+0200  encrypted send peer=M3 nonce=0 bytes=4151
+server   2026-11-27 19:30:05+0200  decrypted receive peer=M3 nonce=1 validation OK tag OK
+server   2026-11-27 19:30:05+0200  login M3 challenge R=38f70c74 e=c
+server   2026-11-27 19:30:05+0200  encrypted send peer=M3 nonce=1 bytes=19
+server   2026-11-27 19:30:05+0200  decrypted receive peer=M3 nonce=2 validation OK tag OK
+server   2026-11-27 19:30:05+0200  login M3 R=38f70c74 e=c z=6050ae49 g^z=R*X^e: FAILED
+server   2026-11-27 19:30:05+0200  application rejection member=M3 reason=invalid Schnorr proof
+server   2026-11-27 19:30:05+0200  encrypted send peer=M3 nonce=2 bytes=44
+server   2026-11-27 19:30:05+0200  connection closed peer=M3
+server   2026-11-27 19:30:05+0200  connection accepted from 127.0.0.1:61453
+server   2026-11-27 19:30:05+0200  certificate verification OK peer=M3 group=16002216-16003727-16004417-16005162 sig=30450220
+server   2026-11-27 19:30:05+0200  handshake sent server hello X=04ef6908 Y=04dccb4d
+server   2026-11-27 19:30:05+0200  hs-member signature verification OK X=04ef6908 Y=04dccb4d sig=30450220
+server   2026-11-27 19:30:05+0200  session established peer=M3; login still required
+server   2026-11-27 19:30:05+0200  decrypted receive peer=M3 nonce=0 validation OK tag OK
+server   2026-11-27 19:30:05+0200  encrypted send peer=M3 nonce=0 bytes=4151
+server   2026-11-27 19:30:06+0200  decrypted receive peer=M3 nonce=1 validation OK tag OK
+server   2026-11-27 19:30:06+0200  login M3 challenge R=7e9eda9a e=7
+server   2026-11-27 19:30:06+0200  encrypted send peer=M3 nonce=1 bytes=19
+server   2026-11-27 19:30:06+0200  decrypted receive peer=M3 nonce=2 validation OK tag OK
+server   2026-11-27 19:30:06+0200  login M3 R=7e9eda9a e=7 z=302b6afe g^z=R*X^e: FAILED
+server   2026-11-27 19:30:06+0200  application rejection member=M3 reason=invalid Schnorr proof
+server   2026-11-27 19:30:06+0200  encrypted send peer=M3 nonce=2 bytes=44
+server   2026-11-27 19:30:06+0200  connection closed peer=M3
+server   2026-11-27 19:30:06+0200  connection accepted from 127.0.0.1:61454
+server   2026-11-27 19:30:06+0200  certificate verification OK peer=M3 group=16002216-16003727-16004417-16005162 sig=30450220
+server   2026-11-27 19:30:06+0200  handshake sent server hello X=043180f8 Y=04ecd5ac
+server   2026-11-27 19:30:06+0200  hs-member signature verification OK X=043180f8 Y=04ecd5ac sig=30440220
+server   2026-11-27 19:30:06+0200  session established peer=M3; login still required
+server   2026-11-27 19:30:06+0200  decrypted receive peer=M3 nonce=0 validation OK tag OK
+server   2026-11-27 19:30:06+0200  encrypted send peer=M3 nonce=0 bytes=4151
+server   2026-11-27 19:30:06+0200  decrypted receive peer=M3 nonce=1 validation OK tag OK
+server   2026-11-27 19:30:06+0200  login M3 challenge R=e9c69fc3 e=a
+server   2026-11-27 19:30:06+0200  encrypted send peer=M3 nonce=1 bytes=19
+server   2026-11-27 19:30:06+0200  decrypted receive peer=M3 nonce=2 validation OK tag OK
+server   2026-11-27 19:30:06+0200  login M3 R=e9c69fc3 e=a z=2b2bb1d7 g^z=R*X^e: FAILED
+server   2026-11-27 19:30:06+0200  application rejection member=M3 reason=invalid Schnorr proof
+server   2026-11-27 19:30:06+0200  encrypted send peer=M3 nonce=2 bytes=44
+server   2026-11-27 19:30:06+0200  connection closed peer=M3
+server   2026-11-27 19:30:06+0200  connection accepted from 127.0.0.1:61455
+server   2026-11-27 19:30:06+0200  certificate verification OK peer=M3 group=16002216-16003727-16004417-16005162 sig=30450220
+server   2026-11-27 19:30:06+0200  handshake sent server hello X=04d7c33d Y=045b875d
+server   2026-11-27 19:30:06+0200  hs-member signature verification OK X=04d7c33d Y=045b875d sig=30450221
+server   2026-11-27 19:30:06+0200  session established peer=M3; login still required
+server   2026-11-27 19:30:06+0200  decrypted receive peer=M3 nonce=0 validation OK tag OK
+server   2026-11-27 19:30:06+0200  encrypted send peer=M3 nonce=0 bytes=4151
+server   2026-11-27 19:30:06+0200  decrypted receive peer=M3 nonce=1 validation OK tag OK
+server   2026-11-27 19:30:06+0200  login M3 challenge R=deb51517 e=3
+server   2026-11-27 19:30:06+0200  encrypted send peer=M3 nonce=1 bytes=19
+server   2026-11-27 19:30:06+0200  decrypted receive peer=M3 nonce=2 validation OK tag OK
+server   2026-11-27 19:30:06+0200  login M3 R=deb51517 e=3 z=5660bb19 g^z=R*X^e: FAILED
+server   2026-11-27 19:30:06+0200  application rejection member=M3 reason=invalid Schnorr proof
+server   2026-11-27 19:30:06+0200  encrypted send peer=M3 nonce=2 bytes=44
+server   2026-11-27 19:30:06+0200  connection closed peer=M3
+server   2026-11-27 19:30:06+0200  connection accepted from 127.0.0.1:61456
+server   2026-11-27 19:30:06+0200  certificate verification OK peer=M3 group=16002216-16003727-16004417-16005162 sig=30450220
+server   2026-11-27 19:30:06+0200  handshake sent server hello X=04f1f77d Y=04adb53f
+server   2026-11-27 19:30:06+0200  hs-member signature verification OK X=04f1f77d Y=04adb53f sig=30440220
+server   2026-11-27 19:30:06+0200  session established peer=M3; login still required
+server   2026-11-27 19:30:06+0200  decrypted receive peer=M3 nonce=0 validation OK tag OK
+server   2026-11-27 19:30:06+0200  encrypted send peer=M3 nonce=0 bytes=4151
+server   2026-11-27 19:30:06+0200  decrypted receive peer=M3 nonce=1 validation OK tag OK
+server   2026-11-27 19:30:06+0200  login M3 challenge R=38aa25e4 e=2
+server   2026-11-27 19:30:06+0200  encrypted send peer=M3 nonce=1 bytes=19
+server   2026-11-27 19:30:06+0200  decrypted receive peer=M3 nonce=2 validation OK tag OK
+server   2026-11-27 19:30:07+0200  login M3 R=38aa25e4 e=2 z=4880167b g^z=R*X^e: FAILED
+server   2026-11-27 19:30:07+0200  application rejection member=M3 reason=invalid Schnorr proof
+server   2026-11-27 19:30:07+0200  encrypted send peer=M3 nonce=2 bytes=44
+server   2026-11-27 19:30:07+0200  connection closed peer=M3
+server   2026-11-27 19:30:07+0200  connection accepted from 127.0.0.1:61457
+server   2026-11-27 19:30:07+0200  certificate verification OK peer=M3 group=16002216-16003727-16004417-16005162 sig=30450220
+server   2026-11-27 19:30:07+0200  handshake sent server hello X=04084040 Y=04428e63
+server   2026-11-27 19:30:07+0200  hs-member signature verification OK X=04084040 Y=04428e63 sig=30450221
+server   2026-11-27 19:30:07+0200  session established peer=M3; login still required
+server   2026-11-27 19:30:07+0200  decrypted receive peer=M3 nonce=0 validation OK tag OK
+server   2026-11-27 19:30:07+0200  encrypted send peer=M3 nonce=0 bytes=4151
+server   2026-11-27 19:30:07+0200  decrypted receive peer=M3 nonce=1 validation OK tag OK
+server   2026-11-27 19:30:07+0200  login M3 challenge R=345be005 e=2
+server   2026-11-27 19:30:07+0200  encrypted send peer=M3 nonce=1 bytes=19
+server   2026-11-27 19:30:07+0200  decrypted receive peer=M3 nonce=2 validation OK tag OK
+server   2026-11-27 19:30:07+0200  login M3 R=345be005 e=2 z=1b07dc23 g^z=R*X^e: FAILED
+server   2026-11-27 19:30:07+0200  application rejection member=M3 reason=invalid Schnorr proof
+server   2026-11-27 19:30:07+0200  encrypted send peer=M3 nonce=2 bytes=44
+server   2026-11-27 19:30:07+0200  connection closed peer=M3
+server   2026-11-27 19:30:07+0200  connection accepted from 127.0.0.1:61459
+server   2026-11-27 19:30:07+0200  certificate verification OK peer=M3 group=16002216-16003727-16004417-16005162 sig=30450220
+server   2026-11-27 19:30:07+0200  handshake sent server hello X=04babb4b Y=04cdd363
+server   2026-11-27 19:30:07+0200  hs-member signature verification OK X=04babb4b Y=04cdd363 sig=30450220
+server   2026-11-27 19:30:07+0200  session established peer=M3; login still required
+server   2026-11-27 19:30:07+0200  decrypted receive peer=M3 nonce=0 validation OK tag OK
+server   2026-11-27 19:30:07+0200  encrypted send peer=M3 nonce=0 bytes=4151
+server   2026-11-27 19:30:07+0200  decrypted receive peer=M3 nonce=1 validation OK tag OK
+server   2026-11-27 19:30:07+0200  login M3 challenge R=17e18f78 e=9
+server   2026-11-27 19:30:07+0200  encrypted send peer=M3 nonce=1 bytes=19
+server   2026-11-27 19:30:07+0200  decrypted receive peer=M3 nonce=2 validation OK tag OK
+server   2026-11-27 19:30:07+0200  login M3 R=17e18f78 e=9 z=719a4bd7 g^z=R*X^e: FAILED
+server   2026-11-27 19:30:07+0200  application rejection member=M3 reason=invalid Schnorr proof
+server   2026-11-27 19:30:07+0200  encrypted send peer=M3 nonce=2 bytes=44
+server   2026-11-27 19:30:07+0200  connection closed peer=M3
+server   2026-11-27 19:30:07+0200  connection accepted from 127.0.0.1:61460
+server   2026-11-27 19:30:07+0200  certificate verification OK peer=M3 group=16002216-16003727-16004417-16005162 sig=30450220
+server   2026-11-27 19:30:07+0200  handshake sent server hello X=04db681d Y=04147896
+server   2026-11-27 19:30:07+0200  hs-member signature verification OK X=04db681d Y=04147896 sig=30440220
+server   2026-11-27 19:30:07+0200  session established peer=M3; login still required
+server   2026-11-27 19:30:07+0200  decrypted receive peer=M3 nonce=0 validation OK tag OK
+server   2026-11-27 19:30:07+0200  encrypted send peer=M3 nonce=0 bytes=4151
+server   2026-11-27 19:30:07+0200  decrypted receive peer=M3 nonce=1 validation OK tag OK
+server   2026-11-27 19:30:08+0200  login M3 challenge R=e5830c68 e=0
+server   2026-11-27 19:30:08+0200  encrypted send peer=M3 nonce=1 bytes=19
+server   2026-11-27 19:30:08+0200  decrypted receive peer=M3 nonce=2 validation OK tag OK
+server   2026-11-27 19:30:08+0200  login M3 R=e5830c68 e=0 z=7760277f g^z=R*X^e: FAILED
+server   2026-11-27 19:30:08+0200  application rejection member=M3 reason=invalid Schnorr proof
+server   2026-11-27 19:30:08+0200  encrypted send peer=M3 nonce=2 bytes=44
+server   2026-11-27 19:30:08+0200  connection closed peer=M3
+server   2026-11-27 19:30:08+0200  connection accepted from 127.0.0.1:61461
+server   2026-11-27 19:30:08+0200  certificate verification OK peer=M3 group=16002216-16003727-16004417-16005162 sig=30450220
+server   2026-11-27 19:30:08+0200  handshake sent server hello X=0496a2da Y=045585a7
+server   2026-11-27 19:30:08+0200  hs-member signature verification OK X=0496a2da Y=045585a7 sig=30450221
+server   2026-11-27 19:30:08+0200  session established peer=M3; login still required
+server   2026-11-27 19:30:08+0200  decrypted receive peer=M3 nonce=0 validation OK tag OK
+server   2026-11-27 19:30:08+0200  encrypted send peer=M3 nonce=0 bytes=4151
+server   2026-11-27 19:30:08+0200  decrypted receive peer=M3 nonce=1 validation OK tag OK
+server   2026-11-27 19:30:08+0200  login M3 challenge R=dd41792e e=4
+server   2026-11-27 19:30:08+0200  encrypted send peer=M3 nonce=1 bytes=19
+server   2026-11-27 19:30:08+0200  decrypted receive peer=M3 nonce=2 validation OK tag OK
+server   2026-11-27 19:30:08+0200  login M3 R=dd41792e e=4 z=1e36524c g^z=R*X^e: FAILED
+server   2026-11-27 19:30:08+0200  application rejection member=M3 reason=invalid Schnorr proof
+server   2026-11-27 19:30:08+0200  encrypted send peer=M3 nonce=2 bytes=44
+server   2026-11-27 19:30:08+0200  connection closed peer=M3
+server   2026-11-27 19:30:08+0200  connection accepted from 127.0.0.1:61462
+server   2026-11-27 19:30:08+0200  certificate verification OK peer=M3 group=16002216-16003727-16004417-16005162 sig=30450220
+server   2026-11-27 19:30:08+0200  handshake sent server hello X=04cf44a6 Y=0458317f
+server   2026-11-27 19:30:08+0200  hs-member signature verification OK X=04cf44a6 Y=0458317f sig=30460221
+server   2026-11-27 19:30:08+0200  session established peer=M3; login still required
+server   2026-11-27 19:30:08+0200  decrypted receive peer=M3 nonce=0 validation OK tag OK
+server   2026-11-27 19:30:08+0200  encrypted send peer=M3 nonce=0 bytes=4151
+server   2026-11-27 19:30:08+0200  decrypted receive peer=M3 nonce=1 validation OK tag OK
+server   2026-11-27 19:30:08+0200  login M3 challenge R=da3f4d66 e=c
+server   2026-11-27 19:30:08+0200  encrypted send peer=M3 nonce=1 bytes=19
+server   2026-11-27 19:30:08+0200  decrypted receive peer=M3 nonce=2 validation OK tag OK
+server   2026-11-27 19:30:08+0200  login M3 R=da3f4d66 e=c z=30273ed1 g^z=R*X^e: FAILED
+server   2026-11-27 19:30:08+0200  application rejection member=M3 reason=invalid Schnorr proof
+server   2026-11-27 19:30:08+0200  encrypted send peer=M3 nonce=2 bytes=44
+server   2026-11-27 19:30:08+0200  connection closed peer=M3
+server   2026-11-27 19:30:08+0200  connection accepted from 127.0.0.1:61463
+server   2026-11-27 19:30:08+0200  certificate verification OK peer=M3 group=16002216-16003727-16004417-16005162 sig=30450220
+server   2026-11-27 19:30:08+0200  handshake sent server hello X=048f8934 Y=0482cf64
+server   2026-11-27 19:30:08+0200  hs-member signature verification OK X=048f8934 Y=0482cf64 sig=30460221
+server   2026-11-27 19:30:08+0200  session established peer=M3; login still required
+server   2026-11-27 19:30:08+0200  decrypted receive peer=M3 nonce=0 validation OK tag OK
+server   2026-11-27 19:30:08+0200  encrypted send peer=M3 nonce=0 bytes=4151
+server   2026-11-27 19:30:09+0200  decrypted receive peer=M3 nonce=1 validation OK tag OK
+server   2026-11-27 19:30:09+0200  login M3 challenge R=973fe973 e=5
+server   2026-11-27 19:30:09+0200  encrypted send peer=M3 nonce=1 bytes=19
+server   2026-11-27 19:30:09+0200  decrypted receive peer=M3 nonce=2 validation OK tag OK
+server   2026-11-27 19:30:09+0200  login M3 R=973fe973 e=5 z=5377a804 g^z=R*X^e: FAILED
+server   2026-11-27 19:30:09+0200  application rejection member=M3 reason=invalid Schnorr proof
+server   2026-11-27 19:30:09+0200  encrypted send peer=M3 nonce=2 bytes=44
+server   2026-11-27 19:30:09+0200  connection closed peer=M3
+server   2026-11-27 19:30:09+0200  connection accepted from 127.0.0.1:61464
+server   2026-11-27 19:30:09+0200  certificate verification OK peer=M3 group=16002216-16003727-16004417-16005162 sig=30450220
+server   2026-11-27 19:30:09+0200  handshake sent server hello X=043f1fbb Y=04adc2e4
+server   2026-11-27 19:30:09+0200  hs-member signature verification OK X=043f1fbb Y=04adc2e4 sig=30440220
+server   2026-11-27 19:30:09+0200  session established peer=M3; login still required
+server   2026-11-27 19:30:09+0200  decrypted receive peer=M3 nonce=0 validation OK tag OK
+server   2026-11-27 19:30:09+0200  encrypted send peer=M3 nonce=0 bytes=4151
+server   2026-11-27 19:30:09+0200  decrypted receive peer=M3 nonce=1 validation OK tag OK
+server   2026-11-27 19:30:09+0200  login M3 challenge R=47175a07 e=9
+server   2026-11-27 19:30:09+0200  encrypted send peer=M3 nonce=1 bytes=19
+server   2026-11-27 19:30:09+0200  decrypted receive peer=M3 nonce=2 validation OK tag OK
+server   2026-11-27 19:30:09+0200  login M3 R=47175a07 e=9 z=ef3dea38 g^z=R*X^e: FAILED
+server   2026-11-27 19:30:09+0200  application rejection member=M3 reason=invalid Schnorr proof
+server   2026-11-27 19:30:09+0200  encrypted send peer=M3 nonce=2 bytes=44
+server   2026-11-27 19:30:09+0200  connection closed peer=M3
+server   2026-11-27 19:30:09+0200  connection accepted from 127.0.0.1:61465
+server   2026-11-27 19:30:09+0200  certificate verification OK peer=M3 group=16002216-16003727-16004417-16005162 sig=30450220
+server   2026-11-27 19:30:09+0200  handshake sent server hello X=045c6dfd Y=0466256f
+server   2026-11-27 19:30:09+0200  hs-member signature verification OK X=045c6dfd Y=0466256f sig=30460221
+server   2026-11-27 19:30:09+0200  session established peer=M3; login still required
+server   2026-11-27 19:30:09+0200  decrypted receive peer=M3 nonce=0 validation OK tag OK
+server   2026-11-27 19:30:09+0200  encrypted send peer=M3 nonce=0 bytes=4151
+server   2026-11-27 19:30:09+0200  decrypted receive peer=M3 nonce=1 validation OK tag OK
+server   2026-11-27 19:30:09+0200  login M3 challenge R=dd52eadf e=c
+server   2026-11-27 19:30:09+0200  encrypted send peer=M3 nonce=1 bytes=19
+server   2026-11-27 19:30:09+0200  decrypted receive peer=M3 nonce=2 validation OK tag OK
+server   2026-11-27 19:30:09+0200  login M3 R=dd52eadf e=c z=cc39a6b9 g^z=R*X^e: FAILED
+server   2026-11-27 19:30:09+0200  application rejection member=M3 reason=invalid Schnorr proof
+server   2026-11-27 19:30:09+0200  encrypted send peer=M3 nonce=2 bytes=44
+server   2026-11-27 19:30:09+0200  connection closed peer=M3
+server   2026-11-27 19:30:09+0200  connection accepted from 127.0.0.1:61466
+server   2026-11-27 19:30:09+0200  certificate verification OK peer=M3 group=16002216-16003727-16004417-16005162 sig=30450220
+server   2026-11-27 19:30:09+0200  handshake sent server hello X=048ba89e Y=0491bd1f
+server   2026-11-27 19:30:09+0200  hs-member signature verification OK X=048ba89e Y=0491bd1f sig=30440220
+server   2026-11-27 19:30:09+0200  session established peer=M3; login still required
+server   2026-11-27 19:30:09+0200  decrypted receive peer=M3 nonce=0 validation OK tag OK
+server   2026-11-27 19:30:09+0200  encrypted send peer=M3 nonce=0 bytes=4151
+server   2026-11-27 19:30:10+0200  decrypted receive peer=M3 nonce=1 validation OK tag OK
+server   2026-11-27 19:30:10+0200  login M3 challenge R=6a1f7d90 e=7
+server   2026-11-27 19:30:10+0200  encrypted send peer=M3 nonce=1 bytes=19
+server   2026-11-27 19:30:10+0200  decrypted receive peer=M3 nonce=2 validation OK tag OK
+server   2026-11-27 19:30:10+0200  login M3 R=6a1f7d90 e=7 z=4d84c26c g^z=R*X^e: FAILED
+server   2026-11-27 19:30:10+0200  application rejection member=M3 reason=invalid Schnorr proof
+server   2026-11-27 19:30:10+0200  encrypted send peer=M3 nonce=2 bytes=44
+server   2026-11-27 19:30:10+0200  connection closed peer=M3
+server   2026-11-27 19:30:10+0200  connection accepted from 127.0.0.1:61467
+server   2026-11-27 19:30:10+0200  certificate verification OK peer=M3 group=16002216-16003727-16004417-16005162 sig=30450220
+server   2026-11-27 19:30:10+0200  handshake sent server hello X=04909bd2 Y=044a270e
+server   2026-11-27 19:30:10+0200  hs-member signature verification OK X=04909bd2 Y=044a270e sig=30460221
+server   2026-11-27 19:30:10+0200  session established peer=M3; login still required
+server   2026-11-27 19:30:10+0200  decrypted receive peer=M3 nonce=0 validation OK tag OK
+server   2026-11-27 19:30:10+0200  encrypted send peer=M3 nonce=0 bytes=4151
+server   2026-11-27 19:30:10+0200  decrypted receive peer=M3 nonce=1 validation OK tag OK
+server   2026-11-27 19:30:10+0200  login M3 challenge R=bcec5771 e=b
+server   2026-11-27 19:30:10+0200  encrypted send peer=M3 nonce=1 bytes=19
+server   2026-11-27 19:30:10+0200  decrypted receive peer=M3 nonce=2 validation OK tag OK
+server   2026-11-27 19:30:10+0200  login M3 R=bcec5771 e=b z=200a8374 g^z=R*X^e: OK
+server   2026-11-27 19:30:10+0200  encrypted send peer=M3 nonce=2 bytes=24
+server   2026-11-27 19:30:10+0200  connection closed peer=M3
+server   2026-11-27 19:30:10+0200  founder commitments signature OK C0=767afbf8 t=3 n=5
+server   2026-11-27 19:30:10+0200  listening on 127.0.0.1:5050 mode=secure n=5 t=3
+server   2026-11-27 19:30:11+0200  connection accepted from 127.0.0.1:61468
+server   2026-11-27 19:30:11+0200  certificate verification OK peer=M3 group=16002216-16003727-16004417-16005162 sig=30450220
+server   2026-11-27 19:30:11+0200  handshake sent server hello X=04c85b64 Y=04fb8f9c
+server   2026-11-27 19:30:11+0200  hs-member signature verification OK X=04c85b64 Y=04fb8f9c sig=30460221
+server   2026-11-27 19:30:11+0200  session established peer=M3; login still required
+server   2026-11-27 19:30:11+0200  decrypted receive peer=M3 nonce=0 validation OK tag OK
+server   2026-11-27 19:30:11+0200  encrypted send peer=M3 nonce=0 bytes=4151
+server   2026-11-27 19:30:11+0200  decrypted receive peer=M3 nonce=1 validation OK tag OK
+server   2026-11-27 19:30:11+0200  login M3 challenge R=9b00f68b e=c6e5b204
+server   2026-11-27 19:30:11+0200  encrypted send peer=M3 nonce=1 bytes=50
+server   2026-11-27 19:30:11+0200  decrypted receive peer=M3 nonce=2 validation OK tag OK
+server   2026-11-27 19:30:11+0200  login M3 R=9b00f68b e=c6e5b204 z=54b2d7c5 g^z=R*X^e: OK
+server   2026-11-27 19:30:11+0200  encrypted send peer=M3 nonce=2 bytes=24
+server   2026-11-27 19:30:11+0200  connection closed peer=M3
+server   2026-11-27 19:30:11+0200  connection accepted from 127.0.0.1:61469
+server   2026-11-27 19:30:11+0200  certificate verification OK peer=M3 group=16002216-16003727-16004417-16005162 sig=30450220
+server   2026-11-27 19:30:11+0200  handshake sent server hello X=04776658 Y=0404206a
+server   2026-11-27 19:30:11+0200  hs-member signature verification OK X=04776658 Y=0404206a sig=30440220
+server   2026-11-27 19:30:11+0200  session established peer=M3; login still required
+server   2026-11-27 19:30:11+0200  decrypted receive peer=M3 nonce=0 validation OK tag OK
+server   2026-11-27 19:30:11+0200  encrypted send peer=M3 nonce=0 bytes=4151
+server   2026-11-27 19:30:11+0200  decrypted receive peer=M3 nonce=1 validation OK tag OK
+server   2026-11-27 19:30:11+0200  login M3 challenge R=66a0469d e=4d8f8771
+server   2026-11-27 19:30:11+0200  encrypted send peer=M3 nonce=1 bytes=50
+server   2026-11-27 19:30:11+0200  decrypted receive peer=M3 nonce=2 validation OK tag OK
+server   2026-11-27 19:30:12+0200  login M3 R=66a0469d e=4d8f8771 z=540f16ed g^z=R*X^e: FAILED
+server   2026-11-27 19:30:12+0200  application rejection member=M3 reason=invalid Schnorr proof
+server   2026-11-27 19:30:12+0200  encrypted send peer=M3 nonce=2 bytes=44
+server   2026-11-27 19:30:12+0200  connection closed peer=M3
+server   2026-11-27 19:30:12+0200  connection accepted from 127.0.0.1:61470
+server   2026-11-27 19:30:12+0200  certificate verification OK peer=M3 group=16002216-16003727-16004417-16005162 sig=30450220
+server   2026-11-27 19:30:12+0200  handshake sent server hello X=04333b33 Y=04e73bee
+server   2026-11-27 19:30:12+0200  hs-member signature verification OK X=04333b33 Y=04e73bee sig=30460221
+server   2026-11-27 19:30:12+0200  session established peer=M3; login still required
+server   2026-11-27 19:30:12+0200  decrypted receive peer=M3 nonce=0 validation OK tag OK
+server   2026-11-27 19:30:12+0200  encrypted send peer=M3 nonce=0 bytes=4151
+server   2026-11-27 19:30:12+0200  decrypted receive peer=M3 nonce=1 validation OK tag OK
+server   2026-11-27 19:30:12+0200  login M3 challenge R=be148ac7 e=f7825e85
+server   2026-11-27 19:30:12+0200  encrypted send peer=M3 nonce=1 bytes=50
+server   2026-11-27 19:30:12+0200  decrypted receive peer=M3 nonce=2 validation OK tag OK
+server   2026-11-27 19:30:12+0200  login M3 R=be148ac7 e=f7825e85 z=2e0223d1 g^z=R*X^e: FAILED
+server   2026-11-27 19:30:12+0200  application rejection member=M3 reason=invalid Schnorr proof
+server   2026-11-27 19:30:12+0200  encrypted send peer=M3 nonce=2 bytes=44
+server   2026-11-27 19:30:12+0200  connection closed peer=M3
+server   2026-11-27 19:30:12+0200  connection accepted from 127.0.0.1:61471
+server   2026-11-27 19:30:12+0200  certificate verification OK peer=M3 group=16002216-16003727-16004417-16005162 sig=30450220
+server   2026-11-27 19:30:12+0200  handshake sent server hello X=046b5387 Y=04aba97f
+server   2026-11-27 19:30:12+0200  hs-member signature verification OK X=046b5387 Y=04aba97f sig=30460221
+server   2026-11-27 19:30:12+0200  session established peer=M3; login still required
+server   2026-11-27 19:30:12+0200  decrypted receive peer=M3 nonce=0 validation OK tag OK
+server   2026-11-27 19:30:12+0200  encrypted send peer=M3 nonce=0 bytes=4151
+server   2026-11-27 19:30:12+0200  decrypted receive peer=M3 nonce=1 validation OK tag OK
+server   2026-11-27 19:30:12+0200  login M3 challenge R=3e61f731 e=5777629f
+server   2026-11-27 19:30:12+0200  encrypted send peer=M3 nonce=1 bytes=50
+server   2026-11-27 19:30:12+0200  decrypted receive peer=M3 nonce=2 validation OK tag OK
+server   2026-11-27 19:30:12+0200  login M3 R=3e61f731 e=5777629f z=41cef5b6 g^z=R*X^e: FAILED
+server   2026-11-27 19:30:12+0200  application rejection member=M3 reason=invalid Schnorr proof
+server   2026-11-27 19:30:12+0200  encrypted send peer=M3 nonce=2 bytes=44
+server   2026-11-27 19:30:12+0200  connection closed peer=M3
+server   2026-11-27 19:30:12+0200  connection accepted from 127.0.0.1:61472
+server   2026-11-27 19:30:12+0200  certificate verification OK peer=M3 group=16002216-16003727-16004417-16005162 sig=30450220
+server   2026-11-27 19:30:12+0200  handshake sent server hello X=04a9d0fc Y=04b17c24
+server   2026-11-27 19:30:12+0200  hs-member signature verification OK X=04a9d0fc Y=04b17c24 sig=30440220
+server   2026-11-27 19:30:12+0200  session established peer=M3; login still required
+server   2026-11-27 19:30:12+0200  decrypted receive peer=M3 nonce=0 validation OK tag OK
+server   2026-11-27 19:30:12+0200  encrypted send peer=M3 nonce=0 bytes=4151
+server   2026-11-27 19:30:12+0200  decrypted receive peer=M3 nonce=1 validation OK tag OK
+server   2026-11-27 19:30:12+0200  login M3 challenge R=ec04375f e=ac659f33
+server   2026-11-27 19:30:12+0200  encrypted send peer=M3 nonce=1 bytes=50
+server   2026-11-27 19:30:12+0200  decrypted receive peer=M3 nonce=2 validation OK tag OK
+server   2026-11-27 19:30:13+0200  login M3 R=ec04375f e=ac659f33 z=1f2302ce g^z=R*X^e: FAILED
+server   2026-11-27 19:30:13+0200  application rejection member=M3 reason=invalid Schnorr proof
+server   2026-11-27 19:30:13+0200  encrypted send peer=M3 nonce=2 bytes=44
+server   2026-11-27 19:30:13+0200  connection closed peer=M3
+server   2026-11-27 19:30:13+0200  connection accepted from 127.0.0.1:61473
+server   2026-11-27 19:30:13+0200  certificate verification OK peer=M3 group=16002216-16003727-16004417-16005162 sig=30450220
+server   2026-11-27 19:30:13+0200  handshake sent server hello X=04887e56 Y=043490e8
+server   2026-11-27 19:30:13+0200  hs-member signature verification OK X=04887e56 Y=043490e8 sig=30460221
+server   2026-11-27 19:30:13+0200  session established peer=M3; login still required
+server   2026-11-27 19:30:13+0200  decrypted receive peer=M3 nonce=0 validation OK tag OK
+server   2026-11-27 19:30:13+0200  encrypted send peer=M3 nonce=0 bytes=4151
+server   2026-11-27 19:30:13+0200  decrypted receive peer=M3 nonce=1 validation OK tag OK
+server   2026-11-27 19:30:13+0200  login M3 challenge R=5e201c54 e=6b3618fc
+server   2026-11-27 19:30:13+0200  encrypted send peer=M3 nonce=1 bytes=50
+server   2026-11-27 19:30:13+0200  decrypted receive peer=M3 nonce=2 validation OK tag OK
+server   2026-11-27 19:30:13+0200  login M3 R=5e201c54 e=6b3618fc z=2bc68690 g^z=R*X^e: FAILED
+server   2026-11-27 19:30:13+0200  application rejection member=M3 reason=invalid Schnorr proof
+server   2026-11-27 19:30:13+0200  encrypted send peer=M3 nonce=2 bytes=44
+server   2026-11-27 19:30:13+0200  connection closed peer=M3
+server   2026-11-27 19:30:13+0200  connection accepted from 127.0.0.1:61474
+server   2026-11-27 19:30:13+0200  certificate verification OK peer=M3 group=16002216-16003727-16004417-16005162 sig=30450220
+server   2026-11-27 19:30:13+0200  handshake sent server hello X=040fd2aa Y=04b253ab
+server   2026-11-27 19:30:13+0200  hs-member signature verification OK X=040fd2aa Y=04b253ab sig=30450220
+server   2026-11-27 19:30:13+0200  session established peer=M3; login still required
+server   2026-11-27 19:30:13+0200  decrypted receive peer=M3 nonce=0 validation OK tag OK
+server   2026-11-27 19:30:13+0200  encrypted send peer=M3 nonce=0 bytes=4151
+server   2026-11-27 19:30:13+0200  decrypted receive peer=M3 nonce=1 validation OK tag OK
+server   2026-11-27 19:30:13+0200  login M3 challenge R=f4bec32a e=793403bd
+server   2026-11-27 19:30:13+0200  encrypted send peer=M3 nonce=1 bytes=50
+server   2026-11-27 19:30:13+0200  decrypted receive peer=M3 nonce=2 validation OK tag OK
+server   2026-11-27 19:30:13+0200  login M3 R=f4bec32a e=793403bd z=603ca8d3 g^z=R*X^e: FAILED
+server   2026-11-27 19:30:13+0200  application rejection member=M3 reason=invalid Schnorr proof
+server   2026-11-27 19:30:13+0200  encrypted send peer=M3 nonce=2 bytes=44
+server   2026-11-27 19:30:13+0200  connection closed peer=M3
+server   2026-11-27 19:30:13+0200  connection accepted from 127.0.0.1:61475
+server   2026-11-27 19:30:13+0200  certificate verification OK peer=M3 group=16002216-16003727-16004417-16005162 sig=30450220
+server   2026-11-27 19:30:13+0200  handshake sent server hello X=046c2fea Y=04081b0b
+server   2026-11-27 19:30:13+0200  hs-member signature verification OK X=046c2fea Y=04081b0b sig=30450220
+server   2026-11-27 19:30:13+0200  session established peer=M3; login still required
+server   2026-11-27 19:30:13+0200  decrypted receive peer=M3 nonce=0 validation OK tag OK
+server   2026-11-27 19:30:13+0200  encrypted send peer=M3 nonce=0 bytes=4151
+server   2026-11-27 19:30:13+0200  decrypted receive peer=M3 nonce=1 validation OK tag OK
+server   2026-11-27 19:30:13+0200  login M3 challenge R=cdaa62b9 e=6d39755a
+server   2026-11-27 19:30:13+0200  encrypted send peer=M3 nonce=1 bytes=50
+server   2026-11-27 19:30:13+0200  decrypted receive peer=M3 nonce=2 validation OK tag OK
+server   2026-11-27 19:30:13+0200  login M3 R=cdaa62b9 e=6d39755a z=77e0789a g^z=R*X^e: FAILED
+server   2026-11-27 19:30:13+0200  application rejection member=M3 reason=invalid Schnorr proof
+server   2026-11-27 19:30:13+0200  encrypted send peer=M3 nonce=2 bytes=44
+server   2026-11-27 19:30:13+0200  connection closed peer=M3
+server   2026-11-27 19:30:13+0200  connection accepted from 127.0.0.1:61476
+server   2026-11-27 19:30:13+0200  certificate verification OK peer=M3 group=16002216-16003727-16004417-16005162 sig=30450220
+server   2026-11-27 19:30:13+0200  handshake sent server hello X=04cefccd Y=040f1abf
+server   2026-11-27 19:30:13+0200  hs-member signature verification OK X=04cefccd Y=040f1abf sig=30460221
+server   2026-11-27 19:30:13+0200  session established peer=M3; login still required
+server   2026-11-27 19:30:13+0200  decrypted receive peer=M3 nonce=0 validation OK tag OK
+server   2026-11-27 19:30:13+0200  encrypted send peer=M3 nonce=0 bytes=4151
+server   2026-11-27 19:30:14+0200  decrypted receive peer=M3 nonce=1 validation OK tag OK
+server   2026-11-27 19:30:14+0200  login M3 challenge R=3923012f e=7ff6509b
+server   2026-11-27 19:30:14+0200  encrypted send peer=M3 nonce=1 bytes=50
+server   2026-11-27 19:30:14+0200  decrypted receive peer=M3 nonce=2 validation OK tag OK
+server   2026-11-27 19:30:14+0200  login M3 R=3923012f e=7ff6509b z=9066eeac g^z=R*X^e: FAILED
+server   2026-11-27 19:30:14+0200  application rejection member=M3 reason=invalid Schnorr proof
+server   2026-11-27 19:30:14+0200  encrypted send peer=M3 nonce=2 bytes=44
+server   2026-11-27 19:30:14+0200  connection closed peer=M3

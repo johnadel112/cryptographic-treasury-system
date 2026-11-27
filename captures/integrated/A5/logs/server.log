@@ -1,0 +1,214 @@
+server   2026-11-27 19:32:21+0200  owner-local server key ready; public key published
+server   2026-11-27 19:32:24+0200  founder commitments signature OK C0=250a8509 t=3 n=5
+server   2026-11-27 19:32:24+0200  EDUCATIONAL WEAK MODE: no-proof
+server   2026-11-27 19:32:24+0200  listening on 127.0.0.1:5050 mode=no-proof n=5 t=3
+server   2026-11-27 19:32:24+0200  connection accepted from 127.0.0.1:56706
+server   2026-11-27 19:32:24+0200  certificate verification OK peer=M1 group=16002216-16003727-16004417-16005162 sig=30440220
+server   2026-11-27 19:32:24+0200  handshake sent server hello X=04600aac Y=04dcef84
+server   2026-11-27 19:32:24+0200  hs-member signature verification OK X=04600aac Y=04dcef84 sig=30460221
+server   2026-11-27 19:32:24+0200  session established peer=M1; login still required
+server   2026-11-27 19:32:24+0200  decrypted receive peer=M1 nonce=0 validation OK tag OK
+server   2026-11-27 19:32:24+0200  encrypted send peer=M1 nonce=0 bytes=3648
+server   2026-11-27 19:32:24+0200  decrypted receive peer=M1 nonce=1 validation OK tag OK
+server   2026-11-27 19:32:24+0200  registration M1 OK X=2668a8a1
+server   2026-11-27 19:32:24+0200  encrypted send peer=M1 nonce=1 bytes=11
+server   2026-11-27 19:32:24+0200  decrypted receive peer=M1 nonce=2 validation OK tag OK
+server   2026-11-27 19:32:24+0200  login M1 challenge R=b33cddd9 e=f070be24
+server   2026-11-27 19:32:24+0200  encrypted send peer=M1 nonce=2 bytes=50
+server   2026-11-27 19:32:24+0200  decrypted receive peer=M1 nonce=3 validation OK tag OK
+server   2026-11-27 19:32:24+0200  login M1 R=b33cddd9 e=f070be24 z=515fecdf g^z=R*X^e: OK
+server   2026-11-27 19:32:24+0200  encrypted send peer=M1 nonce=3 bytes=24
+server   2026-11-27 19:32:24+0200  decrypted receive peer=M1 nonce=4 validation OK tag OK
+server   2026-11-27 19:32:24+0200  request M1 seq=1 op=open-vault signature OK; accepted ledger entry
+server   2026-11-27 19:32:24+0200  encrypted send peer=M1 nonce=4 bytes=1184
+server   2026-11-27 19:32:24+0200  connection closed peer=M1
+server   2026-11-27 19:32:25+0200  connection accepted from 127.0.0.1:56707
+server   2026-11-27 19:32:25+0200  certificate verification OK peer=M1 group=16002216-16003727-16004417-16005162 sig=30440220
+server   2026-11-27 19:32:25+0200  handshake sent server hello X=04646aa5 Y=049fcd64
+server   2026-11-27 19:32:25+0200  hs-member signature verification OK X=04646aa5 Y=049fcd64 sig=30440220
+server   2026-11-27 19:32:25+0200  session established peer=M1; login still required
+server   2026-11-27 19:32:25+0200  decrypted receive peer=M1 nonce=0 validation OK tag OK
+server   2026-11-27 19:32:25+0200  encrypted send peer=M1 nonce=0 bytes=4157
+server   2026-11-27 19:32:25+0200  decrypted receive peer=M1 nonce=1 validation OK tag OK
+server   2026-11-27 19:32:25+0200  login M1 challenge R=2abb458f e=ad91690c
+server   2026-11-27 19:32:25+0200  encrypted send peer=M1 nonce=1 bytes=49
+server   2026-11-27 19:32:25+0200  decrypted receive peer=M1 nonce=2 validation OK tag OK
+server   2026-11-27 19:32:25+0200  login M1 R=2abb458f e=ad91690c z=634c700b g^z=R*X^e: OK
+server   2026-11-27 19:32:25+0200  encrypted send peer=M1 nonce=2 bytes=24
+server   2026-11-27 19:32:25+0200  decrypted receive peer=M1 nonce=3 validation OK tag OK
+server   2026-11-27 19:32:25+0200  encrypted send peer=M1 nonce=3 bytes=4157
+server   2026-11-27 19:32:25+0200  decrypted receive peer=M1 nonce=4 validation OK tag OK
+server   2026-11-27 19:32:25+0200  request M1 seq=2 op=status signature OK; accepted ledger entry
+server   2026-11-27 19:32:25+0200  encrypted send peer=M1 nonce=4 bytes=1184
+server   2026-11-27 19:32:26+0200  decrypted receive peer=M1 nonce=5 validation OK tag OK
+server   2026-11-27 19:32:26+0200  operation=vault-db50eb08993c68c836c00b771bdf4691 member=M1 d=4b6ab696 proof=SKIPPED (weak)
+server   2026-11-27 19:32:26+0200  request M1 seq=3 op=contribute signature OK; accepted ledger entry
+server   2026-11-27 19:32:26+0200  encrypted send peer=M1 nonce=5 bytes=1184
+server   2026-11-27 19:32:26+0200  connection closed peer=M1
+server   2026-11-27 19:32:26+0200  connection accepted from 127.0.0.1:56709
+server   2026-11-27 19:32:26+0200  certificate verification OK peer=M2 group=16002216-16003727-16004417-16005162 sig=30450220
+server   2026-11-27 19:32:26+0200  handshake sent server hello X=04aa45d1 Y=04bb657b
+server   2026-11-27 19:32:26+0200  hs-member signature verification OK X=04aa45d1 Y=04bb657b sig=30450221
+server   2026-11-27 19:32:26+0200  session established peer=M2; login still required
+server   2026-11-27 19:32:26+0200  decrypted receive peer=M2 nonce=0 validation OK tag OK
+server   2026-11-27 19:32:26+0200  encrypted send peer=M2 nonce=0 bytes=3648
+server   2026-11-27 19:32:26+0200  decrypted receive peer=M2 nonce=1 validation OK tag OK
+server   2026-11-27 19:32:26+0200  registration M2 OK X=b06d6a29
+server   2026-11-27 19:32:26+0200  encrypted send peer=M2 nonce=1 bytes=11
+server   2026-11-27 19:32:26+0200  decrypted receive peer=M2 nonce=2 validation OK tag OK
+server   2026-11-27 19:32:27+0200  login M2 challenge R=e0f95153 e=11786541
+server   2026-11-27 19:32:27+0200  encrypted send peer=M2 nonce=2 bytes=50
+server   2026-11-27 19:32:27+0200  decrypted receive peer=M2 nonce=3 validation OK tag OK
+server   2026-11-27 19:32:27+0200  login M2 R=e0f95153 e=11786541 z=6f529982 g^z=R*X^e: OK
+server   2026-11-27 19:32:27+0200  encrypted send peer=M2 nonce=3 bytes=24
+server   2026-11-27 19:32:27+0200  decrypted receive peer=M2 nonce=4 validation OK tag OK
+server   2026-11-27 19:32:27+0200  encrypted send peer=M2 nonce=4 bytes=4157
+server   2026-11-27 19:32:27+0200  decrypted receive peer=M2 nonce=5 validation OK tag OK
+server   2026-11-27 19:32:27+0200  request M2 seq=1 op=status signature OK; accepted ledger entry
+server   2026-11-27 19:32:27+0200  encrypted send peer=M2 nonce=5 bytes=1184
+server   2026-11-27 19:32:27+0200  decrypted receive peer=M2 nonce=6 validation OK tag OK
+server   2026-11-27 19:32:27+0200  operation=vault-db50eb08993c68c836c00b771bdf4691 member=M2 d=bb95c86a proof=SKIPPED (weak)
+server   2026-11-27 19:32:27+0200  request M2 seq=2 op=contribute signature OK; accepted ledger entry
+server   2026-11-27 19:32:27+0200  encrypted send peer=M2 nonce=6 bytes=1184
+server   2026-11-27 19:32:27+0200  connection closed peer=M2
+server   2026-11-27 19:32:28+0200  connection accepted from 127.0.0.1:56710
+server   2026-11-27 19:32:28+0200  certificate verification OK peer=M3 group=16002216-16003727-16004417-16005162 sig=30440220
+server   2026-11-27 19:32:28+0200  handshake sent server hello X=043b9d26 Y=04be764e
+server   2026-11-27 19:32:28+0200  hs-member signature verification OK X=043b9d26 Y=04be764e sig=30440220
+server   2026-11-27 19:32:28+0200  session established peer=M3; login still required
+server   2026-11-27 19:32:28+0200  decrypted receive peer=M3 nonce=0 validation OK tag OK
+server   2026-11-27 19:32:28+0200  encrypted send peer=M3 nonce=0 bytes=3648
+server   2026-11-27 19:32:28+0200  decrypted receive peer=M3 nonce=1 validation OK tag OK
+server   2026-11-27 19:32:28+0200  registration M3 OK X=a501fc87
+server   2026-11-27 19:32:28+0200  encrypted send peer=M3 nonce=1 bytes=11
+server   2026-11-27 19:32:28+0200  decrypted receive peer=M3 nonce=2 validation OK tag OK
+server   2026-11-27 19:32:28+0200  login M3 challenge R=a7e0cd5d e=7b294b2c
+server   2026-11-27 19:32:28+0200  encrypted send peer=M3 nonce=2 bytes=50
+server   2026-11-27 19:32:28+0200  decrypted receive peer=M3 nonce=3 validation OK tag OK
+server   2026-11-27 19:32:28+0200  login M3 R=a7e0cd5d e=7b294b2c z=4c3d9bd1 g^z=R*X^e: OK
+server   2026-11-27 19:32:28+0200  encrypted send peer=M3 nonce=3 bytes=24
+server   2026-11-27 19:32:28+0200  decrypted receive peer=M3 nonce=4 validation OK tag OK
+server   2026-11-27 19:32:28+0200  encrypted send peer=M3 nonce=4 bytes=4157
+server   2026-11-27 19:32:28+0200  decrypted receive peer=M3 nonce=5 validation OK tag OK
+server   2026-11-27 19:32:28+0200  request M3 seq=1 op=status signature OK; accepted ledger entry
+server   2026-11-27 19:32:28+0200  encrypted send peer=M3 nonce=5 bytes=1184
+server   2026-11-27 19:32:29+0200  decrypted receive peer=M3 nonce=6 validation OK tag OK
+server   2026-11-27 19:32:29+0200  operation=vault-db50eb08993c68c836c00b771bdf4691 member=M3 d=f64f7537 proof=SKIPPED (weak)
+server   2026-11-27 19:32:29+0200  operation=vault-db50eb08993c68c836c00b771bdf4691 vault recovery failed
+server   2026-11-27 19:32:29+0200  request M3 seq=2 op=contribute signature OK; accepted ledger entry
+server   2026-11-27 19:32:29+0200  encrypted send peer=M3 nonce=6 bytes=1180
+server   2026-11-27 19:32:29+0200  connection closed peer=M3
+server   2026-11-27 19:32:30+0200  founder commitments signature OK C0=250a8509 t=3 n=5
+server   2026-11-27 19:32:30+0200  listening on 127.0.0.1:5050 mode=secure n=5 t=3
+server   2026-11-27 19:32:30+0200  connection accepted from 127.0.0.1:56712
+server   2026-11-27 19:32:30+0200  certificate verification OK peer=M1 group=16002216-16003727-16004417-16005162 sig=30440220
+server   2026-11-27 19:32:30+0200  handshake sent server hello X=04495dd9 Y=041a8a53
+server   2026-11-27 19:32:30+0200  hs-member signature verification OK X=04495dd9 Y=041a8a53 sig=30440220
+server   2026-11-27 19:32:30+0200  session established peer=M1; login still required
+server   2026-11-27 19:32:30+0200  decrypted receive peer=M1 nonce=0 validation OK tag OK
+server   2026-11-27 19:32:30+0200  encrypted send peer=M1 nonce=0 bytes=4157
+server   2026-11-27 19:32:30+0200  decrypted receive peer=M1 nonce=1 validation OK tag OK
+server   2026-11-27 19:32:30+0200  login M1 challenge R=e1741702 e=7ea802c9
+server   2026-11-27 19:32:30+0200  encrypted send peer=M1 nonce=1 bytes=50
+server   2026-11-27 19:32:30+0200  decrypted receive peer=M1 nonce=2 validation OK tag OK
+server   2026-11-27 19:32:30+0200  login M1 R=e1741702 e=7ea802c9 z=3559dc95 g^z=R*X^e: OK
+server   2026-11-27 19:32:30+0200  encrypted send peer=M1 nonce=2 bytes=24
+server   2026-11-27 19:32:30+0200  decrypted receive peer=M1 nonce=3 validation OK tag OK
+server   2026-11-27 19:32:30+0200  request M1 seq=4 op=open-vault signature OK; accepted ledger entry
+server   2026-11-27 19:32:30+0200  encrypted send peer=M1 nonce=3 bytes=1184
+server   2026-11-27 19:32:30+0200  connection closed peer=M1
+server   2026-11-27 19:32:31+0200  connection accepted from 127.0.0.1:56713
+server   2026-11-27 19:32:31+0200  certificate verification OK peer=M1 group=16002216-16003727-16004417-16005162 sig=30440220
+server   2026-11-27 19:32:31+0200  handshake sent server hello X=041c0470 Y=043b949f
+server   2026-11-27 19:32:31+0200  hs-member signature verification OK X=041c0470 Y=043b949f sig=30450221
+server   2026-11-27 19:32:31+0200  session established peer=M1; login still required
+server   2026-11-27 19:32:31+0200  decrypted receive peer=M1 nonce=0 validation OK tag OK
+server   2026-11-27 19:32:31+0200  encrypted send peer=M1 nonce=0 bytes=4157
+server   2026-11-27 19:32:31+0200  decrypted receive peer=M1 nonce=1 validation OK tag OK
+server   2026-11-27 19:32:31+0200  login M1 challenge R=819e6dbe e=bf5714cb
+server   2026-11-27 19:32:31+0200  encrypted send peer=M1 nonce=1 bytes=50
+server   2026-11-27 19:32:31+0200  decrypted receive peer=M1 nonce=2 validation OK tag OK
+server   2026-11-27 19:32:31+0200  login M1 R=819e6dbe e=bf5714cb z=495113dc g^z=R*X^e: OK
+server   2026-11-27 19:32:31+0200  encrypted send peer=M1 nonce=2 bytes=24
+server   2026-11-27 19:32:31+0200  decrypted receive peer=M1 nonce=3 validation OK tag OK
+server   2026-11-27 19:32:31+0200  encrypted send peer=M1 nonce=3 bytes=4157
+server   2026-11-27 19:32:31+0200  decrypted receive peer=M1 nonce=4 validation OK tag OK
+server   2026-11-27 19:32:31+0200  request M1 seq=5 op=status signature OK; accepted ledger entry
+server   2026-11-27 19:32:31+0200  encrypted send peer=M1 nonce=4 bytes=1184
+server   2026-11-27 19:32:32+0200  decrypted receive peer=M1 nonce=5 validation OK tag OK
+server   2026-11-27 19:32:32+0200  operation=vault-705432104714b8d1c0c384a46ddf3b79 member=M1 d=4b6ab696 proof=OK
+server   2026-11-27 19:32:32+0200  request M1 seq=6 op=contribute signature OK; accepted ledger entry
+server   2026-11-27 19:32:32+0200  encrypted send peer=M1 nonce=5 bytes=1184
+server   2026-11-27 19:32:32+0200  connection closed peer=M1
+server   2026-11-27 19:32:33+0200  connection accepted from 127.0.0.1:56714
+server   2026-11-27 19:32:33+0200  certificate verification OK peer=M2 group=16002216-16003727-16004417-16005162 sig=30450220
+server   2026-11-27 19:32:33+0200  handshake sent server hello X=04224759 Y=0492f845
+server   2026-11-27 19:32:33+0200  hs-member signature verification OK X=04224759 Y=0492f845 sig=30450221
+server   2026-11-27 19:32:33+0200  session established peer=M2; login still required
+server   2026-11-27 19:32:33+0200  decrypted receive peer=M2 nonce=0 validation OK tag OK
+server   2026-11-27 19:32:33+0200  encrypted send peer=M2 nonce=0 bytes=4157
+server   2026-11-27 19:32:33+0200  decrypted receive peer=M2 nonce=1 validation OK tag OK
+server   2026-11-27 19:32:33+0200  login M2 challenge R=452c665a e=f12e7a6a
+server   2026-11-27 19:32:33+0200  encrypted send peer=M2 nonce=1 bytes=50
+server   2026-11-27 19:32:33+0200  decrypted receive peer=M2 nonce=2 validation OK tag OK
+server   2026-11-27 19:32:33+0200  login M2 R=452c665a e=f12e7a6a z=586f2fb2 g^z=R*X^e: OK
+server   2026-11-27 19:32:33+0200  encrypted send peer=M2 nonce=2 bytes=24
+server   2026-11-27 19:32:33+0200  decrypted receive peer=M2 nonce=3 validation OK tag OK
+server   2026-11-27 19:32:33+0200  encrypted send peer=M2 nonce=3 bytes=4157
+server   2026-11-27 19:32:33+0200  decrypted receive peer=M2 nonce=4 validation OK tag OK
+server   2026-11-27 19:32:33+0200  request M2 seq=3 op=status signature OK; accepted ledger entry
+server   2026-11-27 19:32:33+0200  encrypted send peer=M2 nonce=4 bytes=1184
+server   2026-11-27 19:32:34+0200  decrypted receive peer=M2 nonce=5 validation OK tag OK
+server   2026-11-27 19:32:34+0200  operation=vault-705432104714b8d1c0c384a46ddf3b79 member=M2 d=bb95c86a proof=OK
+server   2026-11-27 19:32:34+0200  request M2 seq=4 op=contribute signature OK; accepted ledger entry
+server   2026-11-27 19:32:34+0200  encrypted send peer=M2 nonce=5 bytes=1184
+server   2026-11-27 19:32:34+0200  connection closed peer=M2
+server   2026-11-27 19:32:34+0200  connection accepted from 127.0.0.1:56715
+server   2026-11-27 19:32:34+0200  certificate verification OK peer=M3 group=16002216-16003727-16004417-16005162 sig=30440220
+server   2026-11-27 19:32:34+0200  handshake sent server hello X=04dee61a Y=0408000d
+server   2026-11-27 19:32:34+0200  hs-member signature verification OK X=04dee61a Y=0408000d sig=30440220
+server   2026-11-27 19:32:34+0200  session established peer=M3; login still required
+server   2026-11-27 19:32:34+0200  decrypted receive peer=M3 nonce=0 validation OK tag OK
+server   2026-11-27 19:32:34+0200  encrypted send peer=M3 nonce=0 bytes=4157
+server   2026-11-27 19:32:34+0200  decrypted receive peer=M3 nonce=1 validation OK tag OK
+server   2026-11-27 19:32:34+0200  login M3 challenge R=bceff616 e=e16342b0
+server   2026-11-27 19:32:34+0200  encrypted send peer=M3 nonce=1 bytes=50
+server   2026-11-27 19:32:34+0200  decrypted receive peer=M3 nonce=2 validation OK tag OK
+server   2026-11-27 19:32:34+0200  login M3 R=bceff616 e=e16342b0 z=44a4f4fa g^z=R*X^e: OK
+server   2026-11-27 19:32:34+0200  encrypted send peer=M3 nonce=2 bytes=24
+server   2026-11-27 19:32:34+0200  decrypted receive peer=M3 nonce=3 validation OK tag OK
+server   2026-11-27 19:32:34+0200  encrypted send peer=M3 nonce=3 bytes=4157
+server   2026-11-27 19:32:35+0200  decrypted receive peer=M3 nonce=4 validation OK tag OK
+server   2026-11-27 19:32:35+0200  request M3 seq=3 op=status signature OK; accepted ledger entry
+server   2026-11-27 19:32:35+0200  encrypted send peer=M3 nonce=4 bytes=1184
+server   2026-11-27 19:32:35+0200  decrypted receive peer=M3 nonce=5 validation OK tag OK
+server   2026-11-27 19:32:35+0200  application rejection member=M3 reason=decryption proof verification FAILED
+server   2026-11-27 19:32:35+0200  encrypted send peer=M3 nonce=5 bytes=59
+server   2026-11-27 19:32:35+0200  connection closed peer=M3
+server   2026-11-27 19:32:36+0200  connection accepted from 127.0.0.1:56716
+server   2026-11-27 19:32:36+0200  certificate verification OK peer=M4 group=16002216-16003727-16004417-16005162 sig=30460221
+server   2026-11-27 19:32:36+0200  handshake sent server hello X=049ac5db Y=042d8c0a
+server   2026-11-27 19:32:36+0200  hs-member signature verification OK X=049ac5db Y=042d8c0a sig=30460221
+server   2026-11-27 19:32:36+0200  session established peer=M4; login still required
+server   2026-11-27 19:32:36+0200  decrypted receive peer=M4 nonce=0 validation OK tag OK
+server   2026-11-27 19:32:36+0200  encrypted send peer=M4 nonce=0 bytes=3648
+server   2026-11-27 19:32:36+0200  decrypted receive peer=M4 nonce=1 validation OK tag OK
+server   2026-11-27 19:32:36+0200  registration M4 OK X=37e86fd8
+server   2026-11-27 19:32:36+0200  encrypted send peer=M4 nonce=1 bytes=11
+server   2026-11-27 19:32:36+0200  decrypted receive peer=M4 nonce=2 validation OK tag OK
+server   2026-11-27 19:32:36+0200  login M4 challenge R=5497477a e=c12ccf8b
+server   2026-11-27 19:32:36+0200  encrypted send peer=M4 nonce=2 bytes=50
+server   2026-11-27 19:32:36+0200  decrypted receive peer=M4 nonce=3 validation OK tag OK
+server   2026-11-27 19:32:36+0200  login M4 R=5497477a e=c12ccf8b z=6c6d2b69 g^z=R*X^e: OK
+server   2026-11-27 19:32:36+0200  encrypted send peer=M4 nonce=3 bytes=24
+server   2026-11-27 19:32:36+0200  decrypted receive peer=M4 nonce=4 validation OK tag OK
+server   2026-11-27 19:32:36+0200  encrypted send peer=M4 nonce=4 bytes=4157
+server   2026-11-27 19:32:36+0200  decrypted receive peer=M4 nonce=5 validation OK tag OK
+server   2026-11-27 19:32:36+0200  request M4 seq=1 op=status signature OK; accepted ledger entry
+server   2026-11-27 19:32:36+0200  encrypted send peer=M4 nonce=5 bytes=1184
+server   2026-11-27 19:32:37+0200  decrypted receive peer=M4 nonce=6 validation OK tag OK
+server   2026-11-27 19:32:37+0200  operation=vault-705432104714b8d1c0c384a46ddf3b79 member=M4 d=f562b9a2 proof=OK
+server   2026-11-27 19:32:38+0200  operation=vault-705432104714b8d1c0c384a46ddf3b79 vault recovery opened
+server   2026-11-27 19:32:38+0200  request M4 seq=2 op=contribute signature OK; accepted ledger entry
+server   2026-11-27 19:32:38+0200  encrypted send peer=M4 nonce=6 bytes=1253
+server   2026-11-27 19:32:38+0200  connection closed peer=M4
