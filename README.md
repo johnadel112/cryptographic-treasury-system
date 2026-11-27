@@ -5,7 +5,7 @@ GROUP: `16002216-16003727-16004417-16005162`.
 
 John: identities, certificates, secure channel, integration. Essam: Schnorr login and signed requests. Divan: Shamir/Feldman and threshold vault. Yassin: homomorphic voting. Original commits remain in Git history. Name-to-student-ID mapping still needs team confirmation.
 
-The three milestones run in one Python `treasury` package using independent owner processes and framed TCP on localhost. Secure mode is the default. Streamlit is deferred.
+The three milestones run in one Python `treasury` package using independent owner processes and framed TCP on localhost. Secure mode is the default. An optional owner-local Streamlit dashboard is available on the dashboard branch; the underlying roles still use secure TCP.
 
 ```mermaid
 flowchart LR
@@ -52,6 +52,28 @@ python -m treasury.demo vote --votes 1,0,1,0,0
 ```
 
 `vault` verifies M1/M3/M5 and M2/M4/M5 recover identical input bytes; before the third share the operation remains collecting. Changing n/t creates a fresh setup. Voting always requires at least three yes votes, independently of t.
+
+## Streamlit member dashboard
+
+After the fresh owner/founder setup below, start the treasury server in its own terminal. Install the dashboard in a separate environment (the optional PDF builder has different Pillow requirements):
+
+```powershell
+python -m venv .venv-dashboard
+.\.venv-dashboard\Scripts\Activate.ps1
+python -m pip install -r requirements-dashboard.txt
+python -m treasury.dashboard --name M1 --data-dir runtime/live1 --port 8501
+```
+
+Linux/macOS activation: `. .venv-dashboard/bin/activate`. Open **http://127.0.0.1:8501**, choose a login method, then **Connect / refresh**. Use Overview, Vault, Voting, Activity and Evidence to inspect real state and perform authenticated actions. Refresh after other members act. Each process has one fixed owner:
+
+```sh
+python -m treasury.dashboard --name M2 --data-dir runtime/live1 --port 8502
+python -m treasury.dashboard --name M3 --data-dir runtime/live1 --port 8503
+python -m treasury.dashboard --name M4 --data-dir runtime/live1 --port 8504
+python -m treasury.dashboard --name M5 --data-dir runtime/live1 --port 8505
+```
+
+Run those in separate terminals if needed; all connect to the same treasury server on 5050. The dashboard loads only its owner's credentials/share, never server state or another member's private files. No identity selector, weak-mode toggle or automatic action retry is provided. This is a local owner application, not a shared hosted website. See [dashboard guide](docs/STREAMLIT_DASHBOARD.md).
 
 ## Manual independent processes
 
@@ -157,4 +179,4 @@ Signatures prove ballot origin, not that its plaintext is 0 or 1. A malicious me
 
 See [live guide](docs/LIVE_EVALUATION_GUIDE.md), [technical guide](docs/TECHNICAL_GUIDE.md), [integration API](docs/INTEGRATION.md), [four-page design sheet](docs/DESIGN_SHEET.pdf) and [final report](docs/FINAL_IMPLEMENTATION_REPORT.md).
 
-The team must confirm name-ID mapping, make the repository private and invite the specified TA with explicit authorization, record each attack in at most three minutes, and rehearse the 15-minute evaluation. These administrative/manual tasks are not implied complete by passing tests. The integration PR remains unmerged pending approval. Future UI work belongs on `feature/john-streamlit-dashboard` and must call owner-side clients without bypassing authentication.
+The team must confirm name-ID mapping, make the repository private and invite the specified TA with explicit authorization, record each attack in at most three minutes, and rehearse the 15-minute evaluation. These administrative/manual tasks are not implied complete by passing tests. The integration PR remains unmerged pending approval. Dashboard work is on `feature/john-streamlit-dashboard` and uses owner-side clients without bypassing authentication.

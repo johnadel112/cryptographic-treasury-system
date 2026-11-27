@@ -114,6 +114,22 @@ class TreasuryApplication:
         return result
 
     def _operation(self, state, name, op, body):
+        if op == "overview":
+            # Explicit public projection: never ship proofs, ballots or recovered bytes.
+            fields = ("id", "kind", "state", "vote_number", "amount", "reason", "total", "approved")
+            operations = []
+            for operation in list(state["operations"].values())[-100:]:
+                row = {key: operation[key] for key in fields if key in operation}
+                row.update(ballot_count=len(operation.get("ballots", {})),
+                           contribution_count=len(operation.get("contributions", {})),
+                           has_ballot=name in operation.get("ballots", {}),
+                           has_contribution=name in operation.get("contributions", {}))
+                operations.append(row)
+            ledger = [{key: entry[key] for key in ("time", "member", "seq", "op")}
+                      for entry in state["ledger"][-100:]]
+            return {"group": GROUP, "n": self.vault["n"], "t": self.vault["t"],
+                    "operations": operations, "ledger": ledger,
+                    "operation_total": len(state["operations"]), "ledger_total": len(state["ledger"])}
         if op == "ping":
             return {"message": "pong"}
         if op == "share-complaint":

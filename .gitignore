@@ -27,3 +27,5 @@ logs/
 **/application.json
 **/application.tmp
 !docs/DESIGN_SHEET.pdf
+
+.streamlit/secrets.toml

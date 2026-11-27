@@ -1,0 +1,4 @@
+-r requirements-lock.txt
+streamlit==1.58.0
+# Streamlit 1.58 uses the pre-1.0 Starlette response API.
+starlette==0.52.1
