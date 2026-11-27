@@ -4,7 +4,7 @@
 
 ## Audit and consolidation
 
-All four supplied assignment PDFs were read in full; the initial requirement checklist is [FINAL_AUDIT_CHECKLIST.md](FINAL_AUDIT_CHECKLIST.md). Main already contained Essam, Divan and Yassin's merged work. Develop was exactly 12 commits behind main with no unique commits. It was safely fast-forwarded locally; remote synchronization is performed before the integration PR. No histories were rewritten or teammate branches deleted. Essam's unmerged test-conversion commit remains on his branch; pytest discovers both unittest and pytest tests directly.
+All four supplied assignment PDFs were read in full; the initial requirement checklist is [FINAL_AUDIT_CHECKLIST.md](FINAL_AUDIT_CHECKLIST.md). Main already contained Essam, Divan and Yassin's merged work. Develop was exactly 12 commits behind main with no unique commits. It was safely fast-forwarded locally and on origin from bae87aa to b290198 before opening PR #6. No histories were rewritten or teammate branches deleted. Essam's unmerged test-conversion commit remains on his branch; pytest discovers both unittest and pytest tests directly.
 
 The baseline passed 112 tests but did not establish integrated behavior: login/request stubs remained in treasury, src had GROUP_1/g=2 and a competing channel/certificate format, voting service/tests were empty, commitments were unsigned, contribution verification trusted member-supplied keys, the proof used an incompatible transcript, the opener read every private share, and the ledger could record failed operations. A5 used the wrong member/inconsistent manipulation. Existing captures used the retired src protocol and are preserved as historical evidence.
 
@@ -58,7 +58,7 @@ Status legend: **V** = IMPLEMENTED AND VERIFIED; **U** = IMPLEMENTED BUT NOT VER
 | Preserve historical captures and generate integrated matching evidence | V | scripts/run_captures.py; five fresh validated pcapng folders, source hashes and matching logs |
 | Overview six captures vs M1 conditional A3/A4 | M | A3 included, A4 not selected. TA must confirm whether sixth A4 capture is nevertheless required |
 | Full pytest discovery across contributor modules, real crypto and integration | V | 131 local tests; docs/evidence/local-tests.xml; no weakening to pass tests |
-| Windows/Ubuntu Python3.10/3.12 CI, PR and main/develop pushes | U | .github/workflows/tests.yml configured; actual remote workflow result pending publication |
+| Windows/Ubuntu Python3.10/3.12 CI, PR and main/develop pushes | V | .github/workflows/tests.yml; all four jobs in PR run 46043032516 succeeded, each executing 131 tests |
 | Complete README with real CLI/manual and runner commands | V | README.md; runner executes the same owner CLI commands in clean installed environment; variable IDs must be copied from results |
 | Combined design <=4 pages, values/ownership/flows/attacks | V | DESIGN_SHEET.md, build_design_sheet.py; pypdf verifies exactly 4 pages |
 | Individual name-ID mapping | M | Four names/IDs listed without invented pairing; team confirmation required |
@@ -70,7 +70,13 @@ Status legend: **V** = IMPLEMENTED AND VERIFIED; **U** = IMPLEMENTED BUT NOT VER
 | Streamlit implementation | O | Explicitly deferred; no dependency/UI added |
 | Future backend integration interfaces | V | TreasuryMemberClient, TreasuryApplication, JSON results, persistent state; INTEGRATION.md documents owner boundary |
 | Versioned structured public event stream for future dashboard | P | Structured results/ledger available; diagnostic logs are text. A UI event adapter remains future dashboard work |
-| Push integration branch and open review PR; no main merge | U | Publication step pending; no force push/deletion/visibility change |
+| Push integration branch and open review PR; no main merge | V | [PR #6](https://github.com/johnadel112/cryptographic-treasury-system/pull/6) open against develop; branch published, main unchanged; no force push/deletion/visibility change |
+
+## Publication and CI
+
+[PR #6](https://github.com/johnadel112/cryptographic-treasury-system/pull/6) is open against develop and unmerged. Main remains b290198. The integration branch contains separate core, tests/CI and documentation/evidence commits.
+
+[GitHub Actions run 46043032516](https://github.com/johnadel112/cryptographic-treasury-system/actions/runs/46043032516) completed successfully on integration head `9db8c585fdbc751eca6253bde97ecdbf8231c190`: Windows and Ubuntu, Python 3.10 and 3.12, **131 passed in each of all four jobs**. Verified from completed job conclusions and pytest logs, not inferred from workflow configuration. JUnit artifacts were uploaded. Subsequent report-only commits do not change the tested implementation; the PR checks show their separate runs.
 
 ## Actual test and execution results
 
@@ -114,7 +120,7 @@ The capture interface is host-specific; select yours with tshark -D. README cont
 
 ## File inventory
 
-The following source inventory compares the integration work to b290198. Added evidence files are grouped under captures/integrated and docs/evidence; they contain no runtime private directories. A means added, M modified, D removed. Removed src modules are retired duplicate protocols, not deleted contribution history.
+The following source inventory compares the integration work to b290198. Also added: .gitattributes (binary PDF/capture preservation), this final report and its publication/CI evidence update. Added evidence files are grouped under captures/integrated and docs/evidence; they contain no runtime private directories. A means added, M modified, D removed. Removed src modules are retired duplicate protocols, not deleted contribution history.
 
 ```
 M	.github/workflows/tests.yml
