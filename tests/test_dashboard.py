@@ -39,16 +39,19 @@ def test_overview_requires_login_and_projects_public_fields(env):
 
 def test_dashboard_owner_isolation_and_both_logins(env, monkeypatch):
     root, port, app = env
-    original = Path.read_bytes
-    def guarded(path):
+    original = Path.open
+    def guarded(path, *args, **kwargs):
         resolved = path.resolve()
         for name in ("M2", "M3", "M4", "M5"):
             if resolved.is_relative_to((root / name).resolve()):
                 raise AssertionError("dashboard read another member's private directory")
-        return original(path)
-    monkeypatch.setattr(Path, "read_bytes", guarded)
+        return original(path, *args, **kwargs)
+    monkeypatch.setattr(Path, "open", guarded)
     for method in ("interactive", "noninteractive"):
         assert MemberDashboard(OwnerConfig("M1", root, port), method).execute("overview")["n"] == 5
+    dashboard = MemberDashboard(OwnerConfig("M1", root, port))
+    opening = dashboard.execute("open-vault")
+    assert dashboard.execute("contribute", operation=opening["id"])["contribution_count"] == 1
     with pytest.raises(DashboardError):
         MemberDashboard(OwnerConfig("M1", root, port)).execute("arbitrary-command")
 
