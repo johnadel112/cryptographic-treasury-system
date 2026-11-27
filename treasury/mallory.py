@@ -10,7 +10,7 @@ from cryptography.hazmat.primitives.asymmetric import ec
 
 from .channel import (SecureChannel, derive_directional_keys, generate_p256_keypair,
                       load_point, point_hex)
-from .config import GROUP, HOST, MALLORY_PORT, SERVER_PORT, SOCKET_TIMEOUT_SECONDS
+from .config import G, P, GROUP, HOST, MALLORY_PORT, SERVER_PORT, SOCKET_TIMEOUT_SECONDS
 from .encoding import canonical_json
 from .framing import ProtocolError, decode_json, recv_frame, recv_json, send_frame, send_json
 from .logging_utils import get_logger
@@ -53,10 +53,10 @@ def a1_handshake(member, server, log):
     return SecureChannel(down_s2m, down_m2s), SecureChannel(up_m2s, up_s2m)
 
 
-def proxy_connection(member, server, attack, log):
+def proxy_connection(member, server, attack, log, *, tamper_request=False):
     channels = None
     try:
-        if attack == "A1":
+        if attack in ("A1", "A7"):
             channels = a1_handshake(member, server, log)
             if channels is None:
                 return
@@ -84,8 +84,16 @@ def proxy_connection(member, server, attack, log):
                     clear = reader.decrypt(frame)
                     message = decode_json(clear)
                     log.warning("A1 PLAINTEXT %s: %s", "member->server" if source is member else "server->member", canonical_json(message).decode())
-                    # Extension for Essam/Yassin: change a signed body here to show rejection;
-                    # preserve its original signature. No request signing/login is fabricated.
+                    if source is member and tamper_request and not injected and message.get("op") == "spend":
+                        message["body"]["amount"] += 1
+                        clear = canonical_json(message)
+                        injected = True
+                        log.warning("A1 changed signed request amount; original signature preserved")
+                    if source is member and attack == "A7" and not injected and message.get("type") == "ballot":
+                        message["c2"] = format(int(message["c2"], 16) * G % P, "x")
+                        clear = canonical_json(message)
+                        injected = True
+                        log.warning("A7 changed c2 := c2*g; original signature preserved if present")
                     send_frame(target, writer.encrypt(clear))
                 elif source is member and not injected:
                     injected = True
@@ -111,11 +119,12 @@ def proxy_connection(member, server, attack, log):
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Local treasury attack demonstration")
-    parser.add_argument("--attack", required=True, choices=["A1", "replay-frame", "tamper-frame"])
+    parser.add_argument("--attack", required=True, choices=["A1", "A7", "replay-frame", "tamper-frame"])
     parser.add_argument("--weak", choices=["unsigned-handshake"],
                         help="labels the weak A1 run; peers must also enable this flag")
+    parser.add_argument("--tamper-request", action="store_true", help="A1: change one signed spending request")
     args = parser.parse_args()
-    if args.weak and args.attack != "A1":
+    if args.weak and args.attack not in ("A1", "A7"):
         parser.error("--weak unsigned-handshake is for A1 only")
     log = get_logger("mallory")
     try:
@@ -129,7 +138,7 @@ def main() -> None:
             try:
                 with socket.create_connection((HOST, SERVER_PORT), timeout=SOCKET_TIMEOUT_SECONDS) as server:
                     log.info("two local TCP connections: member=%s server=%s:%d", address, HOST, SERVER_PORT)
-                    proxy_connection(member, server, args.attack, log)
+                    proxy_connection(member, server, args.attack, log, tamper_request=args.tamper_request)
             finally:
                 member.close()
     except (OSError, ValueError, KeyError, TypeError, ProtocolError) as exc:

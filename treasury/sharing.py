@@ -25,7 +25,7 @@ def make_shares(secret: int, t: int, n: int, q: int) -> tuple[list[int], list[in
     coefficients: [a0=secret, a1, ..., a_{t-1}]  (kept private)
     shares:       [f(1), f(2), ..., f(n)]          (member i gets shares[i-1])
     """
-    if not (1 <= t <= n):
+    if type(t) is not int or type(n) is not int or not (1 <= t <= n < q):
         raise ValueError("require 1 <= t <= n")
     if not (0 < secret < q):
         raise ValueError("secret must be in (0, q)")
@@ -51,6 +51,10 @@ def verify_share(share: int, member_index: int, commitments: list[int], p: int, 
     member_index is 1-based (member M_i gets share f(i)).
     Returns True iff the share is consistent with the public commitments.
     """
+    if (type(share) is not int or not 0 <= share < q or
+            type(member_index) is not int or not 0 < member_index < q or
+            any(type(c) is not int or not 1 < c < p or pow(c, q, p) != 1 for c in commitments)):
+        return False
     if not commitments:
         return False
     # LHS: g^{share} mod p
@@ -68,6 +72,8 @@ def lagrange_coefficient(i: int, selected_indices: list[int], q: int) -> int:
     Uses modular inverses (Fermat's little theorem: q is prime, so a^{-1} = a^{q-2} mod q).
     i and selected_indices are 1-based member indices matching the polynomial evaluation points.
     """
+    if i not in selected_indices or len(set(selected_indices)) != len(selected_indices) or any(type(j) is not int or not 0 < j < q for j in selected_indices):
+        raise ValueError("invalid or duplicate interpolation indices")
     numerator = 1
     denominator = 1
     for j in selected_indices:
@@ -77,3 +83,13 @@ def lagrange_coefficient(i: int, selected_indices: list[int], q: int) -> int:
         numerator = (numerator * (-j)) % q
         denominator = (denominator * (i - j)) % q
     return (numerator * pow(denominator, q - 2, q)) % q
+
+
+def verification_key(index: int, commitments: list[int], p: int, q: int) -> int:
+    """Derive h_i only from authenticated Feldman commitments."""
+    if type(index) is not int or not 0 < index < q:
+        raise ValueError("invalid member index")
+    result = 1
+    for k, commitment in enumerate(commitments):
+        result = result * pow(commitment, pow(index, k, q), p) % p
+    return result
