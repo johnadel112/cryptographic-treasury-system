@@ -159,140 +159,6 @@ class TestLagrangeCoefficient(unittest.TestCase):
 
 # ---------------------------------------------------------------------------
 # opening.py tests
-# ---------------------------------------------------------------------------
-
-class TestMakeDecryptionShare(unittest.TestCase):
-    def _setup(self):
-        s = secrets.randbelow(Q - 1) + 1
-        _, shares = make_shares(s, 3, 5, Q)
-        r = secrets.randbelow(Q - 1) + 1
-        c1 = pow(G, r, P)
-        return s, shares, c1, r
-
-    def test_returns_required_fields(self):
-        _, shares, c1, _ = self._setup()
-        contrib = make_decryption_share(shares[0], 1, c1)
-        for field in ("member_index", "d_i", "V_i", "a1", "a2", "c", "z"):
-            self.assertIn(field, contrib, f"missing field: {field}")
-
-    def test_proof_verifies(self):
-        _, shares, c1, _ = self._setup()
-        contrib = make_decryption_share(shares[0], 1, c1)
-        self.assertTrue(verify_decryption_share(contrib, c1))
-
-    def test_all_five_proofs_verify(self):
-        _, shares, c1, _ = self._setup()
-        for i in range(5):
-            contrib = make_decryption_share(shares[i], i + 1, c1)
-            self.assertTrue(verify_decryption_share(contrib, c1),
-                            f"proof failed for member {i+1}")
-
-
-class TestVerifyDecryptionShare(unittest.TestCase):
-    def _make_valid_contrib(self, si, idx, c1):
-        return make_decryption_share(si, idx, c1)
-
-    def test_valid_proof_accepted(self):
-        s = secrets.randbelow(Q - 1) + 1
-        _, shares = make_shares(s, 3, 5, Q)
-        c1 = pow(G, secrets.randbelow(Q - 1) + 1, P)
-        contrib = self._make_valid_contrib(shares[0], 1, c1)
-        self.assertTrue(verify_decryption_share(contrib, c1))
-
-    def test_tampered_d_i_rejected(self):
-        s = secrets.randbelow(Q - 1) + 1
-        _, shares = make_shares(s, 3, 5, Q)
-        c1 = pow(G, secrets.randbelow(Q - 1) + 1, P)
-        contrib = self._make_valid_contrib(shares[0], 1, c1)
-        d_bad = (int(contrib["d_i"], 16) + 1) % P
-        contrib["d_i"] = format(d_bad, "x")
-        self.assertFalse(verify_decryption_share(contrib, c1))
-
-    def test_tampered_z_rejected(self):
-        s = secrets.randbelow(Q - 1) + 1
-        _, shares = make_shares(s, 3, 5, Q)
-        c1 = pow(G, secrets.randbelow(Q - 1) + 1, P)
-        contrib = self._make_valid_contrib(shares[0], 1, c1)
-        z_bad = (int(contrib["z"], 16) + 1) % Q
-        contrib["z"] = format(z_bad, "x")
-        self.assertFalse(verify_decryption_share(contrib, c1))
-
-    def test_weak_no_proof_accepts_anything(self):
-        """A5: weak mode must accept even a completely invalid contribution."""
-        bad_contrib = {
-            "member_index": 1,
-            "d_i": "deadbeef",
-            "V_i": "cafebabe",
-            "a1": "00000001",
-            "a2": "00000001",
-            "c":  "00000001",
-            "z":  "00000001",
-        }
-        self.assertTrue(verify_decryption_share(bad_contrib, 42, weak="no-proof"))
-
-    def test_missing_fields_rejected(self):
-        self.assertFalse(verify_decryption_share({}, 42))
-
-    def test_malformed_hex_rejected(self):
-        contrib = {
-            "member_index": 1, "d_i": "ZZZZ", "V_i": "aa",
-            "a1": "aa", "a2": "aa", "c": "aa", "z": "aa",
-        }
-        self.assertFalse(verify_decryption_share(contrib, 42))
-
-
-class TestCombineDecryptionShares(unittest.TestCase):
-    def _full_setup(self, t=3, n=5):
-        s = secrets.randbelow(Q - 1) + 1
-        _, shares = make_shares(s, t, n, Q)
-        r = secrets.randbelow(Q - 1) + 1
-        c1 = pow(G, r, P)
-        H_vault = pow(G, s, P)
-        e = secrets.randbelow(Q - 1) + 1
-        e_elem = pow(G, e, P)
-        c2 = (e_elem * pow(H_vault, r, P)) % P
-        return s, shares, c1, c2, e_elem
-
-    def test_combination_recovers_correct_element(self):
-        s, shares, c1, c2, e_elem = self._full_setup()
-        contributions = [make_decryption_share(shares[i], i + 1, c1) for i in range(5)]
-        combined = combine_decryption_shares(contributions[:3], c1, 3)
-        self.assertIsNotNone(combined)
-        combined_inv = pow(combined, P - 2, P)
-        recovered = (c2 * combined_inv) % P
-        self.assertEqual(recovered, e_elem)
-
-    def test_fewer_than_threshold_returns_none(self):
-        s, shares, c1, _, _ = self._full_setup()
-        contributions = [make_decryption_share(shares[i], i + 1, c1) for i in range(2)]
-        result = combine_decryption_shares(contributions, c1, 3)
-        self.assertIsNone(result)
-
-    def test_cheating_member_rejected_in_secure_mode(self):
-        """A5 secure: a corrupted contribution is rejected; vault still opens."""
-        s, shares, c1, c2, e_elem = self._full_setup()
-        valid_contribs = [make_decryption_share(shares[i], i + 1, c1) for i in range(4)]
-        bad_si = (shares[4] + 1) % Q
-        cheat = make_decryption_share(bad_si, 5, c1)
-        all_contribs = valid_contribs + [cheat]
-        combined = combine_decryption_shares(all_contribs, c1, 3, weak=None)
-        self.assertIsNotNone(combined)
-        combined_inv = pow(combined, P - 2, P)
-        recovered = (c2 * combined_inv) % P
-        self.assertEqual(recovered, e_elem)
-
-    def test_cheating_member_accepted_in_weak_mode(self):
-        """A5 weak: cheating contribution passes verification."""
-        s, shares, c1, c2, _ = self._full_setup()
-        bad_si = (shares[0] + 1) % Q
-        cheat = make_decryption_share(bad_si, 1, c1)
-        self.assertTrue(verify_decryption_share(cheat, c1, weak="no-proof"))
-
-
-# ---------------------------------------------------------------------------
-# vault.py tests
-# ---------------------------------------------------------------------------
-
 class TestElGamal(unittest.TestCase):
     def test_encrypt_decrypt_roundtrip(self):
         s = secrets.randbelow(Q - 1) + 1
@@ -355,162 +221,137 @@ class TestHKDF(unittest.TestCase):
         self.assertEqual(len(k), 32)
 
 
-class TestVaultSetupAndOpen(unittest.TestCase):
-    """Integration test: full vault lifecycle with a temporary directory."""
-
-    def _init_data_dir(self, tmp_path: Path, n: int = 5) -> None:
-        from treasury.config import member_names
-        for name in member_names(n):
-            (tmp_path / name).mkdir(parents=True, exist_ok=True, mode=0o700)
-        (tmp_path / "public").mkdir(parents=True, exist_ok=True)
-
-    def test_vault_setup_creates_files(self):
-        with tempfile.TemporaryDirectory() as td:
-            tmp = Path(td)
-            self._init_data_dir(tmp)
-            content = b"My secret vault content"
-            pub = vault_setup(tmp, 3, 5, content)
-            self.assertTrue((tmp / "public" / "vault_public.json").exists())
-            from treasury.config import member_names
-            for name in member_names(5):
-                self.assertTrue((tmp / name / "share.json").exists(),
-                                f"{name}/share.json missing")
-            for key in ("commitments", "vault_key", "V_keys", "elgamal", "encrypted_vault"):
-                self.assertIn(key, pub)
-
-    def test_full_vault_open_3_of_5(self):
-        with tempfile.TemporaryDirectory() as td:
-            tmp = Path(td)
-            self._init_data_dir(tmp)
-            content = b"Treasury ledger data - confidential"
-            vault_public = vault_setup(tmp, 3, 5, content)
-            c1 = int(vault_public["elgamal"]["c1"], 16)
-
-            from treasury.config import member_names
-            from treasury.vault import load_member_share
-            contributions = []
-            for i, name in enumerate(member_names(5)):
-                sd = load_member_share(tmp, name)
-                si  = int(sd["share"], 16)
-                V_i = int(sd["V_i"],   16)
-                contrib = make_decryption_share(si, i + 1, c1, verification_key=V_i)
-                contributions.append(contrib)
-
-            result = open_vault(vault_public, contributions[:3])
-            self.assertEqual(result, content)
-
-    def test_vault_open_with_all_5_still_works(self):
-        with tempfile.TemporaryDirectory() as td:
-            tmp = Path(td)
-            self._init_data_dir(tmp)
-            content = b"All five members contribute"
-            vault_public = vault_setup(tmp, 3, 5, content)
-            c1 = int(vault_public["elgamal"]["c1"], 16)
-
-            from treasury.config import member_names
-            from treasury.vault import load_member_share
-            contributions = []
-            for i, name in enumerate(member_names(5)):
-                sd = load_member_share(tmp, name)
-                si  = int(sd["share"], 16)
-                V_i = int(sd["V_i"],   16)
-                contrib = make_decryption_share(si, i + 1, c1, verification_key=V_i)
-                contributions.append(contrib)
-
-            result = open_vault(vault_public, contributions)
-            self.assertEqual(result, content)
-
-    def test_vault_open_fails_with_2_contributions(self):
-        with tempfile.TemporaryDirectory() as td:
-            tmp = Path(td)
-            self._init_data_dir(tmp)
-            content = b"Should not open"
-            vault_public = vault_setup(tmp, 3, 5, content)
-            c1 = int(vault_public["elgamal"]["c1"], 16)
-
-            from treasury.config import member_names
-            from treasury.vault import load_member_share
-            contributions = []
-            for i, name in enumerate(list(member_names(5))[:2]):
-                sd = load_member_share(tmp, name)
-                si  = int(sd["share"], 16)
-                V_i = int(sd["V_i"],   16)
-                contrib = make_decryption_share(si, i + 1, c1, verification_key=V_i)
-                contributions.append(contrib)
-
-            result = open_vault(vault_public, contributions)
-            self.assertIsNone(result)
 
 
-# ---------------------------------------------------------------------------
-# Attack A5: Cheating Member demonstration
-# ---------------------------------------------------------------------------
-
-class TestAttackA5(unittest.TestCase):
-    """Demonstrate weak vs secure mode for a cheating member."""
-
-    def _setup_vault(self, tmp):
-        from treasury.config import member_names
-        (tmp / "public").mkdir(parents=True, exist_ok=True)
-        for name in member_names(5):
-            (tmp / name).mkdir(parents=True, exist_ok=True, mode=0o700)
-        content = b"Attack A5 test vault"
-        return vault_setup(tmp, 3, 5, content), content
-
-    def _get_contributions(self, tmp, vault_public, cheat_index=None):
-        from treasury.config import member_names
-        from treasury.vault import load_member_share
-        c1 = int(vault_public["elgamal"]["c1"], 16)
-        contributions = []
-        for i, name in enumerate(member_names(5)):
-            sd = load_member_share(tmp, name)
-            si  = int(sd["share"], 16)
-            V_i = int(sd["V_i"],   16)
-            if cheat_index is not None and i + 1 == cheat_index:
-                bad_si = (si + 42) % Q
-                contrib = make_decryption_share(bad_si, i + 1, c1,
-                                                verification_key=V_i)
-            else:
-                contrib = make_decryption_share(si, i + 1, c1,
-                                                verification_key=V_i)
-            contributions.append(contrib)
-        return contributions
-
-    def test_a5_secure_mode_rejects_cheater_vault_still_opens(self):
-        """Secure mode: cheater rejected; 4 valid remain → vault opens."""
-        with tempfile.TemporaryDirectory() as td:
-            tmp = Path(td)
-            vault_public, content = self._setup_vault(tmp)
-            contributions = self._get_contributions(tmp, vault_public, cheat_index=2)
-            result = open_vault(vault_public, contributions, weak=None)
-            self.assertEqual(result, content)
-
-    def test_a5_weak_mode_cheater_causes_wrong_decryption(self):
-        """Weak mode: cheater's invalid d_i corrupts the decryption."""
-        with tempfile.TemporaryDirectory() as td:
-            tmp = Path(td)
-            vault_public, content = self._setup_vault(tmp)
-
-            from treasury.config import member_names
-            from treasury.vault import load_member_share
-            c1 = int(vault_public["elgamal"]["c1"], 16)
-            contributions = []
-            for i, name in enumerate(list(member_names(5))[:3]):
-                sd = load_member_share(tmp, name)
-                si  = int(sd["share"], 16)
-                V_i = int(sd["V_i"],   16)
-                if i + 1 == 2:
-                    bad_si = (si + 42) % Q
-                    contrib = make_decryption_share(bad_si, i + 1, c1,
-                                                    verification_key=V_i)
-                else:
-                    contrib = make_decryption_share(si, i + 1, c1,
-                                                    verification_key=V_i)
-                contributions.append(contrib)
-
-            result = open_vault(vault_public, contributions, weak="no-proof")
-            self.assertNotEqual(result, content)
+# Regressions replace the old tests that trusted a contributor's self-declared V_i.
+import copy
+import pytest
+from conftest import client
+from treasury.identity import load_identity
+from treasury.vault import check_vault_public, load_member_share, trusted_verification_keys
+from treasury.encoding import H, canonical_json
 
 
-if __name__ == "__main__":
-    unittest.main()
+def test_signed_commitments_and_tamper(env):
+    root,port,app=env
+    founder=load_identity("M1",root).founder_public_key
+    check_vault_public(app.vault,founder)
+    bad=copy.deepcopy(app.vault)
+    bad["commitments"][0]=format(pow(G,99,P),"x")
+    with pytest.raises(ValueError):check_vault_public(bad,founder)
+
+
+def test_exact_proof_transcript_and_trusted_key(env):
+    root,port,app=env
+    share=int(load_member_share(root,"M1")["share"],16)
+    c1=int(app.vault["elgamal"]["c1"],16)
+    proof=make_decryption_share(share,1,c1)
+    hi=app.keys[1]
+    assert verify_decryption_share(proof,c1,verification_key=hi,member_index=1)
+    e=H("dec",1,c1,hi,int(proof["d_i"],16),int(proof["T1"],16),int(proof["T2"],16),q=Q)
+    assert pow(G,int(proof["z"],16),P)==int(proof["T1"],16)*pow(hi,e,P)%P
+    # A fully self-consistent proof of an attacker-selected share is still rejected.
+    forged=make_decryption_share(123,1,c1)
+    assert not verify_decryption_share(forged,c1,verification_key=hi,member_index=1)
+    assert not verify_decryption_share(proof,c1,verification_key=hi,member_index=2)
+    assert not verify_decryption_share(proof,pow(G,71,P),verification_key=hi,member_index=1)
+    bad=dict(proof,z=format(Q,"x"))
+    assert not verify_decryption_share(bad,c1,verification_key=hi,member_index=1)
+
+
+def test_duplicate_contributions_do_not_reach_threshold(env):
+    root,port,app=env
+    c1=int(app.vault["elgamal"]["c1"],16)
+    proof=make_decryption_share(int(load_member_share(root,"M1")["share"],16),1,c1)
+    assert combine_decryption_shares([proof]*3,c1,3,verification_keys=app.keys) is None
+
+
+@pytest.mark.parametrize("members", [("M1","M3","M5"),("M2","M4","M5")])
+def test_network_vault_alternative_combinations(env,members):
+    root,port,app=env
+    opener=client(root,port)
+    operation=opener.request("open-vault",{})["result"]["id"]
+    opener.close()
+    for index,name in enumerate(members):
+        c=client(root,port,name)
+        result=c.contribute(operation)
+        c.close()
+        assert result["ok"]
+        assert result["result"]["state"]==("opened" if index==2 else "collecting")
+    assert bytes.fromhex(result["result"]["content_hex"])==b"integrated treasury treasure"
+
+
+def test_share_complaint_and_no_participation(env):
+    import json
+    root,port,app=env
+    c=client(root,port)
+    operation=c.request("open-vault",{})["result"]["id"]
+    path=root/"M1"/"share.json"
+    share=json.loads(path.read_text())
+    share["share"]=format((int(share["share"],16)+1)%Q,"x")
+    path.write_text(json.dumps(share))
+    assert not c.contribute(operation)["ok"]
+    c.close()
+    state=app.store.snapshot()
+    assert state["ledger"][-1]["op"]=="share-complaint"
+    assert state["operations"][operation]["contributions"]=={}
+
+
+def test_duplicate_unknown_and_cross_operation_replay(env):
+    root,port,app=env
+    c=client(root,port)
+    one=c.request("open-vault",{})["result"]["id"]
+    two=c.request("open-vault",{})["result"]["id"]
+    proof=make_decryption_share(int(load_member_share(root,"M1")["share"],16),1,int(app.vault["elgamal"]["c1"],16))
+    assert c.request("contribute",{"operation":one,"proof":proof})["ok"]
+    assert not c.request("contribute",{"operation":one,"proof":proof})["ok"]
+    assert not c.request("contribute",{"operation":two,"proof":proof})["ok"]
+    assert not c.request("contribute",{"operation":"missing","proof":proof})["ok"]
+    c.close()
+
+
+@pytest.mark.parametrize("weak", [False,True])
+def test_a5_same_M3_corruption_and_substitution(setup_root,service_factory,weak):
+    app,port=service_factory(setup_root,["no-proof"] if weak else [])
+    c=client(setup_root,port)
+    operation=c.request("open-vault",{})["result"]["id"]
+    assert c.contribute(operation)["ok"]
+    c.close()
+    c=client(setup_root,port,"M2");assert c.contribute(operation)["ok"];c.close()
+    c=client(setup_root,port,"M3");bad=c.contribute(operation,cheat=True);c.close()
+    if weak:
+        assert bad["ok"] and bad["result"]["state"]=="failed"
+    else:
+        assert not bad["ok"]
+        c=client(setup_root,port,"M4");result=c.contribute(operation);c.close()
+        assert result["result"]["state"]=="opened"
+
+
+def test_existing_setup_refused_without_changes(env):
+    root,port,app=env
+    path=root/"public"/"vault_public.json"
+    before=path.read_bytes()
+    with pytest.raises(ValueError):vault_setup(root,3,5,b"new")
+    assert path.read_bytes()==before
+
+
+def test_server_never_reads_member_private_files(setup_root,service_factory,monkeypatch):
+    import threading
+    original=Path.open
+    root=setup_root.resolve()
+    def guarded(path,*args,**kwargs):
+        relative=path.resolve().relative_to(root) if path.resolve().is_relative_to(root) else None
+        if relative and relative.parts[0].startswith("M") and threading.current_thread() is not threading.main_thread():
+            raise AssertionError("server attempted owner-private file access")
+        return original(path,*args,**kwargs)
+    with monkeypatch.context() as m:
+        m.setattr(Path,"open",guarded)
+        app,port=service_factory(setup_root)
+        assert app.vault["n"]==5
+        c=client(setup_root,port)
+        operation=c.request("open-vault",{})["result"]["id"]
+        assert c.contribute(operation)["ok"]
+        c.close()
+        for name in ["M3","M5"]:
+            c=client(setup_root,port,name);r=c.contribute(operation);c.close()
+        assert r["result"]["state"]=="opened"

@@ -80,7 +80,7 @@ class ProcessTests(unittest.TestCase):
         return process
 
     def member(self, weak=None, port=5050, message="probe-public-marker"):
-        args = ["--name", "M1", "--data-dir", str(self.data), "--port", str(port), "--message", message]
+        args = ["--name", "M1", "--command", "probe", "--data-dir", str(self.data), "--port", str(port), "--message", message]
         if weak:
             args += ["--weak", weak]
         return subprocess.run([sys.executable, "-m", "treasury.member", *args], cwd=PROJECT,
@@ -222,7 +222,7 @@ class ProcessTests(unittest.TestCase):
                 session.send({"op": "spend", "seq": 1, "body": {"amount": 50}})
                 reply = session.receive()
                 self.assertFalse(reply["ok"])
-                self.assertIn("not implemented", reply["error"])
+                self.assertIn("not authenticated", reply["error"])
                 self.assertFalse(session.authenticated)
         server.wait(timeout=10)
 
