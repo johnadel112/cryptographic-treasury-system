@@ -1,0 +1,47 @@
+server   2026-11-27 19:29:11+0200  owner-local server key ready; public key published
+server   2026-11-27 19:29:14+0200  founder commitments signature OK C0=c3e146f4 t=3 n=5
+server   2026-11-27 19:29:14+0200  EDUCATIONAL WEAK MODE: unsigned-handshake
+server   2026-11-27 19:29:14+0200  listening on 127.0.0.1:5050 mode=unsigned-handshake n=5 t=3
+server   2026-11-27 19:29:14+0200  connection accepted from 127.0.0.1:64411
+server   2026-11-27 19:29:14+0200  EDUCATIONAL WEAK MODE: unsigned-handshake
+server   2026-11-27 19:29:14+0200  certificate verification OK peer=M1 group=16002216-16003727-16004417-16005162 sig=3043021f
+server   2026-11-27 19:29:14+0200  handshake sent server hello X=04a39446 Y=04f2743b
+server   2026-11-27 19:29:14+0200  DEMO handshake signatures omitted
+server   2026-11-27 19:29:14+0200  session established peer=M1; login still required
+server   2026-11-27 19:29:14+0200  decrypted receive peer=M1 nonce=0 validation OK tag OK
+server   2026-11-27 19:29:14+0200  encrypted send peer=M1 nonce=0 bytes=3646
+server   2026-11-27 19:29:14+0200  decrypted receive peer=M1 nonce=1 validation OK tag OK
+server   2026-11-27 19:29:14+0200  registration M1 OK X=741bdc26
+server   2026-11-27 19:29:14+0200  encrypted send peer=M1 nonce=1 bytes=11
+server   2026-11-27 19:29:14+0200  decrypted receive peer=M1 nonce=2 validation OK tag OK
+server   2026-11-27 19:29:14+0200  login M1 challenge R=9e86c578 e=304a0deb
+server   2026-11-27 19:29:14+0200  encrypted send peer=M1 nonce=2 bytes=49
+server   2026-11-27 19:29:14+0200  decrypted receive peer=M1 nonce=3 validation OK tag OK
+server   2026-11-27 19:29:14+0200  login M1 R=9e86c578 e=304a0deb z=31e4557f g^z=R*X^e: OK
+server   2026-11-27 19:29:14+0200  encrypted send peer=M1 nonce=3 bytes=24
+server   2026-11-27 19:29:14+0200  connection closed peer=M1
+server   2026-11-27 19:29:15+0200  connection accepted from 127.0.0.1:64413
+server   2026-11-27 19:29:15+0200  EDUCATIONAL WEAK MODE: unsigned-handshake
+server   2026-11-27 19:29:15+0200  certificate verification OK peer=M1 group=16002216-16003727-16004417-16005162 sig=3043021f
+server   2026-11-27 19:29:15+0200  handshake sent server hello X=04e88356 Y=04d28840
+server   2026-11-27 19:29:15+0200  DEMO handshake signatures omitted
+server   2026-11-27 19:29:15+0200  session established peer=M1; login still required
+server   2026-11-27 19:29:15+0200  decrypted receive peer=M1 nonce=0 validation OK tag OK
+server   2026-11-27 19:29:15+0200  encrypted send peer=M1 nonce=0 bytes=4155
+server   2026-11-27 19:29:15+0200  decrypted receive peer=M1 nonce=1 validation OK tag OK
+server   2026-11-27 19:29:15+0200  login M1 challenge R=7d2a2621 e=219b73e7
+server   2026-11-27 19:29:15+0200  encrypted send peer=M1 nonce=1 bytes=50
+server   2026-11-27 19:29:15+0200  decrypted receive peer=M1 nonce=2 validation OK tag OK
+server   2026-11-27 19:29:15+0200  login M1 R=7d2a2621 e=219b73e7 z=55466910 g^z=R*X^e: OK
+server   2026-11-27 19:29:15+0200  encrypted send peer=M1 nonce=2 bytes=24
+server   2026-11-27 19:29:15+0200  decrypted receive peer=M1 nonce=3 validation OK tag OK
+server   2026-11-27 19:29:15+0200  application rejection member=M1 reason=request signature or sequence verification FAILED
+server   2026-11-27 19:29:15+0200  encrypted send peer=M1 nonce=3 bytes=72
+server   2026-11-27 19:29:15+0200  connection closed peer=M1
+server   2026-11-27 19:29:16+0200  founder commitments signature OK C0=c3e146f4 t=3 n=5
+server   2026-11-27 19:29:16+0200  listening on 127.0.0.1:5050 mode=secure n=5 t=3
+server   2026-11-27 19:29:17+0200  connection accepted from 127.0.0.1:64418
+server   2026-11-27 19:29:17+0200  certificate verification OK peer=M1 group=16002216-16003727-16004417-16005162 sig=3043021f
+server   2026-11-27 19:29:17+0200  handshake sent server hello X=0453e485 Y=04d53869
+server   2026-11-27 19:29:17+0200  handshake security rejection: handshake missing or unexpected fields (including required signature)
+server   2026-11-27 19:29:17+0200  connection rejected: handshake missing or unexpected fields (including required signature)

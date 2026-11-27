@@ -1,0 +1,483 @@
+M3       2026-11-27 19:29:58+0200  owner-local identity and independent login secret ready
+M3       2026-11-27 19:30:00+0200  handshake sent member hello X=040369ef
+M3       2026-11-27 19:30:00+0200  certificate verification OK peer=server group=16002216-16003727-16004417-16005162 sig=30440220
+M3       2026-11-27 19:30:00+0200  hs-server signature verification OK X=040369ef Y=04333f24 sig=30450221
+M3       2026-11-27 19:30:00+0200  channel ready peer=server; login still required
+M3       2026-11-27 19:30:00+0200  encrypted send peer=server nonce=0 bytes=15
+M3       2026-11-27 19:30:00+0200  decrypted receive peer=server nonce=0 validation OK tag OK
+M3       2026-11-27 19:30:00+0200  encrypted send peer=server nonce=1 bytes=538
+M3       2026-11-27 19:30:00+0200  decrypted receive peer=server nonce=1 validation OK tag OK
+M3       2026-11-27 19:30:00+0200  encrypted send peer=server nonce=2 bytes=553
+M3       2026-11-27 19:30:00+0200  decrypted receive peer=server nonce=2 validation OK tag OK
+M3       2026-11-27 19:30:00+0200  encrypted send peer=server nonce=3 bytes=554
+M3       2026-11-27 19:30:00+0200  decrypted receive peer=server nonce=3 validation OK tag OK
+M3       2026-11-27 19:30:00+0200  interactive login result=True
+M3       2026-11-27 19:30:00+0200  connection closed peer=server
+M3       2026-11-27 19:30:00+0200  handshake sent member hello X=04febfb5
+M3       2026-11-27 19:30:00+0200  certificate verification OK peer=server group=16002216-16003727-16004417-16005162 sig=30440220
+M3       2026-11-27 19:30:00+0200  hs-server signature verification OK X=04febfb5 Y=0403201a sig=30460221
+M3       2026-11-27 19:30:00+0200  channel ready peer=server; login still required
+M3       2026-11-27 19:30:00+0200  encrypted send peer=server nonce=0 bytes=15
+M3       2026-11-27 19:30:00+0200  decrypted receive peer=server nonce=0 validation OK tag OK
+M3       2026-11-27 19:30:00+0200  encrypted send peer=server nonce=1 bytes=553
+M3       2026-11-27 19:30:00+0200  decrypted receive peer=server nonce=1 validation OK tag OK
+M3       2026-11-27 19:30:00+0200  encrypted send peer=server nonce=2 bytes=554
+M3       2026-11-27 19:30:01+0200  decrypted receive peer=server nonce=2 validation OK tag OK
+M3       2026-11-27 19:30:01+0200  A3 attempt=1 guessed=6 accepted=False
+M3       2026-11-27 19:30:01+0200  connection closed peer=server
+M3       2026-11-27 19:30:01+0200  handshake sent member hello X=04e01c61
+M3       2026-11-27 19:30:01+0200  certificate verification OK peer=server group=16002216-16003727-16004417-16005162 sig=30440220
+M3       2026-11-27 19:30:01+0200  hs-server signature verification OK X=04e01c61 Y=04d70469 sig=30440220
+M3       2026-11-27 19:30:01+0200  channel ready peer=server; login still required
+M3       2026-11-27 19:30:01+0200  encrypted send peer=server nonce=0 bytes=15
+M3       2026-11-27 19:30:01+0200  decrypted receive peer=server nonce=0 validation OK tag OK
+M3       2026-11-27 19:30:01+0200  encrypted send peer=server nonce=1 bytes=553
+M3       2026-11-27 19:30:01+0200  decrypted receive peer=server nonce=1 validation OK tag OK
+M3       2026-11-27 19:30:01+0200  encrypted send peer=server nonce=2 bytes=554
+M3       2026-11-27 19:30:01+0200  decrypted receive peer=server nonce=2 validation OK tag OK
+M3       2026-11-27 19:30:01+0200  A3 attempt=2 guessed=0 accepted=False
+M3       2026-11-27 19:30:01+0200  connection closed peer=server
+M3       2026-11-27 19:30:01+0200  handshake sent member hello X=04425409
+M3       2026-11-27 19:30:01+0200  certificate verification OK peer=server group=16002216-16003727-16004417-16005162 sig=30440220
+M3       2026-11-27 19:30:01+0200  hs-server signature verification OK X=04425409 Y=047dfd3f sig=30450220
+M3       2026-11-27 19:30:01+0200  channel ready peer=server; login still required
+M3       2026-11-27 19:30:01+0200  encrypted send peer=server nonce=0 bytes=15
+M3       2026-11-27 19:30:01+0200  decrypted receive peer=server nonce=0 validation OK tag OK
+M3       2026-11-27 19:30:01+0200  encrypted send peer=server nonce=1 bytes=553
+M3       2026-11-27 19:30:01+0200  decrypted receive peer=server nonce=1 validation OK tag OK
+M3       2026-11-27 19:30:01+0200  encrypted send peer=server nonce=2 bytes=554
+M3       2026-11-27 19:30:01+0200  decrypted receive peer=server nonce=2 validation OK tag OK
+M3       2026-11-27 19:30:01+0200  A3 attempt=3 guessed=9 accepted=False
+M3       2026-11-27 19:30:01+0200  connection closed peer=server
+M3       2026-11-27 19:30:01+0200  handshake sent member hello X=0404ced5
+M3       2026-11-27 19:30:01+0200  certificate verification OK peer=server group=16002216-16003727-16004417-16005162 sig=30440220
+M3       2026-11-27 19:30:01+0200  hs-server signature verification OK X=0404ced5 Y=041fe43e sig=30460221
+M3       2026-11-27 19:30:01+0200  channel ready peer=server; login still required
+M3       2026-11-27 19:30:01+0200  encrypted send peer=server nonce=0 bytes=15
+M3       2026-11-27 19:30:01+0200  decrypted receive peer=server nonce=0 validation OK tag OK
+M3       2026-11-27 19:30:01+0200  encrypted send peer=server nonce=1 bytes=553
+M3       2026-11-27 19:30:01+0200  decrypted receive peer=server nonce=1 validation OK tag OK
+M3       2026-11-27 19:30:01+0200  encrypted send peer=server nonce=2 bytes=554
+M3       2026-11-27 19:30:02+0200  decrypted receive peer=server nonce=2 validation OK tag OK
+M3       2026-11-27 19:30:02+0200  A3 attempt=4 guessed=11 accepted=False
+M3       2026-11-27 19:30:02+0200  connection closed peer=server
+M3       2026-11-27 19:30:02+0200  handshake sent member hello X=0424f092
+M3       2026-11-27 19:30:02+0200  certificate verification OK peer=server group=16002216-16003727-16004417-16005162 sig=30440220
+M3       2026-11-27 19:30:02+0200  hs-server signature verification OK X=0424f092 Y=04728c02 sig=30450220
+M3       2026-11-27 19:30:02+0200  channel ready peer=server; login still required
+M3       2026-11-27 19:30:02+0200  encrypted send peer=server nonce=0 bytes=15
+M3       2026-11-27 19:30:02+0200  decrypted receive peer=server nonce=0 validation OK tag OK
+M3       2026-11-27 19:30:02+0200  encrypted send peer=server nonce=1 bytes=553
+M3       2026-11-27 19:30:02+0200  decrypted receive peer=server nonce=1 validation OK tag OK
+M3       2026-11-27 19:30:02+0200  encrypted send peer=server nonce=2 bytes=554
+M3       2026-11-27 19:30:02+0200  decrypted receive peer=server nonce=2 validation OK tag OK
+M3       2026-11-27 19:30:02+0200  A3 attempt=5 guessed=0 accepted=False
+M3       2026-11-27 19:30:02+0200  connection closed peer=server
+M3       2026-11-27 19:30:02+0200  handshake sent member hello X=049cc2c0
+M3       2026-11-27 19:30:02+0200  certificate verification OK peer=server group=16002216-16003727-16004417-16005162 sig=30440220
+M3       2026-11-27 19:30:02+0200  hs-server signature verification OK X=049cc2c0 Y=049cc413 sig=30450220
+M3       2026-11-27 19:30:02+0200  channel ready peer=server; login still required
+M3       2026-11-27 19:30:02+0200  encrypted send peer=server nonce=0 bytes=15
+M3       2026-11-27 19:30:02+0200  decrypted receive peer=server nonce=0 validation OK tag OK
+M3       2026-11-27 19:30:02+0200  encrypted send peer=server nonce=1 bytes=553
+M3       2026-11-27 19:30:02+0200  decrypted receive peer=server nonce=1 validation OK tag OK
+M3       2026-11-27 19:30:02+0200  encrypted send peer=server nonce=2 bytes=554
+M3       2026-11-27 19:30:02+0200  decrypted receive peer=server nonce=2 validation OK tag OK
+M3       2026-11-27 19:30:02+0200  A3 attempt=6 guessed=7 accepted=False
+M3       2026-11-27 19:30:02+0200  connection closed peer=server
+M3       2026-11-27 19:30:02+0200  handshake sent member hello X=04b625cd
+M3       2026-11-27 19:30:02+0200  certificate verification OK peer=server group=16002216-16003727-16004417-16005162 sig=30440220
+M3       2026-11-27 19:30:02+0200  hs-server signature verification OK X=04b625cd Y=04130eb7 sig=30440220
+M3       2026-11-27 19:30:02+0200  channel ready peer=server; login still required
+M3       2026-11-27 19:30:02+0200  encrypted send peer=server nonce=0 bytes=15
+M3       2026-11-27 19:30:02+0200  decrypted receive peer=server nonce=0 validation OK tag OK
+M3       2026-11-27 19:30:02+0200  encrypted send peer=server nonce=1 bytes=553
+M3       2026-11-27 19:30:02+0200  decrypted receive peer=server nonce=1 validation OK tag OK
+M3       2026-11-27 19:30:02+0200  encrypted send peer=server nonce=2 bytes=554
+M3       2026-11-27 19:30:02+0200  decrypted receive peer=server nonce=2 validation OK tag OK
+M3       2026-11-27 19:30:02+0200  A3 attempt=7 guessed=6 accepted=False
+M3       2026-11-27 19:30:02+0200  connection closed peer=server
+M3       2026-11-27 19:30:03+0200  handshake sent member hello X=042d9e9c
+M3       2026-11-27 19:30:03+0200  certificate verification OK peer=server group=16002216-16003727-16004417-16005162 sig=30440220
+M3       2026-11-27 19:30:03+0200  hs-server signature verification OK X=042d9e9c Y=042a4aa9 sig=30460221
+M3       2026-11-27 19:30:03+0200  channel ready peer=server; login still required
+M3       2026-11-27 19:30:03+0200  encrypted send peer=server nonce=0 bytes=15
+M3       2026-11-27 19:30:03+0200  decrypted receive peer=server nonce=0 validation OK tag OK
+M3       2026-11-27 19:30:03+0200  encrypted send peer=server nonce=1 bytes=553
+M3       2026-11-27 19:30:03+0200  decrypted receive peer=server nonce=1 validation OK tag OK
+M3       2026-11-27 19:30:03+0200  encrypted send peer=server nonce=2 bytes=554
+M3       2026-11-27 19:30:03+0200  decrypted receive peer=server nonce=2 validation OK tag OK
+M3       2026-11-27 19:30:03+0200  A3 attempt=8 guessed=7 accepted=False
+M3       2026-11-27 19:30:03+0200  connection closed peer=server
+M3       2026-11-27 19:30:03+0200  handshake sent member hello X=0416e75e
+M3       2026-11-27 19:30:03+0200  certificate verification OK peer=server group=16002216-16003727-16004417-16005162 sig=30440220
+M3       2026-11-27 19:30:03+0200  hs-server signature verification OK X=0416e75e Y=0473eea0 sig=30440220
+M3       2026-11-27 19:30:03+0200  channel ready peer=server; login still required
+M3       2026-11-27 19:30:03+0200  encrypted send peer=server nonce=0 bytes=15
+M3       2026-11-27 19:30:03+0200  decrypted receive peer=server nonce=0 validation OK tag OK
+M3       2026-11-27 19:30:03+0200  encrypted send peer=server nonce=1 bytes=553
+M3       2026-11-27 19:30:03+0200  decrypted receive peer=server nonce=1 validation OK tag OK
+M3       2026-11-27 19:30:03+0200  encrypted send peer=server nonce=2 bytes=554
+M3       2026-11-27 19:30:03+0200  decrypted receive peer=server nonce=2 validation OK tag OK
+M3       2026-11-27 19:30:03+0200  A3 attempt=9 guessed=7 accepted=False
+M3       2026-11-27 19:30:03+0200  connection closed peer=server
+M3       2026-11-27 19:30:03+0200  handshake sent member hello X=048af545
+M3       2026-11-27 19:30:03+0200  certificate verification OK peer=server group=16002216-16003727-16004417-16005162 sig=30440220
+M3       2026-11-27 19:30:03+0200  hs-server signature verification OK X=048af545 Y=04737480 sig=30440220
+M3       2026-11-27 19:30:03+0200  channel ready peer=server; login still required
+M3       2026-11-27 19:30:03+0200  encrypted send peer=server nonce=0 bytes=15
+M3       2026-11-27 19:30:03+0200  decrypted receive peer=server nonce=0 validation OK tag OK
+M3       2026-11-27 19:30:03+0200  encrypted send peer=server nonce=1 bytes=553
+M3       2026-11-27 19:30:03+0200  decrypted receive peer=server nonce=1 validation OK tag OK
+M3       2026-11-27 19:30:03+0200  encrypted send peer=server nonce=2 bytes=554
+M3       2026-11-27 19:30:03+0200  decrypted receive peer=server nonce=2 validation OK tag OK
+M3       2026-11-27 19:30:03+0200  A3 attempt=10 guessed=15 accepted=False
+M3       2026-11-27 19:30:03+0200  connection closed peer=server
+M3       2026-11-27 19:30:03+0200  handshake sent member hello X=0409cd62
+M3       2026-11-27 19:30:03+0200  certificate verification OK peer=server group=16002216-16003727-16004417-16005162 sig=30440220
+M3       2026-11-27 19:30:03+0200  hs-server signature verification OK X=0409cd62 Y=042796ac sig=30450221
+M3       2026-11-27 19:30:03+0200  channel ready peer=server; login still required
+M3       2026-11-27 19:30:03+0200  encrypted send peer=server nonce=0 bytes=15
+M3       2026-11-27 19:30:03+0200  decrypted receive peer=server nonce=0 validation OK tag OK
+M3       2026-11-27 19:30:04+0200  encrypted send peer=server nonce=1 bytes=553
+M3       2026-11-27 19:30:04+0200  decrypted receive peer=server nonce=1 validation OK tag OK
+M3       2026-11-27 19:30:04+0200  encrypted send peer=server nonce=2 bytes=554
+M3       2026-11-27 19:30:04+0200  decrypted receive peer=server nonce=2 validation OK tag OK
+M3       2026-11-27 19:30:04+0200  A3 attempt=11 guessed=3 accepted=False
+M3       2026-11-27 19:30:04+0200  connection closed peer=server
+M3       2026-11-27 19:30:04+0200  handshake sent member hello X=0453dc4a
+M3       2026-11-27 19:30:04+0200  certificate verification OK peer=server group=16002216-16003727-16004417-16005162 sig=30440220
+M3       2026-11-27 19:30:04+0200  hs-server signature verification OK X=0453dc4a Y=049cc807 sig=30450221
+M3       2026-11-27 19:30:04+0200  channel ready peer=server; login still required
+M3       2026-11-27 19:30:04+0200  encrypted send peer=server nonce=0 bytes=15
+M3       2026-11-27 19:30:04+0200  decrypted receive peer=server nonce=0 validation OK tag OK
+M3       2026-11-27 19:30:04+0200  encrypted send peer=server nonce=1 bytes=553
+M3       2026-11-27 19:30:04+0200  decrypted receive peer=server nonce=1 validation OK tag OK
+M3       2026-11-27 19:30:04+0200  encrypted send peer=server nonce=2 bytes=554
+M3       2026-11-27 19:30:04+0200  decrypted receive peer=server nonce=2 validation OK tag OK
+M3       2026-11-27 19:30:04+0200  A3 attempt=12 guessed=13 accepted=False
+M3       2026-11-27 19:30:04+0200  connection closed peer=server
+M3       2026-11-27 19:30:04+0200  handshake sent member hello X=04362f2c
+M3       2026-11-27 19:30:04+0200  certificate verification OK peer=server group=16002216-16003727-16004417-16005162 sig=30440220
+M3       2026-11-27 19:30:04+0200  hs-server signature verification OK X=04362f2c Y=04f79e38 sig=30460221
+M3       2026-11-27 19:30:04+0200  channel ready peer=server; login still required
+M3       2026-11-27 19:30:04+0200  encrypted send peer=server nonce=0 bytes=15
+M3       2026-11-27 19:30:04+0200  decrypted receive peer=server nonce=0 validation OK tag OK
+M3       2026-11-27 19:30:04+0200  encrypted send peer=server nonce=1 bytes=553
+M3       2026-11-27 19:30:04+0200  decrypted receive peer=server nonce=1 validation OK tag OK
+M3       2026-11-27 19:30:04+0200  encrypted send peer=server nonce=2 bytes=554
+M3       2026-11-27 19:30:04+0200  decrypted receive peer=server nonce=2 validation OK tag OK
+M3       2026-11-27 19:30:04+0200  A3 attempt=13 guessed=10 accepted=False
+M3       2026-11-27 19:30:04+0200  connection closed peer=server
+M3       2026-11-27 19:30:04+0200  handshake sent member hello X=047ea375
+M3       2026-11-27 19:30:04+0200  certificate verification OK peer=server group=16002216-16003727-16004417-16005162 sig=30440220
+M3       2026-11-27 19:30:04+0200  hs-server signature verification OK X=047ea375 Y=040cc2ef sig=30450220
+M3       2026-11-27 19:30:04+0200  channel ready peer=server; login still required
+M3       2026-11-27 19:30:04+0200  encrypted send peer=server nonce=0 bytes=15
+M3       2026-11-27 19:30:04+0200  decrypted receive peer=server nonce=0 validation OK tag OK
+M3       2026-11-27 19:30:05+0200  encrypted send peer=server nonce=1 bytes=553
+M3       2026-11-27 19:30:05+0200  decrypted receive peer=server nonce=1 validation OK tag OK
+M3       2026-11-27 19:30:05+0200  encrypted send peer=server nonce=2 bytes=554
+M3       2026-11-27 19:30:05+0200  decrypted receive peer=server nonce=2 validation OK tag OK
+M3       2026-11-27 19:30:05+0200  A3 attempt=14 guessed=4 accepted=False
+M3       2026-11-27 19:30:05+0200  connection closed peer=server
+M3       2026-11-27 19:30:05+0200  handshake sent member hello X=045355b8
+M3       2026-11-27 19:30:05+0200  certificate verification OK peer=server group=16002216-16003727-16004417-16005162 sig=30440220
+M3       2026-11-27 19:30:05+0200  hs-server signature verification OK X=045355b8 Y=04f82404 sig=30440220
+M3       2026-11-27 19:30:05+0200  channel ready peer=server; login still required
+M3       2026-11-27 19:30:05+0200  encrypted send peer=server nonce=0 bytes=15
+M3       2026-11-27 19:30:05+0200  decrypted receive peer=server nonce=0 validation OK tag OK
+M3       2026-11-27 19:30:05+0200  encrypted send peer=server nonce=1 bytes=553
+M3       2026-11-27 19:30:05+0200  decrypted receive peer=server nonce=1 validation OK tag OK
+M3       2026-11-27 19:30:05+0200  encrypted send peer=server nonce=2 bytes=554
+M3       2026-11-27 19:30:05+0200  decrypted receive peer=server nonce=2 validation OK tag OK
+M3       2026-11-27 19:30:05+0200  A3 attempt=15 guessed=14 accepted=False
+M3       2026-11-27 19:30:05+0200  connection closed peer=server
+M3       2026-11-27 19:30:05+0200  handshake sent member hello X=04c24f7d
+M3       2026-11-27 19:30:05+0200  certificate verification OK peer=server group=16002216-16003727-16004417-16005162 sig=30440220
+M3       2026-11-27 19:30:05+0200  hs-server signature verification OK X=04c24f7d Y=0442e40d sig=30450221
+M3       2026-11-27 19:30:05+0200  channel ready peer=server; login still required
+M3       2026-11-27 19:30:05+0200  encrypted send peer=server nonce=0 bytes=15
+M3       2026-11-27 19:30:05+0200  decrypted receive peer=server nonce=0 validation OK tag OK
+M3       2026-11-27 19:30:05+0200  encrypted send peer=server nonce=1 bytes=553
+M3       2026-11-27 19:30:05+0200  decrypted receive peer=server nonce=1 validation OK tag OK
+M3       2026-11-27 19:30:05+0200  encrypted send peer=server nonce=2 bytes=554
+M3       2026-11-27 19:30:05+0200  decrypted receive peer=server nonce=2 validation OK tag OK
+M3       2026-11-27 19:30:05+0200  A3 attempt=16 guessed=7 accepted=False
+M3       2026-11-27 19:30:05+0200  connection closed peer=server
+M3       2026-11-27 19:30:05+0200  handshake sent member hello X=04ef6908
+M3       2026-11-27 19:30:05+0200  certificate verification OK peer=server group=16002216-16003727-16004417-16005162 sig=30440220
+M3       2026-11-27 19:30:05+0200  hs-server signature verification OK X=04ef6908 Y=04dccb4d sig=30460221
+M3       2026-11-27 19:30:05+0200  channel ready peer=server; login still required
+M3       2026-11-27 19:30:05+0200  encrypted send peer=server nonce=0 bytes=15
+M3       2026-11-27 19:30:05+0200  decrypted receive peer=server nonce=0 validation OK tag OK
+M3       2026-11-27 19:30:06+0200  encrypted send peer=server nonce=1 bytes=553
+M3       2026-11-27 19:30:06+0200  decrypted receive peer=server nonce=1 validation OK tag OK
+M3       2026-11-27 19:30:06+0200  encrypted send peer=server nonce=2 bytes=554
+M3       2026-11-27 19:30:06+0200  decrypted receive peer=server nonce=2 validation OK tag OK
+M3       2026-11-27 19:30:06+0200  A3 attempt=17 guessed=6 accepted=False
+M3       2026-11-27 19:30:06+0200  connection closed peer=server
+M3       2026-11-27 19:30:06+0200  handshake sent member hello X=043180f8
+M3       2026-11-27 19:30:06+0200  certificate verification OK peer=server group=16002216-16003727-16004417-16005162 sig=30440220
+M3       2026-11-27 19:30:06+0200  hs-server signature verification OK X=043180f8 Y=04ecd5ac sig=30450220
+M3       2026-11-27 19:30:06+0200  channel ready peer=server; login still required
+M3       2026-11-27 19:30:06+0200  encrypted send peer=server nonce=0 bytes=15
+M3       2026-11-27 19:30:06+0200  decrypted receive peer=server nonce=0 validation OK tag OK
+M3       2026-11-27 19:30:06+0200  encrypted send peer=server nonce=1 bytes=553
+M3       2026-11-27 19:30:06+0200  decrypted receive peer=server nonce=1 validation OK tag OK
+M3       2026-11-27 19:30:06+0200  encrypted send peer=server nonce=2 bytes=554
+M3       2026-11-27 19:30:06+0200  decrypted receive peer=server nonce=2 validation OK tag OK
+M3       2026-11-27 19:30:06+0200  A3 attempt=18 guessed=9 accepted=False
+M3       2026-11-27 19:30:06+0200  connection closed peer=server
+M3       2026-11-27 19:30:06+0200  handshake sent member hello X=04d7c33d
+M3       2026-11-27 19:30:06+0200  certificate verification OK peer=server group=16002216-16003727-16004417-16005162 sig=30440220
+M3       2026-11-27 19:30:06+0200  hs-server signature verification OK X=04d7c33d Y=045b875d sig=30450220
+M3       2026-11-27 19:30:06+0200  channel ready peer=server; login still required
+M3       2026-11-27 19:30:06+0200  encrypted send peer=server nonce=0 bytes=15
+M3       2026-11-27 19:30:06+0200  decrypted receive peer=server nonce=0 validation OK tag OK
+M3       2026-11-27 19:30:06+0200  encrypted send peer=server nonce=1 bytes=553
+M3       2026-11-27 19:30:06+0200  decrypted receive peer=server nonce=1 validation OK tag OK
+M3       2026-11-27 19:30:06+0200  encrypted send peer=server nonce=2 bytes=553
+M3       2026-11-27 19:30:06+0200  decrypted receive peer=server nonce=2 validation OK tag OK
+M3       2026-11-27 19:30:06+0200  A3 attempt=19 guessed=0 accepted=False
+M3       2026-11-27 19:30:06+0200  connection closed peer=server
+M3       2026-11-27 19:30:06+0200  handshake sent member hello X=04f1f77d
+M3       2026-11-27 19:30:06+0200  certificate verification OK peer=server group=16002216-16003727-16004417-16005162 sig=30440220
+M3       2026-11-27 19:30:06+0200  hs-server signature verification OK X=04f1f77d Y=04adb53f sig=30450221
+M3       2026-11-27 19:30:06+0200  channel ready peer=server; login still required
+M3       2026-11-27 19:30:06+0200  encrypted send peer=server nonce=0 bytes=15
+M3       2026-11-27 19:30:06+0200  decrypted receive peer=server nonce=0 validation OK tag OK
+M3       2026-11-27 19:30:06+0200  encrypted send peer=server nonce=1 bytes=553
+M3       2026-11-27 19:30:06+0200  decrypted receive peer=server nonce=1 validation OK tag OK
+M3       2026-11-27 19:30:06+0200  encrypted send peer=server nonce=2 bytes=554
+M3       2026-11-27 19:30:07+0200  decrypted receive peer=server nonce=2 validation OK tag OK
+M3       2026-11-27 19:30:07+0200  A3 attempt=20 guessed=13 accepted=False
+M3       2026-11-27 19:30:07+0200  connection closed peer=server
+M3       2026-11-27 19:30:07+0200  handshake sent member hello X=04084040
+M3       2026-11-27 19:30:07+0200  certificate verification OK peer=server group=16002216-16003727-16004417-16005162 sig=30440220
+M3       2026-11-27 19:30:07+0200  hs-server signature verification OK X=04084040 Y=04428e63 sig=30460221
+M3       2026-11-27 19:30:07+0200  channel ready peer=server; login still required
+M3       2026-11-27 19:30:07+0200  encrypted send peer=server nonce=0 bytes=15
+M3       2026-11-27 19:30:07+0200  decrypted receive peer=server nonce=0 validation OK tag OK
+M3       2026-11-27 19:30:07+0200  encrypted send peer=server nonce=1 bytes=553
+M3       2026-11-27 19:30:07+0200  decrypted receive peer=server nonce=1 validation OK tag OK
+M3       2026-11-27 19:30:07+0200  encrypted send peer=server nonce=2 bytes=554
+M3       2026-11-27 19:30:07+0200  decrypted receive peer=server nonce=2 validation OK tag OK
+M3       2026-11-27 19:30:07+0200  A3 attempt=21 guessed=14 accepted=False
+M3       2026-11-27 19:30:07+0200  connection closed peer=server
+M3       2026-11-27 19:30:07+0200  handshake sent member hello X=04babb4b
+M3       2026-11-27 19:30:07+0200  certificate verification OK peer=server group=16002216-16003727-16004417-16005162 sig=30440220
+M3       2026-11-27 19:30:07+0200  hs-server signature verification OK X=04babb4b Y=04cdd363 sig=30450221
+M3       2026-11-27 19:30:07+0200  channel ready peer=server; login still required
+M3       2026-11-27 19:30:07+0200  encrypted send peer=server nonce=0 bytes=15
+M3       2026-11-27 19:30:07+0200  decrypted receive peer=server nonce=0 validation OK tag OK
+M3       2026-11-27 19:30:07+0200  encrypted send peer=server nonce=1 bytes=553
+M3       2026-11-27 19:30:07+0200  decrypted receive peer=server nonce=1 validation OK tag OK
+M3       2026-11-27 19:30:07+0200  encrypted send peer=server nonce=2 bytes=554
+M3       2026-11-27 19:30:07+0200  decrypted receive peer=server nonce=2 validation OK tag OK
+M3       2026-11-27 19:30:07+0200  A3 attempt=22 guessed=12 accepted=False
+M3       2026-11-27 19:30:07+0200  connection closed peer=server
+M3       2026-11-27 19:30:07+0200  handshake sent member hello X=04db681d
+M3       2026-11-27 19:30:07+0200  certificate verification OK peer=server group=16002216-16003727-16004417-16005162 sig=30440220
+M3       2026-11-27 19:30:07+0200  hs-server signature verification OK X=04db681d Y=04147896 sig=30450220
+M3       2026-11-27 19:30:07+0200  channel ready peer=server; login still required
+M3       2026-11-27 19:30:07+0200  encrypted send peer=server nonce=0 bytes=15
+M3       2026-11-27 19:30:07+0200  decrypted receive peer=server nonce=0 validation OK tag OK
+M3       2026-11-27 19:30:07+0200  encrypted send peer=server nonce=1 bytes=553
+M3       2026-11-27 19:30:08+0200  decrypted receive peer=server nonce=1 validation OK tag OK
+M3       2026-11-27 19:30:08+0200  encrypted send peer=server nonce=2 bytes=554
+M3       2026-11-27 19:30:08+0200  decrypted receive peer=server nonce=2 validation OK tag OK
+M3       2026-11-27 19:30:08+0200  A3 attempt=23 guessed=8 accepted=False
+M3       2026-11-27 19:30:08+0200  connection closed peer=server
+M3       2026-11-27 19:30:08+0200  handshake sent member hello X=0496a2da
+M3       2026-11-27 19:30:08+0200  certificate verification OK peer=server group=16002216-16003727-16004417-16005162 sig=30440220
+M3       2026-11-27 19:30:08+0200  hs-server signature verification OK X=0496a2da Y=045585a7 sig=30450221
+M3       2026-11-27 19:30:08+0200  channel ready peer=server; login still required
+M3       2026-11-27 19:30:08+0200  encrypted send peer=server nonce=0 bytes=15
+M3       2026-11-27 19:30:08+0200  decrypted receive peer=server nonce=0 validation OK tag OK
+M3       2026-11-27 19:30:08+0200  encrypted send peer=server nonce=1 bytes=553
+M3       2026-11-27 19:30:08+0200  decrypted receive peer=server nonce=1 validation OK tag OK
+M3       2026-11-27 19:30:08+0200  encrypted send peer=server nonce=2 bytes=554
+M3       2026-11-27 19:30:08+0200  decrypted receive peer=server nonce=2 validation OK tag OK
+M3       2026-11-27 19:30:08+0200  A3 attempt=24 guessed=1 accepted=False
+M3       2026-11-27 19:30:08+0200  connection closed peer=server
+M3       2026-11-27 19:30:08+0200  handshake sent member hello X=04cf44a6
+M3       2026-11-27 19:30:08+0200  certificate verification OK peer=server group=16002216-16003727-16004417-16005162 sig=30440220
+M3       2026-11-27 19:30:08+0200  hs-server signature verification OK X=04cf44a6 Y=0458317f sig=30450221
+M3       2026-11-27 19:30:08+0200  channel ready peer=server; login still required
+M3       2026-11-27 19:30:08+0200  encrypted send peer=server nonce=0 bytes=15
+M3       2026-11-27 19:30:08+0200  decrypted receive peer=server nonce=0 validation OK tag OK
+M3       2026-11-27 19:30:08+0200  encrypted send peer=server nonce=1 bytes=553
+M3       2026-11-27 19:30:08+0200  decrypted receive peer=server nonce=1 validation OK tag OK
+M3       2026-11-27 19:30:08+0200  encrypted send peer=server nonce=2 bytes=554
+M3       2026-11-27 19:30:08+0200  decrypted receive peer=server nonce=2 validation OK tag OK
+M3       2026-11-27 19:30:08+0200  A3 attempt=25 guessed=15 accepted=False
+M3       2026-11-27 19:30:08+0200  connection closed peer=server
+M3       2026-11-27 19:30:08+0200  handshake sent member hello X=048f8934
+M3       2026-11-27 19:30:08+0200  certificate verification OK peer=server group=16002216-16003727-16004417-16005162 sig=30440220
+M3       2026-11-27 19:30:08+0200  hs-server signature verification OK X=048f8934 Y=0482cf64 sig=30460221
+M3       2026-11-27 19:30:08+0200  channel ready peer=server; login still required
+M3       2026-11-27 19:30:08+0200  encrypted send peer=server nonce=0 bytes=15
+M3       2026-11-27 19:30:08+0200  decrypted receive peer=server nonce=0 validation OK tag OK
+M3       2026-11-27 19:30:09+0200  encrypted send peer=server nonce=1 bytes=553
+M3       2026-11-27 19:30:09+0200  decrypted receive peer=server nonce=1 validation OK tag OK
+M3       2026-11-27 19:30:09+0200  encrypted send peer=server nonce=2 bytes=554
+M3       2026-11-27 19:30:09+0200  decrypted receive peer=server nonce=2 validation OK tag OK
+M3       2026-11-27 19:30:09+0200  A3 attempt=26 guessed=2 accepted=False
+M3       2026-11-27 19:30:09+0200  connection closed peer=server
+M3       2026-11-27 19:30:09+0200  handshake sent member hello X=043f1fbb
+M3       2026-11-27 19:30:09+0200  certificate verification OK peer=server group=16002216-16003727-16004417-16005162 sig=30440220
+M3       2026-11-27 19:30:09+0200  hs-server signature verification OK X=043f1fbb Y=04adc2e4 sig=30440220
+M3       2026-11-27 19:30:09+0200  channel ready peer=server; login still required
+M3       2026-11-27 19:30:09+0200  encrypted send peer=server nonce=0 bytes=15
+M3       2026-11-27 19:30:09+0200  decrypted receive peer=server nonce=0 validation OK tag OK
+M3       2026-11-27 19:30:09+0200  encrypted send peer=server nonce=1 bytes=553
+M3       2026-11-27 19:30:09+0200  decrypted receive peer=server nonce=1 validation OK tag OK
+M3       2026-11-27 19:30:09+0200  encrypted send peer=server nonce=2 bytes=553
+M3       2026-11-27 19:30:09+0200  decrypted receive peer=server nonce=2 validation OK tag OK
+M3       2026-11-27 19:30:09+0200  A3 attempt=27 guessed=11 accepted=False
+M3       2026-11-27 19:30:09+0200  connection closed peer=server
+M3       2026-11-27 19:30:09+0200  handshake sent member hello X=045c6dfd
+M3       2026-11-27 19:30:09+0200  certificate verification OK peer=server group=16002216-16003727-16004417-16005162 sig=30440220
+M3       2026-11-27 19:30:09+0200  hs-server signature verification OK X=045c6dfd Y=0466256f sig=30450221
+M3       2026-11-27 19:30:09+0200  channel ready peer=server; login still required
+M3       2026-11-27 19:30:09+0200  encrypted send peer=server nonce=0 bytes=15
+M3       2026-11-27 19:30:09+0200  decrypted receive peer=server nonce=0 validation OK tag OK
+M3       2026-11-27 19:30:09+0200  encrypted send peer=server nonce=1 bytes=552
+M3       2026-11-27 19:30:09+0200  decrypted receive peer=server nonce=1 validation OK tag OK
+M3       2026-11-27 19:30:09+0200  encrypted send peer=server nonce=2 bytes=553
+M3       2026-11-27 19:30:09+0200  decrypted receive peer=server nonce=2 validation OK tag OK
+M3       2026-11-27 19:30:09+0200  A3 attempt=28 guessed=13 accepted=False
+M3       2026-11-27 19:30:09+0200  connection closed peer=server
+M3       2026-11-27 19:30:09+0200  handshake sent member hello X=048ba89e
+M3       2026-11-27 19:30:09+0200  certificate verification OK peer=server group=16002216-16003727-16004417-16005162 sig=30440220
+M3       2026-11-27 19:30:09+0200  hs-server signature verification OK X=048ba89e Y=0491bd1f sig=30440220
+M3       2026-11-27 19:30:09+0200  channel ready peer=server; login still required
+M3       2026-11-27 19:30:09+0200  encrypted send peer=server nonce=0 bytes=15
+M3       2026-11-27 19:30:09+0200  decrypted receive peer=server nonce=0 validation OK tag OK
+M3       2026-11-27 19:30:10+0200  encrypted send peer=server nonce=1 bytes=553
+M3       2026-11-27 19:30:10+0200  decrypted receive peer=server nonce=1 validation OK tag OK
+M3       2026-11-27 19:30:10+0200  encrypted send peer=server nonce=2 bytes=554
+M3       2026-11-27 19:30:10+0200  decrypted receive peer=server nonce=2 validation OK tag OK
+M3       2026-11-27 19:30:10+0200  A3 attempt=29 guessed=0 accepted=False
+M3       2026-11-27 19:30:10+0200  connection closed peer=server
+M3       2026-11-27 19:30:10+0200  handshake sent member hello X=04909bd2
+M3       2026-11-27 19:30:10+0200  certificate verification OK peer=server group=16002216-16003727-16004417-16005162 sig=30440220
+M3       2026-11-27 19:30:10+0200  hs-server signature verification OK X=04909bd2 Y=044a270e sig=30440220
+M3       2026-11-27 19:30:10+0200  channel ready peer=server; login still required
+M3       2026-11-27 19:30:10+0200  encrypted send peer=server nonce=0 bytes=15
+M3       2026-11-27 19:30:10+0200  decrypted receive peer=server nonce=0 validation OK tag OK
+M3       2026-11-27 19:30:10+0200  encrypted send peer=server nonce=1 bytes=553
+M3       2026-11-27 19:30:10+0200  decrypted receive peer=server nonce=1 validation OK tag OK
+M3       2026-11-27 19:30:10+0200  encrypted send peer=server nonce=2 bytes=554
+M3       2026-11-27 19:30:10+0200  decrypted receive peer=server nonce=2 validation OK tag OK
+M3       2026-11-27 19:30:10+0200  A3 attempt=30 guessed=11 accepted=True
+M3       2026-11-27 19:30:10+0200  connection closed peer=server
+M3       2026-11-27 19:30:11+0200  handshake sent member hello X=04c85b64
+M3       2026-11-27 19:30:11+0200  certificate verification OK peer=server group=16002216-16003727-16004417-16005162 sig=30440220
+M3       2026-11-27 19:30:11+0200  hs-server signature verification OK X=04c85b64 Y=04fb8f9c sig=30440220
+M3       2026-11-27 19:30:11+0200  channel ready peer=server; login still required
+M3       2026-11-27 19:30:11+0200  encrypted send peer=server nonce=0 bytes=15
+M3       2026-11-27 19:30:11+0200  decrypted receive peer=server nonce=0 validation OK tag OK
+M3       2026-11-27 19:30:11+0200  encrypted send peer=server nonce=1 bytes=553
+M3       2026-11-27 19:30:11+0200  decrypted receive peer=server nonce=1 validation OK tag OK
+M3       2026-11-27 19:30:11+0200  encrypted send peer=server nonce=2 bytes=554
+M3       2026-11-27 19:30:11+0200  decrypted receive peer=server nonce=2 validation OK tag OK
+M3       2026-11-27 19:30:11+0200  interactive login result=True
+M3       2026-11-27 19:30:11+0200  connection closed peer=server
+M3       2026-11-27 19:30:11+0200  handshake sent member hello X=04776658
+M3       2026-11-27 19:30:11+0200  certificate verification OK peer=server group=16002216-16003727-16004417-16005162 sig=30440220
+M3       2026-11-27 19:30:11+0200  hs-server signature verification OK X=04776658 Y=0404206a sig=30440220
+M3       2026-11-27 19:30:11+0200  channel ready peer=server; login still required
+M3       2026-11-27 19:30:11+0200  encrypted send peer=server nonce=0 bytes=15
+M3       2026-11-27 19:30:11+0200  decrypted receive peer=server nonce=0 validation OK tag OK
+M3       2026-11-27 19:30:11+0200  encrypted send peer=server nonce=1 bytes=553
+M3       2026-11-27 19:30:11+0200  decrypted receive peer=server nonce=1 validation OK tag OK
+M3       2026-11-27 19:30:11+0200  encrypted send peer=server nonce=2 bytes=554
+M3       2026-11-27 19:30:12+0200  decrypted receive peer=server nonce=2 validation OK tag OK
+M3       2026-11-27 19:30:12+0200  A3 attempt=1 guessed=15 accepted=False
+M3       2026-11-27 19:30:12+0200  connection closed peer=server
+M3       2026-11-27 19:30:12+0200  handshake sent member hello X=04333b33
+M3       2026-11-27 19:30:12+0200  certificate verification OK peer=server group=16002216-16003727-16004417-16005162 sig=30440220
+M3       2026-11-27 19:30:12+0200  hs-server signature verification OK X=04333b33 Y=04e73bee sig=30440220
+M3       2026-11-27 19:30:12+0200  channel ready peer=server; login still required
+M3       2026-11-27 19:30:12+0200  encrypted send peer=server nonce=0 bytes=15
+M3       2026-11-27 19:30:12+0200  decrypted receive peer=server nonce=0 validation OK tag OK
+M3       2026-11-27 19:30:12+0200  encrypted send peer=server nonce=1 bytes=553
+M3       2026-11-27 19:30:12+0200  decrypted receive peer=server nonce=1 validation OK tag OK
+M3       2026-11-27 19:30:12+0200  encrypted send peer=server nonce=2 bytes=554
+M3       2026-11-27 19:30:12+0200  decrypted receive peer=server nonce=2 validation OK tag OK
+M3       2026-11-27 19:30:12+0200  A3 attempt=2 guessed=13 accepted=False
+M3       2026-11-27 19:30:12+0200  connection closed peer=server
+M3       2026-11-27 19:30:12+0200  handshake sent member hello X=046b5387
+M3       2026-11-27 19:30:12+0200  certificate verification OK peer=server group=16002216-16003727-16004417-16005162 sig=30440220
+M3       2026-11-27 19:30:12+0200  hs-server signature verification OK X=046b5387 Y=04aba97f sig=30450221
+M3       2026-11-27 19:30:12+0200  channel ready peer=server; login still required
+M3       2026-11-27 19:30:12+0200  encrypted send peer=server nonce=0 bytes=15
+M3       2026-11-27 19:30:12+0200  decrypted receive peer=server nonce=0 validation OK tag OK
+M3       2026-11-27 19:30:12+0200  encrypted send peer=server nonce=1 bytes=553
+M3       2026-11-27 19:30:12+0200  decrypted receive peer=server nonce=1 validation OK tag OK
+M3       2026-11-27 19:30:12+0200  encrypted send peer=server nonce=2 bytes=554
+M3       2026-11-27 19:30:12+0200  decrypted receive peer=server nonce=2 validation OK tag OK
+M3       2026-11-27 19:30:12+0200  A3 attempt=3 guessed=7 accepted=False
+M3       2026-11-27 19:30:12+0200  connection closed peer=server
+M3       2026-11-27 19:30:12+0200  handshake sent member hello X=04a9d0fc
+M3       2026-11-27 19:30:12+0200  certificate verification OK peer=server group=16002216-16003727-16004417-16005162 sig=30440220
+M3       2026-11-27 19:30:12+0200  hs-server signature verification OK X=04a9d0fc Y=04b17c24 sig=30460221
+M3       2026-11-27 19:30:12+0200  channel ready peer=server; login still required
+M3       2026-11-27 19:30:12+0200  encrypted send peer=server nonce=0 bytes=15
+M3       2026-11-27 19:30:12+0200  decrypted receive peer=server nonce=0 validation OK tag OK
+M3       2026-11-27 19:30:12+0200  encrypted send peer=server nonce=1 bytes=553
+M3       2026-11-27 19:30:12+0200  decrypted receive peer=server nonce=1 validation OK tag OK
+M3       2026-11-27 19:30:12+0200  encrypted send peer=server nonce=2 bytes=554
+M3       2026-11-27 19:30:13+0200  decrypted receive peer=server nonce=2 validation OK tag OK
+M3       2026-11-27 19:30:13+0200  A3 attempt=4 guessed=13 accepted=False
+M3       2026-11-27 19:30:13+0200  connection closed peer=server
+M3       2026-11-27 19:30:13+0200  handshake sent member hello X=04887e56
+M3       2026-11-27 19:30:13+0200  certificate verification OK peer=server group=16002216-16003727-16004417-16005162 sig=30440220
+M3       2026-11-27 19:30:13+0200  hs-server signature verification OK X=04887e56 Y=043490e8 sig=30450220
+M3       2026-11-27 19:30:13+0200  channel ready peer=server; login still required
+M3       2026-11-27 19:30:13+0200  encrypted send peer=server nonce=0 bytes=15
+M3       2026-11-27 19:30:13+0200  decrypted receive peer=server nonce=0 validation OK tag OK
+M3       2026-11-27 19:30:13+0200  encrypted send peer=server nonce=1 bytes=553
+M3       2026-11-27 19:30:13+0200  decrypted receive peer=server nonce=1 validation OK tag OK
+M3       2026-11-27 19:30:13+0200  encrypted send peer=server nonce=2 bytes=554
+M3       2026-11-27 19:30:13+0200  decrypted receive peer=server nonce=2 validation OK tag OK
+M3       2026-11-27 19:30:13+0200  A3 attempt=5 guessed=2 accepted=False
+M3       2026-11-27 19:30:13+0200  connection closed peer=server
+M3       2026-11-27 19:30:13+0200  handshake sent member hello X=040fd2aa
+M3       2026-11-27 19:30:13+0200  certificate verification OK peer=server group=16002216-16003727-16004417-16005162 sig=30440220
+M3       2026-11-27 19:30:13+0200  hs-server signature verification OK X=040fd2aa Y=04b253ab sig=30440220
+M3       2026-11-27 19:30:13+0200  channel ready peer=server; login still required
+M3       2026-11-27 19:30:13+0200  encrypted send peer=server nonce=0 bytes=15
+M3       2026-11-27 19:30:13+0200  decrypted receive peer=server nonce=0 validation OK tag OK
+M3       2026-11-27 19:30:13+0200  encrypted send peer=server nonce=1 bytes=553
+M3       2026-11-27 19:30:13+0200  decrypted receive peer=server nonce=1 validation OK tag OK
+M3       2026-11-27 19:30:13+0200  encrypted send peer=server nonce=2 bytes=554
+M3       2026-11-27 19:30:13+0200  decrypted receive peer=server nonce=2 validation OK tag OK
+M3       2026-11-27 19:30:13+0200  A3 attempt=6 guessed=11 accepted=False
+M3       2026-11-27 19:30:13+0200  connection closed peer=server
+M3       2026-11-27 19:30:13+0200  handshake sent member hello X=046c2fea
+M3       2026-11-27 19:30:13+0200  certificate verification OK peer=server group=16002216-16003727-16004417-16005162 sig=30440220
+M3       2026-11-27 19:30:13+0200  hs-server signature verification OK X=046c2fea Y=04081b0b sig=30460221
+M3       2026-11-27 19:30:13+0200  channel ready peer=server; login still required
+M3       2026-11-27 19:30:13+0200  encrypted send peer=server nonce=0 bytes=15
+M3       2026-11-27 19:30:13+0200  decrypted receive peer=server nonce=0 validation OK tag OK
+M3       2026-11-27 19:30:13+0200  encrypted send peer=server nonce=1 bytes=553
+M3       2026-11-27 19:30:13+0200  decrypted receive peer=server nonce=1 validation OK tag OK
+M3       2026-11-27 19:30:13+0200  encrypted send peer=server nonce=2 bytes=554
+M3       2026-11-27 19:30:13+0200  decrypted receive peer=server nonce=2 validation OK tag OK
+M3       2026-11-27 19:30:13+0200  A3 attempt=7 guessed=8 accepted=False
+M3       2026-11-27 19:30:13+0200  connection closed peer=server
+M3       2026-11-27 19:30:13+0200  handshake sent member hello X=04cefccd
+M3       2026-11-27 19:30:13+0200  certificate verification OK peer=server group=16002216-16003727-16004417-16005162 sig=30440220
+M3       2026-11-27 19:30:13+0200  hs-server signature verification OK X=04cefccd Y=040f1abf sig=30460221
+M3       2026-11-27 19:30:13+0200  channel ready peer=server; login still required
+M3       2026-11-27 19:30:13+0200  encrypted send peer=server nonce=0 bytes=15
+M3       2026-11-27 19:30:13+0200  decrypted receive peer=server nonce=0 validation OK tag OK
+M3       2026-11-27 19:30:14+0200  encrypted send peer=server nonce=1 bytes=553
+M3       2026-11-27 19:30:14+0200  decrypted receive peer=server nonce=1 validation OK tag OK
+M3       2026-11-27 19:30:14+0200  encrypted send peer=server nonce=2 bytes=553
+M3       2026-11-27 19:30:14+0200  decrypted receive peer=server nonce=2 validation OK tag OK
+M3       2026-11-27 19:30:14+0200  A3 attempt=8 guessed=3 accepted=False
+M3       2026-11-27 19:30:14+0200  connection closed peer=server

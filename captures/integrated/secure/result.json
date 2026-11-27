@@ -1,0 +1,5 @@
+{
+  "scenario": "secure",
+  "both_logins": "verified",
+  "signed_requests": "accepted"
+}

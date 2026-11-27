@@ -1,0 +1,77 @@
+M3       2026-11-27 19:32:39+0200  owner-local identity and independent login secret ready
+M3       2026-11-27 19:32:44+0200  EDUCATIONAL WEAK MODE: unsigned-handshake
+M3       2026-11-27 19:32:44+0200  handshake sent member hello X=044c25d9
+M3       2026-11-27 19:32:44+0200  certificate verification OK peer=server group=16002216-16003727-16004417-16005162 sig=30450221
+M3       2026-11-27 19:32:44+0200  DEMO handshake signatures omitted
+M3       2026-11-27 19:32:44+0200  channel ready peer=server; login still required
+M3       2026-11-27 19:32:44+0200  encrypted send peer=server nonce=0 bytes=15
+M3       2026-11-27 19:32:44+0200  decrypted receive peer=server nonce=0 validation OK tag OK
+M3       2026-11-27 19:32:45+0200  encrypted send peer=server nonce=1 bytes=540
+M3       2026-11-27 19:32:45+0200  decrypted receive peer=server nonce=1 validation OK tag OK
+M3       2026-11-27 19:32:45+0200  encrypted send peer=server nonce=2 bytes=553
+M3       2026-11-27 19:32:45+0200  decrypted receive peer=server nonce=2 validation OK tag OK
+M3       2026-11-27 19:32:45+0200  encrypted send peer=server nonce=3 bytes=554
+M3       2026-11-27 19:32:45+0200  decrypted receive peer=server nonce=3 validation OK tag OK
+M3       2026-11-27 19:32:45+0200  interactive login result=True
+M3       2026-11-27 19:32:45+0200  encrypted send peer=server nonce=4 bytes=15
+M3       2026-11-27 19:32:45+0200  decrypted receive peer=server nonce=4 validation OK tag OK
+M3       2026-11-27 19:32:45+0200  encrypted send peer=server nonce=5 bytes=1073
+M3       2026-11-27 19:32:45+0200  decrypted receive peer=server nonce=5 validation OK tag OK
+M3       2026-11-27 19:32:45+0200  connection closed peer=server
+M3       2026-11-27 19:32:49+0200  EDUCATIONAL WEAK MODE: unsigned-handshake
+M3       2026-11-27 19:32:49+0200  handshake sent member hello X=04087c6f
+M3       2026-11-27 19:32:49+0200  certificate verification OK peer=server group=16002216-16003727-16004417-16005162 sig=30450221
+M3       2026-11-27 19:32:49+0200  DEMO handshake signatures omitted
+M3       2026-11-27 19:32:49+0200  channel ready peer=server; login still required
+M3       2026-11-27 19:32:49+0200  encrypted send peer=server nonce=0 bytes=15
+M3       2026-11-27 19:32:49+0200  decrypted receive peer=server nonce=0 validation OK tag OK
+M3       2026-11-27 19:32:49+0200  encrypted send peer=server nonce=1 bytes=553
+M3       2026-11-27 19:32:50+0200  decrypted receive peer=server nonce=1 validation OK tag OK
+M3       2026-11-27 19:32:50+0200  encrypted send peer=server nonce=2 bytes=553
+M3       2026-11-27 19:32:50+0200  decrypted receive peer=server nonce=2 validation OK tag OK
+M3       2026-11-27 19:32:50+0200  interactive login result=True
+M3       2026-11-27 19:32:50+0200  encrypted send peer=server nonce=3 bytes=15
+M3       2026-11-27 19:32:50+0200  decrypted receive peer=server nonce=3 validation OK tag OK
+M3       2026-11-27 19:32:50+0200  encrypted send peer=server nonce=4 bytes=202
+M3       2026-11-27 19:32:50+0200  decrypted receive peer=server nonce=4 validation OK tag OK
+M3       2026-11-27 19:32:50+0200  share verification OK member=M3 hi=2a4203f2
+M3       2026-11-27 19:32:50+0200  encrypted send peer=server nonce=5 bytes=2314
+M3       2026-11-27 19:32:51+0200  decrypted receive peer=server nonce=5 validation OK tag OK
+M3       2026-11-27 19:32:51+0200  connection closed peer=server
+M3       2026-11-27 19:32:57+0200  EDUCATIONAL WEAK MODE: unsigned-handshake
+M3       2026-11-27 19:32:57+0200  handshake sent member hello X=04545b08
+M3       2026-11-27 19:32:57+0200  certificate verification OK peer=server group=16002216-16003727-16004417-16005162 sig=30450221
+M3       2026-11-27 19:32:57+0200  DEMO handshake signatures omitted
+M3       2026-11-27 19:32:57+0200  channel ready peer=server; login still required
+M3       2026-11-27 19:32:57+0200  encrypted send peer=server nonce=0 bytes=15
+M3       2026-11-27 19:32:57+0200  decrypted receive peer=server nonce=0 validation OK tag OK
+M3       2026-11-27 19:32:58+0200  encrypted send peer=server nonce=1 bytes=553
+M3       2026-11-27 19:32:58+0200  decrypted receive peer=server nonce=1 validation OK tag OK
+M3       2026-11-27 19:32:58+0200  encrypted send peer=server nonce=2 bytes=554
+M3       2026-11-27 19:32:58+0200  decrypted receive peer=server nonce=2 validation OK tag OK
+M3       2026-11-27 19:32:58+0200  interactive login result=True
+M3       2026-11-27 19:32:58+0200  encrypted send peer=server nonce=3 bytes=15
+M3       2026-11-27 19:32:58+0200  decrypted receive peer=server nonce=3 validation OK tag OK
+M3       2026-11-27 19:32:58+0200  encrypted send peer=server nonce=4 bytes=1226
+M3       2026-11-27 19:32:58+0200  decrypted receive peer=server nonce=4 validation OK tag OK
+M3       2026-11-27 19:32:58+0200  connection closed peer=server
+M3       2026-11-27 19:33:02+0200  EDUCATIONAL WEAK MODE: unsigned-handshake
+M3       2026-11-27 19:33:02+0200  handshake sent member hello X=04f5ad60
+M3       2026-11-27 19:33:02+0200  certificate verification OK peer=server group=16002216-16003727-16004417-16005162 sig=30450221
+M3       2026-11-27 19:33:02+0200  DEMO handshake signatures omitted
+M3       2026-11-27 19:33:02+0200  channel ready peer=server; login still required
+M3       2026-11-27 19:33:02+0200  encrypted send peer=server nonce=0 bytes=15
+M3       2026-11-27 19:33:02+0200  decrypted receive peer=server nonce=0 validation OK tag OK
+M3       2026-11-27 19:33:02+0200  encrypted send peer=server nonce=1 bytes=553
+M3       2026-11-27 19:33:02+0200  decrypted receive peer=server nonce=1 validation OK tag OK
+M3       2026-11-27 19:33:02+0200  encrypted send peer=server nonce=2 bytes=554
+M3       2026-11-27 19:33:02+0200  decrypted receive peer=server nonce=2 validation OK tag OK
+M3       2026-11-27 19:33:02+0200  interactive login result=True
+M3       2026-11-27 19:33:02+0200  encrypted send peer=server nonce=3 bytes=15
+M3       2026-11-27 19:33:02+0200  decrypted receive peer=server nonce=3 validation OK tag OK
+M3       2026-11-27 19:33:02+0200  encrypted send peer=server nonce=4 bytes=204
+M3       2026-11-27 19:33:02+0200  decrypted receive peer=server nonce=4 validation OK tag OK
+M3       2026-11-27 19:33:02+0200  share verification OK member=M3 hi=2a4203f2
+M3       2026-11-27 19:33:02+0200  encrypted send peer=server nonce=5 bytes=2315
+M3       2026-11-27 19:33:03+0200  decrypted receive peer=server nonce=5 validation OK tag OK
+M3       2026-11-27 19:33:03+0200  connection closed peer=server

@@ -1,3 +1,5 @@
+> Historical John-only milestone document. See FINAL_IMPLEMENTATION_REPORT.md and DESIGN_SHEET.pdf for the integrated application.
+
 # Executed test results
 
 Date: 26 November 2026 (Africa/Cairo). Windows, Python 3.12, cryptography 50.0.2.

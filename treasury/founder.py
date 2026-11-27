@@ -8,6 +8,7 @@ from .config import (CERTIFICATE_EXPIRY, DATA_DIR, DEFAULT_N, DEFAULT_T,
 from .encoding import canonical_json
 from .identity import initialize_identity, write_new
 from .logging_utils import get_logger
+from .vault import vault_setup, VAULT_DEFAULT_CONTENT
 
 
 def issue_certificates(root: Path, n: int, t: int, log) -> None:
@@ -37,14 +38,27 @@ def main() -> None:
     parser.add_argument("--t", type=int, default=DEFAULT_T)
     parser.add_argument("--n", type=int, default=DEFAULT_N)
     parser.add_argument("--data-dir", type=Path, default=DATA_DIR)
+    parser.add_argument("--vault-file", type=Path, help="file to encrypt; defaults to the course demonstration text")
     args = parser.parse_args()
     validate_group()
     log = get_logger("founder")
     try:
-        issue_certificates(args.data_dir, args.n, args.t, log)
-        # Divan vault setup is handled by vault_cli.py --setup (see treasury/vault_cli.py).
-        # It is intentionally NOT called here so the founder subprocess stays fast
-        # and existing tests (test_processes.py, 20s timeout) continue to pass.
+        # Preflight all output paths before changing any setup artifact.
+        names = ("server", *member_names(args.n))
+        outputs = [args.data_dir / "public" / (name + ".cert.json") for name in names]
+        outputs += [args.data_dir / "public" / "setup.json", args.data_dir / "public" / "vault_public.json"]
+        outputs += [args.data_dir / name / "share.json" for name in member_names(args.n)]
+        if any(path.exists() for path in outputs):
+            raise ValueError("existing setup files; use a fresh --data-dir")
+        content = args.vault_file.read_bytes() if args.vault_file else VAULT_DEFAULT_CONTENT
+        try:
+            issue_certificates(args.data_dir, args.n, args.t, log)
+            vault_setup(args.data_dir, args.t, args.n, content, log)
+        except Exception:
+            for path in outputs:
+                if path.exists():
+                    path.unlink()  # exact preflighted outputs only; preserve all owner keys
+            raise
     except (ValueError, OSError) as exc:
         log.error("setup rejected: %s", exc)
         parser.exit(1, "Create server/member --init-identity public keys first.\n")

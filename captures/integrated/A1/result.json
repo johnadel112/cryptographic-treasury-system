@@ -1,0 +1,6 @@
+{
+  "scenario": "A1",
+  "login_exposed": true,
+  "signed_request_tamper": "rejected",
+  "secure_handshake": "rejected"
+}

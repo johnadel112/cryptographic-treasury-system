@@ -25,6 +25,7 @@ WEAKNESS_NAMES = {
 }
 
 CHANNEL_WEAKNESSES = ("unsigned-handshake", "no-encryption")
+APPLICATION_WEAKNESSES = (*CHANNEL_WEAKNESSES, "short-challenge", "no-proof", "unsigned-ballots")
 CERTIFICATE_EXPIRY = "2026-12-31"
 # https://www.rfc-editor.org/rfc/rfc3526 section 3, group 14. The assignment uses subgroup generator 4.
 P = int("""

@@ -1,0 +1,455 @@
+server   2026-11-27 19:32:38+0200  owner-local server key ready; public key published
+server   2026-11-27 19:32:41+0200  founder commitments signature OK C0=41362a9c t=3 n=5
+server   2026-11-27 19:32:41+0200  EDUCATIONAL WEAK MODE: unsigned-handshake
+server   2026-11-27 19:32:41+0200  EDUCATIONAL WEAK MODE: unsigned-ballots
+server   2026-11-27 19:32:41+0200  listening on 127.0.0.1:5050 mode=unsigned-handshake,unsigned-ballots n=5 t=3
+server   2026-11-27 19:32:41+0200  connection accepted from 127.0.0.1:56718
+server   2026-11-27 19:32:41+0200  EDUCATIONAL WEAK MODE: unsigned-handshake
+server   2026-11-27 19:32:41+0200  certificate verification OK peer=M1 group=16002216-16003727-16004417-16005162 sig=30460221
+server   2026-11-27 19:32:41+0200  handshake sent server hello X=048af24b Y=0439c1ed
+server   2026-11-27 19:32:41+0200  DEMO handshake signatures omitted
+server   2026-11-27 19:32:41+0200  session established peer=M1; login still required
+server   2026-11-27 19:32:41+0200  decrypted receive peer=M1 nonce=0 validation OK tag OK
+server   2026-11-27 19:32:41+0200  encrypted send peer=M1 nonce=0 bytes=3647
+server   2026-11-27 19:32:41+0200  decrypted receive peer=M1 nonce=1 validation OK tag OK
+server   2026-11-27 19:32:41+0200  registration M1 OK X=93519365
+server   2026-11-27 19:32:41+0200  encrypted send peer=M1 nonce=1 bytes=11
+server   2026-11-27 19:32:41+0200  decrypted receive peer=M1 nonce=2 validation OK tag OK
+server   2026-11-27 19:32:41+0200  login M1 challenge R=4a4642ac e=88b631c6
+server   2026-11-27 19:32:41+0200  encrypted send peer=M1 nonce=2 bytes=50
+server   2026-11-27 19:32:41+0200  decrypted receive peer=M1 nonce=3 validation OK tag OK
+server   2026-11-27 19:32:41+0200  login M1 R=4a4642ac e=88b631c6 z=55cb34e7 g^z=R*X^e: OK
+server   2026-11-27 19:32:41+0200  encrypted send peer=M1 nonce=3 bytes=24
+server   2026-11-27 19:32:41+0200  decrypted receive peer=M1 nonce=4 validation OK tag OK
+server   2026-11-27 19:32:41+0200  request M1 seq=1 op=spend signature OK; accepted ledger entry
+server   2026-11-27 19:32:41+0200  encrypted send peer=M1 nonce=4 bytes=160
+server   2026-11-27 19:32:41+0200  connection closed peer=M1
+server   2026-11-27 19:32:42+0200  connection accepted from 127.0.0.1:56719
+server   2026-11-27 19:32:42+0200  EDUCATIONAL WEAK MODE: unsigned-handshake
+server   2026-11-27 19:32:42+0200  certificate verification OK peer=M1 group=16002216-16003727-16004417-16005162 sig=30460221
+server   2026-11-27 19:32:42+0200  handshake sent server hello X=04d33fbe Y=041bbd63
+server   2026-11-27 19:32:42+0200  DEMO handshake signatures omitted
+server   2026-11-27 19:32:42+0200  session established peer=M1; login still required
+server   2026-11-27 19:32:42+0200  decrypted receive peer=M1 nonce=0 validation OK tag OK
+server   2026-11-27 19:32:42+0200  encrypted send peer=M1 nonce=0 bytes=4156
+server   2026-11-27 19:32:42+0200  decrypted receive peer=M1 nonce=1 validation OK tag OK
+server   2026-11-27 19:32:42+0200  login M1 challenge R=bf2f5b65 e=364d6d1a
+server   2026-11-27 19:32:42+0200  encrypted send peer=M1 nonce=1 bytes=50
+server   2026-11-27 19:32:42+0200  decrypted receive peer=M1 nonce=2 validation OK tag OK
+server   2026-11-27 19:32:42+0200  login M1 R=bf2f5b65 e=364d6d1a z=1d0b8087 g^z=R*X^e: OK
+server   2026-11-27 19:32:42+0200  encrypted send peer=M1 nonce=2 bytes=24
+server   2026-11-27 19:32:42+0200  connection closed peer=M1
+server   2026-11-27 19:32:42+0200  connection accepted from 127.0.0.1:56721
+server   2026-11-27 19:32:42+0200  EDUCATIONAL WEAK MODE: unsigned-handshake
+server   2026-11-27 19:32:42+0200  certificate verification OK peer=M1 group=16002216-16003727-16004417-16005162 sig=30460221
+server   2026-11-27 19:32:42+0200  handshake sent server hello X=045c2ea8 Y=04629bed
+server   2026-11-27 19:32:42+0200  DEMO handshake signatures omitted
+server   2026-11-27 19:32:42+0200  session established peer=M1; login still required
+server   2026-11-27 19:32:42+0200  decrypted receive peer=M1 nonce=0 validation OK tag OK
+server   2026-11-27 19:32:42+0200  encrypted send peer=M1 nonce=0 bytes=4156
+server   2026-11-27 19:32:43+0200  decrypted receive peer=M1 nonce=1 validation OK tag OK
+server   2026-11-27 19:32:43+0200  login M1 challenge R=b57cb779 e=66026ea5
+server   2026-11-27 19:32:43+0200  encrypted send peer=M1 nonce=1 bytes=49
+server   2026-11-27 19:32:43+0200  decrypted receive peer=M1 nonce=2 validation OK tag OK
+server   2026-11-27 19:32:43+0200  login M1 R=b57cb779 e=66026ea5 z=5e0c5afd g^z=R*X^e: OK
+server   2026-11-27 19:32:43+0200  encrypted send peer=M1 nonce=2 bytes=24
+server   2026-11-27 19:32:43+0200  decrypted receive peer=M1 nonce=3 validation OK tag OK
+server   2026-11-27 19:32:43+0200  encrypted send peer=M1 nonce=3 bytes=4156
+server   2026-11-27 19:32:43+0200  decrypted receive peer=M1 nonce=4 validation OK tag OK
+server   2026-11-27 19:32:43+0200  ballot accepted member=M1 operation=vote-1 signature=SKIPPED (weak); encrypted only
+server   2026-11-27 19:32:43+0200  encrypted send peer=M1 nonce=4 bytes=160
+server   2026-11-27 19:32:43+0200  connection closed peer=M1
+server   2026-11-27 19:32:44+0200  connection accepted from 127.0.0.1:56723
+server   2026-11-27 19:32:44+0200  EDUCATIONAL WEAK MODE: unsigned-handshake
+server   2026-11-27 19:32:44+0200  certificate verification OK peer=M2 group=16002216-16003727-16004417-16005162 sig=30440220
+server   2026-11-27 19:32:44+0200  handshake sent server hello X=04922a6d Y=049651fc
+server   2026-11-27 19:32:44+0200  DEMO handshake signatures omitted
+server   2026-11-27 19:32:44+0200  session established peer=M2; login still required
+server   2026-11-27 19:32:44+0200  decrypted receive peer=M2 nonce=0 validation OK tag OK
+server   2026-11-27 19:32:44+0200  encrypted send peer=M2 nonce=0 bytes=3647
+server   2026-11-27 19:32:44+0200  decrypted receive peer=M2 nonce=1 validation OK tag OK
+server   2026-11-27 19:32:44+0200  registration M2 OK X=e7f4259e
+server   2026-11-27 19:32:44+0200  encrypted send peer=M2 nonce=1 bytes=11
+server   2026-11-27 19:32:44+0200  decrypted receive peer=M2 nonce=2 validation OK tag OK
+server   2026-11-27 19:32:44+0200  login M2 challenge R=9593a2a6 e=925423d7
+server   2026-11-27 19:32:44+0200  encrypted send peer=M2 nonce=2 bytes=50
+server   2026-11-27 19:32:44+0200  decrypted receive peer=M2 nonce=3 validation OK tag OK
+server   2026-11-27 19:32:44+0200  login M2 R=9593a2a6 e=925423d7 z=719329b2 g^z=R*X^e: OK
+server   2026-11-27 19:32:44+0200  encrypted send peer=M2 nonce=3 bytes=24
+server   2026-11-27 19:32:44+0200  decrypted receive peer=M2 nonce=4 validation OK tag OK
+server   2026-11-27 19:32:44+0200  encrypted send peer=M2 nonce=4 bytes=4156
+server   2026-11-27 19:32:44+0200  decrypted receive peer=M2 nonce=5 validation OK tag OK
+server   2026-11-27 19:32:44+0200  ballot accepted member=M2 operation=vote-1 signature=SKIPPED (weak); encrypted only
+server   2026-11-27 19:32:44+0200  encrypted send peer=M2 nonce=5 bytes=160
+server   2026-11-27 19:32:44+0200  connection closed peer=M2
+server   2026-11-27 19:32:44+0200  connection accepted from 127.0.0.1:56727
+server   2026-11-27 19:32:44+0200  EDUCATIONAL WEAK MODE: unsigned-handshake
+server   2026-11-27 19:32:44+0200  certificate verification OK peer=M3 group=16002216-16003727-16004417-16005162 sig=30440220
+server   2026-11-27 19:32:44+0200  handshake sent server hello X=044c25d9 Y=04a6f728
+server   2026-11-27 19:32:44+0200  DEMO handshake signatures omitted
+server   2026-11-27 19:32:44+0200  session established peer=M3; login still required
+server   2026-11-27 19:32:44+0200  decrypted receive peer=M3 nonce=0 validation OK tag OK
+server   2026-11-27 19:32:44+0200  encrypted send peer=M3 nonce=0 bytes=3647
+server   2026-11-27 19:32:45+0200  decrypted receive peer=M3 nonce=1 validation OK tag OK
+server   2026-11-27 19:32:45+0200  registration M3 OK X=4912fae7
+server   2026-11-27 19:32:45+0200  encrypted send peer=M3 nonce=1 bytes=11
+server   2026-11-27 19:32:45+0200  decrypted receive peer=M3 nonce=2 validation OK tag OK
+server   2026-11-27 19:32:45+0200  login M3 challenge R=a09b9b0e e=576f1c8a
+server   2026-11-27 19:32:45+0200  encrypted send peer=M3 nonce=2 bytes=50
+server   2026-11-27 19:32:45+0200  decrypted receive peer=M3 nonce=3 validation OK tag OK
+server   2026-11-27 19:32:45+0200  login M3 R=a09b9b0e e=576f1c8a z=492a8616 g^z=R*X^e: OK
+server   2026-11-27 19:32:45+0200  encrypted send peer=M3 nonce=3 bytes=24
+server   2026-11-27 19:32:45+0200  decrypted receive peer=M3 nonce=4 validation OK tag OK
+server   2026-11-27 19:32:45+0200  encrypted send peer=M3 nonce=4 bytes=4156
+server   2026-11-27 19:32:45+0200  decrypted receive peer=M3 nonce=5 validation OK tag OK
+server   2026-11-27 19:32:45+0200  ballot accepted member=M3 operation=vote-1 signature=SKIPPED (weak); encrypted only
+server   2026-11-27 19:32:45+0200  encrypted send peer=M3 nonce=5 bytes=160
+server   2026-11-27 19:32:45+0200  connection closed peer=M3
+server   2026-11-27 19:32:46+0200  connection accepted from 127.0.0.1:56728
+server   2026-11-27 19:32:46+0200  EDUCATIONAL WEAK MODE: unsigned-handshake
+server   2026-11-27 19:32:46+0200  certificate verification OK peer=M4 group=16002216-16003727-16004417-16005162 sig=30450221
+server   2026-11-27 19:32:46+0200  handshake sent server hello X=042cd079 Y=040177fc
+server   2026-11-27 19:32:46+0200  DEMO handshake signatures omitted
+server   2026-11-27 19:32:46+0200  session established peer=M4; login still required
+server   2026-11-27 19:32:46+0200  decrypted receive peer=M4 nonce=0 validation OK tag OK
+server   2026-11-27 19:32:46+0200  encrypted send peer=M4 nonce=0 bytes=3647
+server   2026-11-27 19:32:46+0200  decrypted receive peer=M4 nonce=1 validation OK tag OK
+server   2026-11-27 19:32:46+0200  registration M4 OK X=bb9fcff3
+server   2026-11-27 19:32:46+0200  encrypted send peer=M4 nonce=1 bytes=11
+server   2026-11-27 19:32:46+0200  decrypted receive peer=M4 nonce=2 validation OK tag OK
+server   2026-11-27 19:32:46+0200  login M4 challenge R=ef998f30 e=ab915965
+server   2026-11-27 19:32:46+0200  encrypted send peer=M4 nonce=2 bytes=50
+server   2026-11-27 19:32:46+0200  decrypted receive peer=M4 nonce=3 validation OK tag OK
+server   2026-11-27 19:32:46+0200  login M4 R=ef998f30 e=ab915965 z=3ea20538 g^z=R*X^e: OK
+server   2026-11-27 19:32:46+0200  encrypted send peer=M4 nonce=3 bytes=24
+server   2026-11-27 19:32:46+0200  decrypted receive peer=M4 nonce=4 validation OK tag OK
+server   2026-11-27 19:32:46+0200  encrypted send peer=M4 nonce=4 bytes=4156
+server   2026-11-27 19:32:46+0200  decrypted receive peer=M4 nonce=5 validation OK tag OK
+server   2026-11-27 19:32:46+0200  ballot accepted member=M4 operation=vote-1 signature=SKIPPED (weak); encrypted only
+server   2026-11-27 19:32:46+0200  encrypted send peer=M4 nonce=5 bytes=160
+server   2026-11-27 19:32:46+0200  connection closed peer=M4
+server   2026-11-27 19:32:46+0200  connection accepted from 127.0.0.1:56729
+server   2026-11-27 19:32:46+0200  EDUCATIONAL WEAK MODE: unsigned-handshake
+server   2026-11-27 19:32:46+0200  certificate verification OK peer=M5 group=16002216-16003727-16004417-16005162 sig=30450221
+server   2026-11-27 19:32:46+0200  handshake sent server hello X=04a393a6 Y=0421384c
+server   2026-11-27 19:32:47+0200  DEMO handshake signatures omitted
+server   2026-11-27 19:32:47+0200  session established peer=M5; login still required
+server   2026-11-27 19:32:47+0200  decrypted receive peer=M5 nonce=0 validation OK tag OK
+server   2026-11-27 19:32:47+0200  encrypted send peer=M5 nonce=0 bytes=3647
+server   2026-11-27 19:32:47+0200  decrypted receive peer=M5 nonce=1 validation OK tag OK
+server   2026-11-27 19:32:47+0200  registration M5 OK X=2b306baf
+server   2026-11-27 19:32:47+0200  encrypted send peer=M5 nonce=1 bytes=11
+server   2026-11-27 19:32:47+0200  decrypted receive peer=M5 nonce=2 validation OK tag OK
+server   2026-11-27 19:32:47+0200  login M5 challenge R=dfa05a16 e=f77ab325
+server   2026-11-27 19:32:47+0200  encrypted send peer=M5 nonce=2 bytes=50
+server   2026-11-27 19:32:47+0200  decrypted receive peer=M5 nonce=3 validation OK tag OK
+server   2026-11-27 19:32:47+0200  login M5 R=dfa05a16 e=f77ab325 z=5b79d4e4 g^z=R*X^e: OK
+server   2026-11-27 19:32:47+0200  encrypted send peer=M5 nonce=3 bytes=24
+server   2026-11-27 19:32:47+0200  decrypted receive peer=M5 nonce=4 validation OK tag OK
+server   2026-11-27 19:32:47+0200  encrypted send peer=M5 nonce=4 bytes=4156
+server   2026-11-27 19:32:47+0200  decrypted receive peer=M5 nonce=5 validation OK tag OK
+server   2026-11-27 19:32:48+0200  ballot accepted member=M5 operation=vote-1 signature=SKIPPED (weak); encrypted only
+server   2026-11-27 19:32:48+0200  encrypted send peer=M5 nonce=5 bytes=1204
+server   2026-11-27 19:32:48+0200  connection closed peer=M5
+server   2026-11-27 19:32:48+0200  connection accepted from 127.0.0.1:52320
+server   2026-11-27 19:32:48+0200  EDUCATIONAL WEAK MODE: unsigned-handshake
+server   2026-11-27 19:32:48+0200  certificate verification OK peer=M1 group=16002216-16003727-16004417-16005162 sig=30460221
+server   2026-11-27 19:32:48+0200  handshake sent server hello X=047962da Y=04223a40
+server   2026-11-27 19:32:48+0200  DEMO handshake signatures omitted
+server   2026-11-27 19:32:48+0200  session established peer=M1; login still required
+server   2026-11-27 19:32:48+0200  decrypted receive peer=M1 nonce=0 validation OK tag OK
+server   2026-11-27 19:32:48+0200  encrypted send peer=M1 nonce=0 bytes=4156
+server   2026-11-27 19:32:48+0200  decrypted receive peer=M1 nonce=1 validation OK tag OK
+server   2026-11-27 19:32:48+0200  login M1 challenge R=20b05639 e=9f9ed784
+server   2026-11-27 19:32:48+0200  encrypted send peer=M1 nonce=1 bytes=50
+server   2026-11-27 19:32:48+0200  decrypted receive peer=M1 nonce=2 validation OK tag OK
+server   2026-11-27 19:32:48+0200  login M1 R=20b05639 e=9f9ed784 z=239fa973 g^z=R*X^e: OK
+server   2026-11-27 19:32:48+0200  encrypted send peer=M1 nonce=2 bytes=24
+server   2026-11-27 19:32:48+0200  decrypted receive peer=M1 nonce=3 validation OK tag OK
+server   2026-11-27 19:32:48+0200  encrypted send peer=M1 nonce=3 bytes=4156
+server   2026-11-27 19:32:48+0200  decrypted receive peer=M1 nonce=4 validation OK tag OK
+server   2026-11-27 19:32:48+0200  request M1 seq=2 op=status signature OK; accepted ledger entry
+server   2026-11-27 19:32:48+0200  encrypted send peer=M1 nonce=4 bytes=1204
+server   2026-11-27 19:32:49+0200  decrypted receive peer=M1 nonce=5 validation OK tag OK
+server   2026-11-27 19:32:49+0200  operation=vote-1 member=M1 d=db839b50 proof=OK
+server   2026-11-27 19:32:49+0200  request M1 seq=3 op=contribute signature OK; accepted ledger entry
+server   2026-11-27 19:32:49+0200  encrypted send peer=M1 nonce=5 bytes=1204
+server   2026-11-27 19:32:49+0200  connection closed peer=M1
+server   2026-11-27 19:32:49+0200  connection accepted from 127.0.0.1:53048
+server   2026-11-27 19:32:49+0200  EDUCATIONAL WEAK MODE: unsigned-handshake
+server   2026-11-27 19:32:49+0200  certificate verification OK peer=M3 group=16002216-16003727-16004417-16005162 sig=30440220
+server   2026-11-27 19:32:49+0200  handshake sent server hello X=04087c6f Y=045f1d19
+server   2026-11-27 19:32:49+0200  DEMO handshake signatures omitted
+server   2026-11-27 19:32:49+0200  session established peer=M3; login still required
+server   2026-11-27 19:32:49+0200  decrypted receive peer=M3 nonce=0 validation OK tag OK
+server   2026-11-27 19:32:49+0200  encrypted send peer=M3 nonce=0 bytes=4156
+server   2026-11-27 19:32:49+0200  decrypted receive peer=M3 nonce=1 validation OK tag OK
+server   2026-11-27 19:32:50+0200  login M3 challenge R=d1601959 e=a538db02
+server   2026-11-27 19:32:50+0200  encrypted send peer=M3 nonce=1 bytes=50
+server   2026-11-27 19:32:50+0200  decrypted receive peer=M3 nonce=2 validation OK tag OK
+server   2026-11-27 19:32:50+0200  login M3 R=d1601959 e=a538db02 z=c3bc25a5 g^z=R*X^e: OK
+server   2026-11-27 19:32:50+0200  encrypted send peer=M3 nonce=2 bytes=24
+server   2026-11-27 19:32:50+0200  decrypted receive peer=M3 nonce=3 validation OK tag OK
+server   2026-11-27 19:32:50+0200  encrypted send peer=M3 nonce=3 bytes=4156
+server   2026-11-27 19:32:50+0200  decrypted receive peer=M3 nonce=4 validation OK tag OK
+server   2026-11-27 19:32:50+0200  request M3 seq=1 op=status signature OK; accepted ledger entry
+server   2026-11-27 19:32:50+0200  encrypted send peer=M3 nonce=4 bytes=1204
+server   2026-11-27 19:32:50+0200  decrypted receive peer=M3 nonce=5 validation OK tag OK
+server   2026-11-27 19:32:51+0200  operation=vote-1 member=M3 d=30090027 proof=OK
+server   2026-11-27 19:32:51+0200  request M3 seq=2 op=contribute signature OK; accepted ledger entry
+server   2026-11-27 19:32:51+0200  encrypted send peer=M3 nonce=5 bytes=1204
+server   2026-11-27 19:32:51+0200  connection closed peer=M3
+server   2026-11-27 19:32:51+0200  connection accepted from 127.0.0.1:53049
+server   2026-11-27 19:32:51+0200  EDUCATIONAL WEAK MODE: unsigned-handshake
+server   2026-11-27 19:32:51+0200  certificate verification OK peer=M5 group=16002216-16003727-16004417-16005162 sig=30450221
+server   2026-11-27 19:32:51+0200  handshake sent server hello X=04bf874a Y=04002cf2
+server   2026-11-27 19:32:51+0200  DEMO handshake signatures omitted
+server   2026-11-27 19:32:51+0200  session established peer=M5; login still required
+server   2026-11-27 19:32:51+0200  decrypted receive peer=M5 nonce=0 validation OK tag OK
+server   2026-11-27 19:32:51+0200  encrypted send peer=M5 nonce=0 bytes=4156
+server   2026-11-27 19:32:51+0200  decrypted receive peer=M5 nonce=1 validation OK tag OK
+server   2026-11-27 19:32:51+0200  login M5 challenge R=f02a53bb e=81293ce0
+server   2026-11-27 19:32:51+0200  encrypted send peer=M5 nonce=1 bytes=50
+server   2026-11-27 19:32:51+0200  decrypted receive peer=M5 nonce=2 validation OK tag OK
+server   2026-11-27 19:32:51+0200  login M5 R=f02a53bb e=81293ce0 z=59f121cd g^z=R*X^e: OK
+server   2026-11-27 19:32:51+0200  encrypted send peer=M5 nonce=2 bytes=24
+server   2026-11-27 19:32:51+0200  decrypted receive peer=M5 nonce=3 validation OK tag OK
+server   2026-11-27 19:32:51+0200  encrypted send peer=M5 nonce=3 bytes=4156
+server   2026-11-27 19:32:51+0200  decrypted receive peer=M5 nonce=4 validation OK tag OK
+server   2026-11-27 19:32:51+0200  request M5 seq=1 op=status signature OK; accepted ledger entry
+server   2026-11-27 19:32:51+0200  encrypted send peer=M5 nonce=4 bytes=1204
+server   2026-11-27 19:32:52+0200  decrypted receive peer=M5 nonce=5 validation OK tag OK
+server   2026-11-27 19:32:52+0200  operation=vote-1 member=M5 d=b2e1577d proof=OK
+server   2026-11-27 19:32:53+0200  operation=vote-1 aggregate total=3 approved=True (rule >=3)
+server   2026-11-27 19:32:53+0200  request M5 seq=2 op=contribute signature OK; accepted ledger entry
+server   2026-11-27 19:32:53+0200  encrypted send peer=M5 nonce=5 bytes=1229
+server   2026-11-27 19:32:53+0200  connection closed peer=M5
+server   2026-11-27 19:32:53+0200  founder commitments signature OK C0=41362a9c t=3 n=5
+server   2026-11-27 19:32:53+0200  EDUCATIONAL WEAK MODE: unsigned-handshake
+server   2026-11-27 19:32:53+0200  listening on 127.0.0.1:5050 mode=unsigned-handshake n=5 t=3
+server   2026-11-27 19:32:53+0200  connection accepted from 127.0.0.1:53050
+server   2026-11-27 19:32:53+0200  EDUCATIONAL WEAK MODE: unsigned-handshake
+server   2026-11-27 19:32:53+0200  certificate verification OK peer=M1 group=16002216-16003727-16004417-16005162 sig=30460221
+server   2026-11-27 19:32:53+0200  handshake sent server hello X=04d130fd Y=04387566
+server   2026-11-27 19:32:53+0200  DEMO handshake signatures omitted
+server   2026-11-27 19:32:53+0200  session established peer=M1; login still required
+server   2026-11-27 19:32:53+0200  decrypted receive peer=M1 nonce=0 validation OK tag OK
+server   2026-11-27 19:32:53+0200  encrypted send peer=M1 nonce=0 bytes=4156
+server   2026-11-27 19:32:54+0200  decrypted receive peer=M1 nonce=1 validation OK tag OK
+server   2026-11-27 19:32:54+0200  login M1 challenge R=831bee2f e=7a66f8f5
+server   2026-11-27 19:32:54+0200  encrypted send peer=M1 nonce=1 bytes=50
+server   2026-11-27 19:32:54+0200  decrypted receive peer=M1 nonce=2 validation OK tag OK
+server   2026-11-27 19:32:54+0200  login M1 R=831bee2f e=7a66f8f5 z=5de44e16 g^z=R*X^e: OK
+server   2026-11-27 19:32:54+0200  encrypted send peer=M1 nonce=2 bytes=24
+server   2026-11-27 19:32:54+0200  decrypted receive peer=M1 nonce=3 validation OK tag OK
+server   2026-11-27 19:32:54+0200  request M1 seq=4 op=spend signature OK; accepted ledger entry
+server   2026-11-27 19:32:54+0200  encrypted send peer=M1 nonce=3 bytes=160
+server   2026-11-27 19:32:54+0200  connection closed peer=M1
+server   2026-11-27 19:32:54+0200  connection accepted from 127.0.0.1:53051
+server   2026-11-27 19:32:54+0200  EDUCATIONAL WEAK MODE: unsigned-handshake
+server   2026-11-27 19:32:54+0200  certificate verification OK peer=M1 group=16002216-16003727-16004417-16005162 sig=30460221
+server   2026-11-27 19:32:54+0200  handshake sent server hello X=04020b8a Y=0496ec02
+server   2026-11-27 19:32:54+0200  DEMO handshake signatures omitted
+server   2026-11-27 19:32:54+0200  session established peer=M1; login still required
+server   2026-11-27 19:32:54+0200  decrypted receive peer=M1 nonce=0 validation OK tag OK
+server   2026-11-27 19:32:54+0200  encrypted send peer=M1 nonce=0 bytes=4156
+server   2026-11-27 19:32:54+0200  decrypted receive peer=M1 nonce=1 validation OK tag OK
+server   2026-11-27 19:32:54+0200  login M1 challenge R=37ab8984 e=8303f547
+server   2026-11-27 19:32:54+0200  encrypted send peer=M1 nonce=1 bytes=50
+server   2026-11-27 19:32:54+0200  decrypted receive peer=M1 nonce=2 validation OK tag OK
+server   2026-11-27 19:32:54+0200  login M1 R=37ab8984 e=8303f547 z=3a9fd169 g^z=R*X^e: OK
+server   2026-11-27 19:32:54+0200  encrypted send peer=M1 nonce=2 bytes=24
+server   2026-11-27 19:32:54+0200  connection closed peer=M1
+server   2026-11-27 19:32:55+0200  connection accepted from 127.0.0.1:53053
+server   2026-11-27 19:32:55+0200  EDUCATIONAL WEAK MODE: unsigned-handshake
+server   2026-11-27 19:32:55+0200  certificate verification OK peer=M1 group=16002216-16003727-16004417-16005162 sig=30460221
+server   2026-11-27 19:32:55+0200  handshake sent server hello X=04ba94ee Y=04e8647e
+server   2026-11-27 19:32:55+0200  DEMO handshake signatures omitted
+server   2026-11-27 19:32:55+0200  session established peer=M1; login still required
+server   2026-11-27 19:32:55+0200  decrypted receive peer=M1 nonce=0 validation OK tag OK
+server   2026-11-27 19:32:55+0200  encrypted send peer=M1 nonce=0 bytes=4156
+server   2026-11-27 19:32:55+0200  decrypted receive peer=M1 nonce=1 validation OK tag OK
+server   2026-11-27 19:32:55+0200  login M1 challenge R=f5ab6d11 e=d142e936
+server   2026-11-27 19:32:55+0200  encrypted send peer=M1 nonce=1 bytes=49
+server   2026-11-27 19:32:55+0200  decrypted receive peer=M1 nonce=2 validation OK tag OK
+server   2026-11-27 19:32:55+0200  login M1 R=f5ab6d11 e=d142e936 z=122509f9 g^z=R*X^e: OK
+server   2026-11-27 19:32:55+0200  encrypted send peer=M1 nonce=2 bytes=24
+server   2026-11-27 19:32:55+0200  decrypted receive peer=M1 nonce=3 validation OK tag OK
+server   2026-11-27 19:32:55+0200  encrypted send peer=M1 nonce=3 bytes=4156
+server   2026-11-27 19:32:55+0200  decrypted receive peer=M1 nonce=4 validation OK tag OK
+server   2026-11-27 19:32:55+0200  application rejection member=M1 reason=ballot signature/encoding verification FAILED
+server   2026-11-27 19:32:55+0200  encrypted send peer=M1 nonce=4 bytes=68
+server   2026-11-27 19:32:55+0200  connection closed peer=M1
+server   2026-11-27 19:32:56+0200  connection accepted from 127.0.0.1:53054
+server   2026-11-27 19:32:56+0200  EDUCATIONAL WEAK MODE: unsigned-handshake
+server   2026-11-27 19:32:56+0200  certificate verification OK peer=M1 group=16002216-16003727-16004417-16005162 sig=30460221
+server   2026-11-27 19:32:56+0200  handshake sent server hello X=04896389 Y=045e4536
+server   2026-11-27 19:32:56+0200  DEMO handshake signatures omitted
+server   2026-11-27 19:32:56+0200  session established peer=M1; login still required
+server   2026-11-27 19:32:56+0200  decrypted receive peer=M1 nonce=0 validation OK tag OK
+server   2026-11-27 19:32:56+0200  encrypted send peer=M1 nonce=0 bytes=4156
+server   2026-11-27 19:32:56+0200  decrypted receive peer=M1 nonce=1 validation OK tag OK
+server   2026-11-27 19:32:56+0200  login M1 challenge R=f4e82e01 e=7b6ea7dc
+server   2026-11-27 19:32:56+0200  encrypted send peer=M1 nonce=1 bytes=50
+server   2026-11-27 19:32:56+0200  decrypted receive peer=M1 nonce=2 validation OK tag OK
+server   2026-11-27 19:32:56+0200  login M1 R=f4e82e01 e=7b6ea7dc z=614ec21d g^z=R*X^e: OK
+server   2026-11-27 19:32:56+0200  encrypted send peer=M1 nonce=2 bytes=24
+server   2026-11-27 19:32:56+0200  decrypted receive peer=M1 nonce=3 validation OK tag OK
+server   2026-11-27 19:32:56+0200  encrypted send peer=M1 nonce=3 bytes=4156
+server   2026-11-27 19:32:56+0200  decrypted receive peer=M1 nonce=4 validation OK tag OK
+server   2026-11-27 19:32:56+0200  ballot accepted member=M1 operation=vote-2 signature=OK; encrypted only
+server   2026-11-27 19:32:56+0200  encrypted send peer=M1 nonce=4 bytes=160
+server   2026-11-27 19:32:56+0200  connection closed peer=M1
+server   2026-11-27 19:32:57+0200  connection accepted from 127.0.0.1:53055
+server   2026-11-27 19:32:57+0200  EDUCATIONAL WEAK MODE: unsigned-handshake
+server   2026-11-27 19:32:57+0200  certificate verification OK peer=M2 group=16002216-16003727-16004417-16005162 sig=30440220
+server   2026-11-27 19:32:57+0200  handshake sent server hello X=04260e46 Y=0408dd3e
+server   2026-11-27 19:32:57+0200  DEMO handshake signatures omitted
+server   2026-11-27 19:32:57+0200  session established peer=M2; login still required
+server   2026-11-27 19:32:57+0200  decrypted receive peer=M2 nonce=0 validation OK tag OK
+server   2026-11-27 19:32:57+0200  encrypted send peer=M2 nonce=0 bytes=4156
+server   2026-11-27 19:32:57+0200  decrypted receive peer=M2 nonce=1 validation OK tag OK
+server   2026-11-27 19:32:57+0200  login M2 challenge R=5d9e8674 e=679d833b
+server   2026-11-27 19:32:57+0200  encrypted send peer=M2 nonce=1 bytes=50
+server   2026-11-27 19:32:57+0200  decrypted receive peer=M2 nonce=2 validation OK tag OK
+server   2026-11-27 19:32:57+0200  login M2 R=5d9e8674 e=679d833b z=58af2fb4 g^z=R*X^e: OK
+server   2026-11-27 19:32:57+0200  encrypted send peer=M2 nonce=2 bytes=24
+server   2026-11-27 19:32:57+0200  decrypted receive peer=M2 nonce=3 validation OK tag OK
+server   2026-11-27 19:32:57+0200  encrypted send peer=M2 nonce=3 bytes=4156
+server   2026-11-27 19:32:57+0200  decrypted receive peer=M2 nonce=4 validation OK tag OK
+server   2026-11-27 19:32:57+0200  ballot accepted member=M2 operation=vote-2 signature=OK; encrypted only
+server   2026-11-27 19:32:57+0200  encrypted send peer=M2 nonce=4 bytes=160
+server   2026-11-27 19:32:57+0200  connection closed peer=M2
+server   2026-11-27 19:32:57+0200  connection accepted from 127.0.0.1:53056
+server   2026-11-27 19:32:57+0200  EDUCATIONAL WEAK MODE: unsigned-handshake
+server   2026-11-27 19:32:57+0200  certificate verification OK peer=M3 group=16002216-16003727-16004417-16005162 sig=30440220
+server   2026-11-27 19:32:57+0200  handshake sent server hello X=04545b08 Y=046c9973
+server   2026-11-27 19:32:57+0200  DEMO handshake signatures omitted
+server   2026-11-27 19:32:57+0200  session established peer=M3; login still required
+server   2026-11-27 19:32:57+0200  decrypted receive peer=M3 nonce=0 validation OK tag OK
+server   2026-11-27 19:32:57+0200  encrypted send peer=M3 nonce=0 bytes=4156
+server   2026-11-27 19:32:58+0200  decrypted receive peer=M3 nonce=1 validation OK tag OK
+server   2026-11-27 19:32:58+0200  login M3 challenge R=f45fc619 e=e3277ef3
+server   2026-11-27 19:32:58+0200  encrypted send peer=M3 nonce=1 bytes=50
+server   2026-11-27 19:32:58+0200  decrypted receive peer=M3 nonce=2 validation OK tag OK
+server   2026-11-27 19:32:58+0200  login M3 R=f45fc619 e=e3277ef3 z=60ca35f8 g^z=R*X^e: OK
+server   2026-11-27 19:32:58+0200  encrypted send peer=M3 nonce=2 bytes=24
+server   2026-11-27 19:32:58+0200  decrypted receive peer=M3 nonce=3 validation OK tag OK
+server   2026-11-27 19:32:58+0200  encrypted send peer=M3 nonce=3 bytes=4156
+server   2026-11-27 19:32:58+0200  decrypted receive peer=M3 nonce=4 validation OK tag OK
+server   2026-11-27 19:32:58+0200  ballot accepted member=M3 operation=vote-2 signature=OK; encrypted only
+server   2026-11-27 19:32:58+0200  encrypted send peer=M3 nonce=4 bytes=160
+server   2026-11-27 19:32:58+0200  connection closed peer=M3
+server   2026-11-27 19:32:58+0200  connection accepted from 127.0.0.1:53057
+server   2026-11-27 19:32:58+0200  EDUCATIONAL WEAK MODE: unsigned-handshake
+server   2026-11-27 19:32:58+0200  certificate verification OK peer=M4 group=16002216-16003727-16004417-16005162 sig=30450221
+server   2026-11-27 19:32:58+0200  handshake sent server hello X=046029e6 Y=04e8d63b
+server   2026-11-27 19:32:58+0200  DEMO handshake signatures omitted
+server   2026-11-27 19:32:58+0200  session established peer=M4; login still required
+server   2026-11-27 19:32:58+0200  decrypted receive peer=M4 nonce=0 validation OK tag OK
+server   2026-11-27 19:32:58+0200  encrypted send peer=M4 nonce=0 bytes=4156
+server   2026-11-27 19:32:58+0200  decrypted receive peer=M4 nonce=1 validation OK tag OK
+server   2026-11-27 19:32:58+0200  login M4 challenge R=885ca33f e=c367ef6a
+server   2026-11-27 19:32:58+0200  encrypted send peer=M4 nonce=1 bytes=50
+server   2026-11-27 19:32:58+0200  decrypted receive peer=M4 nonce=2 validation OK tag OK
+server   2026-11-27 19:32:59+0200  login M4 R=885ca33f e=c367ef6a z=b55f6611 g^z=R*X^e: OK
+server   2026-11-27 19:32:59+0200  encrypted send peer=M4 nonce=2 bytes=24
+server   2026-11-27 19:32:59+0200  decrypted receive peer=M4 nonce=3 validation OK tag OK
+server   2026-11-27 19:32:59+0200  encrypted send peer=M4 nonce=3 bytes=4156
+server   2026-11-27 19:32:59+0200  decrypted receive peer=M4 nonce=4 validation OK tag OK
+server   2026-11-27 19:32:59+0200  ballot accepted member=M4 operation=vote-2 signature=OK; encrypted only
+server   2026-11-27 19:32:59+0200  encrypted send peer=M4 nonce=4 bytes=160
+server   2026-11-27 19:32:59+0200  connection closed peer=M4
+server   2026-11-27 19:32:59+0200  connection accepted from 127.0.0.1:53058
+server   2026-11-27 19:32:59+0200  EDUCATIONAL WEAK MODE: unsigned-handshake
+server   2026-11-27 19:32:59+0200  certificate verification OK peer=M5 group=16002216-16003727-16004417-16005162 sig=30450221
+server   2026-11-27 19:32:59+0200  handshake sent server hello X=04ef52d3 Y=049a5809
+server   2026-11-27 19:32:59+0200  DEMO handshake signatures omitted
+server   2026-11-27 19:32:59+0200  session established peer=M5; login still required
+server   2026-11-27 19:32:59+0200  decrypted receive peer=M5 nonce=0 validation OK tag OK
+server   2026-11-27 19:32:59+0200  encrypted send peer=M5 nonce=0 bytes=4156
+server   2026-11-27 19:32:59+0200  decrypted receive peer=M5 nonce=1 validation OK tag OK
+server   2026-11-27 19:32:59+0200  login M5 challenge R=1c9dd046 e=eeca5e72
+server   2026-11-27 19:32:59+0200  encrypted send peer=M5 nonce=1 bytes=50
+server   2026-11-27 19:32:59+0200  decrypted receive peer=M5 nonce=2 validation OK tag OK
+server   2026-11-27 19:32:59+0200  login M5 R=1c9dd046 e=eeca5e72 z=511d0fd3 g^z=R*X^e: OK
+server   2026-11-27 19:32:59+0200  encrypted send peer=M5 nonce=2 bytes=24
+server   2026-11-27 19:32:59+0200  decrypted receive peer=M5 nonce=3 validation OK tag OK
+server   2026-11-27 19:32:59+0200  encrypted send peer=M5 nonce=3 bytes=4156
+server   2026-11-27 19:33:00+0200  decrypted receive peer=M5 nonce=4 validation OK tag OK
+server   2026-11-27 19:33:00+0200  ballot accepted member=M5 operation=vote-2 signature=OK; encrypted only
+server   2026-11-27 19:33:00+0200  encrypted send peer=M5 nonce=4 bytes=1204
+server   2026-11-27 19:33:00+0200  connection closed peer=M5
+server   2026-11-27 19:33:00+0200  connection accepted from 127.0.0.1:53059
+server   2026-11-27 19:33:00+0200  EDUCATIONAL WEAK MODE: unsigned-handshake
+server   2026-11-27 19:33:00+0200  certificate verification OK peer=M1 group=16002216-16003727-16004417-16005162 sig=30460221
+server   2026-11-27 19:33:00+0200  handshake sent server hello X=04ef9820 Y=049061d6
+server   2026-11-27 19:33:00+0200  DEMO handshake signatures omitted
+server   2026-11-27 19:33:00+0200  session established peer=M1; login still required
+server   2026-11-27 19:33:00+0200  decrypted receive peer=M1 nonce=0 validation OK tag OK
+server   2026-11-27 19:33:00+0200  encrypted send peer=M1 nonce=0 bytes=4156
+server   2026-11-27 19:33:00+0200  decrypted receive peer=M1 nonce=1 validation OK tag OK
+server   2026-11-27 19:33:00+0200  login M1 challenge R=cd58d5f9 e=b2b747c0
+server   2026-11-27 19:33:00+0200  encrypted send peer=M1 nonce=1 bytes=50
+server   2026-11-27 19:33:00+0200  decrypted receive peer=M1 nonce=2 validation OK tag OK
+server   2026-11-27 19:33:01+0200  login M1 R=cd58d5f9 e=b2b747c0 z=6cc10fe3 g^z=R*X^e: OK
+server   2026-11-27 19:33:01+0200  encrypted send peer=M1 nonce=2 bytes=24
+server   2026-11-27 19:33:01+0200  decrypted receive peer=M1 nonce=3 validation OK tag OK
+server   2026-11-27 19:33:01+0200  encrypted send peer=M1 nonce=3 bytes=4156
+server   2026-11-27 19:33:01+0200  decrypted receive peer=M1 nonce=4 validation OK tag OK
+server   2026-11-27 19:33:01+0200  request M1 seq=5 op=status signature OK; accepted ledger entry
+server   2026-11-27 19:33:01+0200  encrypted send peer=M1 nonce=4 bytes=1204
+server   2026-11-27 19:33:01+0200  decrypted receive peer=M1 nonce=5 validation OK tag OK
+server   2026-11-27 19:33:01+0200  operation=vote-2 member=M1 d=313d7070 proof=OK
+server   2026-11-27 19:33:01+0200  request M1 seq=6 op=contribute signature OK; accepted ledger entry
+server   2026-11-27 19:33:01+0200  encrypted send peer=M1 nonce=5 bytes=1204
+server   2026-11-27 19:33:01+0200  connection closed peer=M1
+server   2026-11-27 19:33:02+0200  connection accepted from 127.0.0.1:53060
+server   2026-11-27 19:33:02+0200  EDUCATIONAL WEAK MODE: unsigned-handshake
+server   2026-11-27 19:33:02+0200  certificate verification OK peer=M3 group=16002216-16003727-16004417-16005162 sig=30440220
+server   2026-11-27 19:33:02+0200  handshake sent server hello X=04f5ad60 Y=0413b6ba
+server   2026-11-27 19:33:02+0200  DEMO handshake signatures omitted
+server   2026-11-27 19:33:02+0200  session established peer=M3; login still required
+server   2026-11-27 19:33:02+0200  decrypted receive peer=M3 nonce=0 validation OK tag OK
+server   2026-11-27 19:33:02+0200  encrypted send peer=M3 nonce=0 bytes=4156
+server   2026-11-27 19:33:02+0200  decrypted receive peer=M3 nonce=1 validation OK tag OK
+server   2026-11-27 19:33:02+0200  login M3 challenge R=230d5802 e=233f282c
+server   2026-11-27 19:33:02+0200  encrypted send peer=M3 nonce=1 bytes=50
+server   2026-11-27 19:33:02+0200  decrypted receive peer=M3 nonce=2 validation OK tag OK
+server   2026-11-27 19:33:02+0200  login M3 R=230d5802 e=233f282c z=180ae4c4 g^z=R*X^e: OK
+server   2026-11-27 19:33:02+0200  encrypted send peer=M3 nonce=2 bytes=24
+server   2026-11-27 19:33:02+0200  decrypted receive peer=M3 nonce=3 validation OK tag OK
+server   2026-11-27 19:33:02+0200  encrypted send peer=M3 nonce=3 bytes=4156
+server   2026-11-27 19:33:02+0200  decrypted receive peer=M3 nonce=4 validation OK tag OK
+server   2026-11-27 19:33:02+0200  request M3 seq=3 op=status signature OK; accepted ledger entry
+server   2026-11-27 19:33:02+0200  encrypted send peer=M3 nonce=4 bytes=1204
+server   2026-11-27 19:33:02+0200  decrypted receive peer=M3 nonce=5 validation OK tag OK
+server   2026-11-27 19:33:03+0200  operation=vote-2 member=M3 d=58205a70 proof=OK
+server   2026-11-27 19:33:03+0200  request M3 seq=4 op=contribute signature OK; accepted ledger entry
+server   2026-11-27 19:33:03+0200  encrypted send peer=M3 nonce=5 bytes=1204
+server   2026-11-27 19:33:03+0200  connection closed peer=M3
+server   2026-11-27 19:33:03+0200  connection accepted from 127.0.0.1:53062
+server   2026-11-27 19:33:03+0200  EDUCATIONAL WEAK MODE: unsigned-handshake
+server   2026-11-27 19:33:03+0200  certificate verification OK peer=M5 group=16002216-16003727-16004417-16005162 sig=30450221
+server   2026-11-27 19:33:03+0200  handshake sent server hello X=049702e7 Y=04959618
+server   2026-11-27 19:33:03+0200  DEMO handshake signatures omitted
+server   2026-11-27 19:33:03+0200  session established peer=M5; login still required
+server   2026-11-27 19:33:03+0200  decrypted receive peer=M5 nonce=0 validation OK tag OK
+server   2026-11-27 19:33:03+0200  encrypted send peer=M5 nonce=0 bytes=4156
+server   2026-11-27 19:33:03+0200  decrypted receive peer=M5 nonce=1 validation OK tag OK
+server   2026-11-27 19:33:03+0200  login M5 challenge R=821aa79c e=3d7ace59
+server   2026-11-27 19:33:03+0200  encrypted send peer=M5 nonce=1 bytes=50
+server   2026-11-27 19:33:03+0200  decrypted receive peer=M5 nonce=2 validation OK tag OK
+server   2026-11-27 19:33:03+0200  login M5 R=821aa79c e=3d7ace59 z=3ce7c669 g^z=R*X^e: OK
+server   2026-11-27 19:33:03+0200  encrypted send peer=M5 nonce=2 bytes=24
+server   2026-11-27 19:33:03+0200  decrypted receive peer=M5 nonce=3 validation OK tag OK
+server   2026-11-27 19:33:03+0200  encrypted send peer=M5 nonce=3 bytes=4156
+server   2026-11-27 19:33:03+0200  decrypted receive peer=M5 nonce=4 validation OK tag OK
+server   2026-11-27 19:33:03+0200  request M5 seq=3 op=status signature OK; accepted ledger entry
+server   2026-11-27 19:33:03+0200  encrypted send peer=M5 nonce=4 bytes=1204
+server   2026-11-27 19:33:04+0200  decrypted receive peer=M5 nonce=5 validation OK tag OK
+server   2026-11-27 19:33:04+0200  operation=vote-2 member=M5 d=2c75edee proof=OK
+server   2026-11-27 19:33:05+0200  operation=vote-2 aggregate total=2 approved=False (rule >=3)
+server   2026-11-27 19:33:05+0200  request M5 seq=4 op=contribute signature OK; accepted ledger entry
+server   2026-11-27 19:33:05+0200  encrypted send peer=M5 nonce=5 bytes=1230
+server   2026-11-27 19:33:05+0200  connection closed peer=M5

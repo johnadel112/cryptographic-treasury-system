@@ -1,0 +1,5 @@
+{
+  "scenario": "A5",
+  "weak": "vault recovery failed",
+  "secure": "M3 rejected; M4 substituted; recovered"
+}

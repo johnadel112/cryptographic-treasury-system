@@ -19,3 +19,11 @@ runtime/
 *.share
 *.pcapng
 data_cap/
+
+# Legacy/runtime stores and generated private shares are never source.
+data/
+logs/
+**/share.json
+**/application.json
+**/application.tmp
+!docs/DESIGN_SHEET.pdf

@@ -1,282 +1,107 @@
-"""Automated Wireshark capture & log generator for Milestone 1 deliverables."""
+"""Capture the integrated CLI application; preserve all existing evidence.
 
+Example: python scripts/run_captures.py --scenario secure --interface 10
+Requires tshark/Npcap. Data stays in ignored runtime; only matching logs/capture
+and measured validation results go into the selected new evidence directory.
+"""
+import argparse
+from datetime import datetime, timezone
+import hashlib
+import json
+from pathlib import Path
+import queue
+import secrets
 import shutil
 import subprocess
 import sys
+import threading
 import time
-from pathlib import Path
 
-BASE_DIR = Path(__file__).resolve().parent.parent
-sys.path.insert(0, str(BASE_DIR))
-
-from src.auth_client import TreasuryMemberClient
-from src.auth_server import TreasuryAuthServer
-from src.config import GROUP, PROXY_PORT, SERVER_HOST, SERVER_PORT
-from src.keys import setup_pki
-from src.proxy_mallory import FrameReplayProxy, MalloryMitmProxy, run_attack_a3
-
-TSHARK = r"C:\Program Files\Wireshark\tshark.exe"
-DUMPCAP = r"C:\Program Files\Wireshark\dumpcap.exe"
-CAPTURES_DIR = BASE_DIR / "captures"
-CAPTURE_FILTER = f"tcp port {SERVER_PORT} or tcp port {PROXY_PORT}"
+BASE = Path(__file__).resolve().parents[1]
+NAMES = {"plain":"1_plain", "secure":"2_secure", "A1":"3_A1_mitm", "A3":"4_A3_short_challenge", "replay":"6_replayed_frame"}
+FILTER = "tcp.port == 5050 || tcp.port == 6000"
 
 
-def start_capture(pcap_path: Path) -> subprocess.Popen:
-    pcap_path.parent.mkdir(parents=True, exist_ok=True)
-    if pcap_path.exists():
-        pcap_path.unlink()
-    proc = subprocess.Popen(
-        [
-            TSHARK,
-            "-i",
-            r"\Device\NPF_Loopback",
-            "-f",
-            CAPTURE_FILTER,
-            "-a",
-            "duration:4",
-            "-w",
-            str(pcap_path),
-        ],
-        stdout=subprocess.DEVNULL,
-        stderr=subprocess.PIPE,
-        text=True,
-    )
-    assert proc.stderr is not None
-    deadline = time.time() + 10.0
-    while time.time() < deadline:
-        line = proc.stderr.readline()
-        if "Capturing on" in line:
-            break
-    time.sleep(0.2)
-    return proc
+def inspect_capture(tshark, capture, scenario):
+    result = subprocess.run([tshark,"-r",str(capture),"-Y",FILTER+" && tcp.len > 0 && !tcp.analysis.retransmission",
+        "-T","fields","-e","tcp.stream","-e","tcp.srcport","-e","tcp.payload"],capture_output=True,text=True,check=True)
+    streams = {}
+    for line in result.stdout.splitlines():
+        parts = line.split("\t")
+        if len(parts)==3 and parts[2]:
+            key=(parts[0],parts[1])
+            streams.setdefault(key,bytearray()).extend(bytes.fromhex(parts[2].replace(":","")))
+    frames=[]
+    for key,data in streams.items():
+        offset=0
+        while offset+4<=len(data):
+            size=int.from_bytes(data[offset:offset+4],"big")
+            if size==0 or offset+4+size>len(data):break
+            frames.append((key,bytes(data[offset+4:offset+4+size])))
+            offset+=4+size
+    wire=b"".join(data for data in streams.values())
+    if b"16002216-16003727-16004417-16005162" not in wire:
+        raise RuntimeError("capture lacks the final GROUP handshake")
+    if b"GROUP_1" in wire:raise RuntimeError("legacy GROUP in capture")
+    if scenario=="plain" and (b"login_interactive_start" not in wire or b'"op":"spend"' not in wire):
+        raise RuntimeError("plaintext login/request not observed")
+    if scenario=="secure" and (b"login_interactive_start" in wire or b'"op":"spend"' in wire):
+        raise RuntimeError("secure capture exposed application plaintext")
+    if scenario=="A1" and len({key[0] for key in streams})<3:
+        raise RuntimeError("capture lacks A1 peer connections")
+    repeats=0
+    for key in streams:
+        encrypted=[frame for k,frame in frames if k==key and len(frame)>=28 and frame[:1]!=b"{"]
+        repeats+=len(encrypted)-len(set(encrypted))
+    if scenario=="replay" and repeats<1:raise RuntimeError("replayed encrypted frame not observed")
+    return {"payload_packets":len(result.stdout.splitlines()), "tcp_streams":len({k[0] for k in streams}),
+            "reassembled_frames":len(frames),"repeated_ciphertexts":repeats,"group_verified":True,
+            "filter":FILTER,"scenario":scenario}
 
 
-def stop_capture(proc: subprocess.Popen) -> None:
-    proc.wait(timeout=15)
-
-
-def reset_data(work_dir: Path) -> None:
-    if work_dir.exists():
-        shutil.rmtree(work_dir)
-    setup_pki(work_dir, members=("M1", "M2", "M3", "M4", "M5"), group=GROUP)
-
-
-def scenario_1_plain() -> None:
-    work = BASE_DIR / "data_cap" / "1_plain"
-    logs = CAPTURES_DIR / "logs" / "1_plain"
-    reset_data(work)
-    cap = start_capture(CAPTURES_DIR / "1_plain.pcapng")
-    srv = TreasuryAuthServer(
-        host=SERVER_HOST,
-        port=SERVER_PORT,
-        data_dir=work,
-        log_file=logs / "server.log",
-        weak_no_encryption=True,
-    )
-    srv.start()
+def main():
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--scenario",choices=list(NAMES),default="secure")
+    parser.add_argument("--interface",required=True,help="tshark -D loopback interface number/name")
+    parser.add_argument("--tshark",default=shutil.which("tshark") or r"C:\Program Files\Wireshark\tshark.exe")
+    parser.add_argument("--duration",type=int,default=45)
+    parser.add_argument("--output",type=Path)
+    args=parser.parse_args()
+    if not Path(args.tshark).exists() and not shutil.which(args.tshark):parser.error("tshark unavailable; see README manual capture steps")
+    output=args.output or BASE/"runtime"/"evidence"/(NAMES[args.scenario]+"-"+secrets.token_hex(5))
+    output.mkdir(parents=True,exist_ok=False)
+    work=BASE/"runtime"/"capture-runs"/secrets.token_hex(8)
+    capture=output/(NAMES[args.scenario]+".pcapng")
+    proc=subprocess.Popen([args.tshark,"-i",args.interface,"-f","tcp port 5050 or tcp port 6000",
+            "-a",f"duration:{args.duration}","-w",str(capture)],stdout=subprocess.DEVNULL,stderr=subprocess.PIPE,text=True)
+    lines=queue.Queue()
+    def read():
+        for line in proc.stderr:lines.put(line)
+    thread=threading.Thread(target=read,daemon=True);thread.start()
     try:
-        c1 = TreasuryMemberClient(
-            "M1",
-            host=SERVER_HOST,
-            port=SERVER_PORT,
-            data_dir=work,
-            log_file=logs / "M1.log",
-            weak_no_encryption=True,
-        )
-        c1.connect()
-        c1.register()
-        c1.login_interactive()
-        c1.send_request("spend", {"amount": 50, "reason": "pizza"})
-        c1.close()
+        deadline=time.monotonic()+15
+        while True:
+            line=lines.get(timeout=max(.1,deadline-time.monotonic()))
+            if "Capturing on" in line:break
+            if proc.poll() is not None or time.monotonic()>deadline:raise RuntimeError("capture did not start: "+line)
+        start=time.monotonic()
+        run=subprocess.run([sys.executable,"-m","treasury.demo",args.scenario,"--run-dir",str(work)],cwd=BASE,
+                           capture_output=True,text=True,timeout=240)
+        if run.returncode:raise RuntimeError(run.stdout+run.stderr)
+        if time.monotonic()-start>=args.duration:raise RuntimeError("scenario exceeded capture duration; rerun with longer --duration")
+        proc.wait(timeout=args.duration+15)
+        if proc.returncode:raise RuntimeError("tshark capture failed")
+        shutil.copytree(work/"logs",output/"logs",ignore=shutil.ignore_patterns("*.stdout","*.process-output"))
+        shutil.copyfile(work/"result.json",output/"result.json")
+        validation=inspect_capture(args.tshark,capture,args.scenario)
+        sources={str(p.relative_to(BASE)):hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted((BASE/"treasury").glob("*.py"))}
+        validation.update(created_utc=datetime.now(timezone.utc).isoformat(),source_hashes=sources)
+        (output/"validation.json").write_text(json.dumps(validation,indent=2),encoding="utf-8")
+        print(json.dumps({"evidence":str(output),**{k:v for k,v in validation.items() if k!="source_hashes"}},sort_keys=True))
     finally:
-        srv.stop()
-        stop_capture(cap)
+        if proc.poll() is None:proc.terminate();proc.wait(timeout=5)
+        thread.join(timeout=2)
+        proc.stderr.close()
 
 
-def scenario_2_secure() -> None:
-    work = BASE_DIR / "data_cap" / "2_secure"
-    logs = CAPTURES_DIR / "logs" / "2_secure"
-    reset_data(work)
-    cap = start_capture(CAPTURES_DIR / "2_secure.pcapng")
-    srv = TreasuryAuthServer(
-        host=SERVER_HOST,
-        port=SERVER_PORT,
-        data_dir=work,
-        log_file=logs / "server.log",
-    )
-    srv.start()
-    try:
-        c1 = TreasuryMemberClient(
-            "M1",
-            host=SERVER_HOST,
-            port=SERVER_PORT,
-            data_dir=work,
-            log_file=logs / "M1.log",
-        )
-        c1.connect()
-        c1.register()
-        c1.login_interactive()
-        c1.send_request("spend", {"amount": 50, "reason": "pizza"})
-        c1.close()
-    finally:
-        srv.stop()
-        stop_capture(cap)
-
-
-def scenario_3_a1_mitm() -> None:
-    work = BASE_DIR / "data_cap" / "3_A1_mitm"
-    logs = CAPTURES_DIR / "logs" / "3_A1_mitm"
-    reset_data(work)
-    cap = start_capture(CAPTURES_DIR / "3_A1_mitm.pcapng")
-    srv = TreasuryAuthServer(
-        host=SERVER_HOST,
-        port=SERVER_PORT,
-        data_dir=work,
-        log_file=logs / "server.log",
-        weak_unsigned_handshake=True,
-    )
-    srv.start()
-    proxy = MalloryMitmProxy(
-        listen_host=SERVER_HOST,
-        listen_port=PROXY_PORT,
-        target_host=SERVER_HOST,
-        target_port=SERVER_PORT,
-        log_file=logs / "mallory_a1.log",
-        tamper_first_request=True,
-    )
-    proxy.start()
-    try:
-        c1 = TreasuryMemberClient(
-            "M1",
-            host=SERVER_HOST,
-            port=PROXY_PORT,
-            data_dir=work,
-            log_file=logs / "M1.log",
-            weak_unsigned_handshake=True,
-        )
-        c1.connect()
-        c1.register()
-        c1.login_interactive()
-        c1.send_request("spend", {"amount": 50, "reason": "pizza"})
-        c1.close()
-    finally:
-        proxy.stop()
-        srv.stop()
-        stop_capture(cap)
-
-
-def scenario_4_a3_short_challenge() -> None:
-    work = BASE_DIR / "data_cap" / "4_A3_short_challenge"
-    logs = CAPTURES_DIR / "logs" / "4_A3_short_challenge"
-    reset_data(work)
-    srv = TreasuryAuthServer(
-        host=SERVER_HOST,
-        port=SERVER_PORT,
-        data_dir=work,
-        log_file=logs / "server.log",
-        weak_short_challenge=True,
-    )
-    srv.start()
-    try:
-        # Register M3 before starting the attack capture
-        c3 = TreasuryMemberClient(
-            "M3",
-            host=SERVER_HOST,
-            port=SERVER_PORT,
-            data_dir=work,
-            log_file=logs / "M3_register.log",
-        )
-        c3.connect()
-        c3.register()
-        c3.close()
-
-        cap = start_capture(CAPTURES_DIR / "4_A3_short_challenge.pcapng")
-        try:
-            run_attack_a3(
-                "M3",
-                host=SERVER_HOST,
-                port=SERVER_PORT,
-                data_dir=work,
-                max_attempts=128,
-                log_file=logs / "mallory_a3.log",
-            )
-        finally:
-            stop_capture(cap)
-    finally:
-        srv.stop()
-
-
-def scenario_6_replayed_frame() -> None:
-    work = BASE_DIR / "data_cap" / "6_replayed_frame"
-    logs = CAPTURES_DIR / "logs" / "6_replayed_frame"
-    reset_data(work)
-    cap = start_capture(CAPTURES_DIR / "6_replayed_frame.pcapng")
-    srv = TreasuryAuthServer(
-        host=SERVER_HOST,
-        port=SERVER_PORT,
-        data_dir=work,
-        log_file=logs / "server.log",
-    )
-    srv.start()
-    proxy = FrameReplayProxy(
-        listen_host=SERVER_HOST,
-        listen_port=PROXY_PORT,
-        target_host=SERVER_HOST,
-        target_port=SERVER_PORT,
-        replay_after_packets=6,
-        log_file=logs / "mallory_replay.log",
-    )
-    proxy.start()
-    try:
-        c1 = TreasuryMemberClient(
-            "M1",
-            host=SERVER_HOST,
-            port=PROXY_PORT,
-            data_dir=work,
-            log_file=logs / "M1.log",
-        )
-        c1.connect()
-        c1.register()
-        c1.login_interactive()
-        c1.send_request("spend", {"amount": 50, "reason": "pizza"})
-        time.sleep(0.3)
-        c1.close()
-    finally:
-        proxy.stop()
-        srv.stop()
-        stop_capture(cap)
-
-
-def main() -> None:
-    scenario_1_plain()
-    scenario_2_secure()
-    scenario_3_a1_mitm()
-    scenario_4_a3_short_challenge()
-    scenario_6_replayed_frame()
-
-    # Verify packet counts with tshark
-    for name in (
-        "1_plain.pcapng",
-        "2_secure.pcapng",
-        "3_A1_mitm.pcapng",
-        "4_A3_short_challenge.pcapng",
-        "6_replayed_frame.pcapng",
-    ):
-        pcap = CAPTURES_DIR / name
-        res = subprocess.run(
-            [TSHARK, "-r", str(pcap), "-Y", "tcp.port == 5050 || tcp.port == 6000"],
-            capture_output=True,
-            text=True,
-            check=False,
-        )
-        lines = [ln for ln in res.stdout.splitlines() if ln.strip()]
-        print(f"{name}: {len(lines)} packets")
-
-    # Clean temporary capture data_cap dir
-    data_cap = BASE_DIR / "data_cap"
-    if data_cap.exists():
-        shutil.rmtree(data_cap)
-
-
-if __name__ == "__main__":
-    main()
+if __name__=="__main__":main()

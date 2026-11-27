@@ -1,3 +1,5 @@
+> Historical John-only milestone document. See FINAL_IMPLEMENTATION_REPORT.md and DESIGN_SHEET.pdf for the integrated application.
+
 # John's implementation report
 
 Date: 26 November 2026. Working branch: `feature/john-secure-channel`.
