@@ -4,6 +4,8 @@ Branch: feature/john-streamlit-dashboard. Based on the complete integration bran
 
 ## Run
 
+For the complete five-member experience on Windows, use `start_demo.cmd`. The central hub on port 8500 launches/opens M1-M5 and the same server/runtime. See [multi-member evaluation guide](MULTI_MEMBER_DEMO.md). The individual launch commands below remain available.
+
 1. Follow README's independent identity/founder setup using a fresh data directory. Founder and each owner remain separate CLI processes. Start `python -m treasury.server --data-dir runtime/live1` in its terminal.
 2. Create `.venv-dashboard`, activate it, and install `python -m pip install -r requirements-dashboard.txt`.
 3. Run `python -m treasury.dashboard --name M1 --data-dir runtime/live1 --port 8501`.
@@ -24,7 +26,7 @@ Use a separate virtual environment for the PDF builder (`requirements-docs.txt`)
 | Activity | Last 100 accepted request metadata records and browser-local structured success/rejection events. Proofs, signatures, plaintext ballot choices and shares are omitted. Events can be downloaded as JSON. |
 | Evidence | Repository-recorded A1/A5/A7/A3/replay and secure/plain results, matching server logs, and available real packet captures. Clearly labelled recorded evidence, never claimed to be a live check. |
 
-Snapshots are explicit, not background polls. Refresh after another member acts. Each refresh is itself an authenticated signed request and appears in the next ledger snapshot. The overview displays latest-100 operation counts, labels that window, and exposes full totals separately. Ballots remain encrypted; the form's local choice is never included in action-event exports. The treasury server is not given plaintext ballots.
+Live workspace fragments refresh authenticated snapshots every five seconds while the browser session is active. Pause this in the sidebar when desired. Spending forms sit outside the timed fragment, so drafts survive polling; ballot choices require an explicit submit button. Each refresh is itself an authenticated signed request and appears in the next ledger snapshot. The overview displays latest-100 operation counts, labels that window, and exposes full totals separately. Ballots remain encrypted; the form's local choice is never included in action-event exports. The treasury server is not given plaintext ballots.
 
 To demonstrate vault opening: M1 requests opening, M1/M3/M5 open their own workspaces, refresh/select the same operation, then Contribute my share. Before three contributions it remains collecting; afterward Retrieve recovered file authenticates a new status request and offers a download. Repeat using a new opening ID and M2/M4/M5.
 
@@ -34,7 +36,7 @@ To demonstrate voting: M1 creates a spending request; five owners refresh and ca
 
 Missing owner setup, stopped server, certificate/handshake rejection and application rejections render as actionable errors. An interrupted action may already have been accepted; refresh before retrying. There is no automatic mutation retry. Fresh connections prevent stale TCP sessions and keys from being cached across reruns. Clear session removes snapshots, local events and downloaded bytes from browser session state; it does not erase the underlying owner keys or make this a password-protected multiuser service.
 
-The signed overview endpoint has an explicit field allowlist. Its participation booleans refer only to the authenticated member. Recovered file bytes are excluded until an explicit authorized status call. Public evidence only reads fixed paths under captures/integrated; users cannot browse arbitrary server files through the UI. Historical capture hashes refer to the core integration source at collection time; the new overview endpoint does not retroactively alter that evidence.
+The signed overview endpoint has an explicit field allowlist. Its participation booleans refer only to the authenticated member; the contributors list contains the authenticated identities of accepted decryption contributions, not their proofs or shares. Recovered file bytes are excluded until an explicit authorized status call. Public evidence only reads fixed paths under captures/integrated; users cannot browse arbitrary server files through the UI. Historical capture hashes refer to the core integration source at collection time; the new overview endpoint does not retroactively alter that evidence.
 
 The launcher fixes owner name/data root/server port in process environment. It exposes no weakness flags, arbitrary command runner, shell or member-key upload. Ballot validity and threshold-collusion limitations from the core report still apply.
 

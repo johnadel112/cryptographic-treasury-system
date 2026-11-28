@@ -122,6 +122,7 @@ class TreasuryApplication:
                 row = {key: operation[key] for key in fields if key in operation}
                 row.update(ballot_count=len(operation.get("ballots", {})),
                            contribution_count=len(operation.get("contributions", {})),
+                           contributors=sorted(operation.get("contributions", {})),
                            has_ballot=name in operation.get("ballots", {}),
                            has_contribution=name in operation.get("contributions", {}))
                 operations.append(row)

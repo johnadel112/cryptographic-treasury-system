@@ -1,0 +1,23 @@
+{
+  "created_utc": "2026-11-28T11:53:28.826744+00:00",
+  "workspaces": 5,
+  "independent_processes": 7,
+  "same_opening": true,
+  "two_insufficient": true,
+  "vault_contributors": [
+    "M1",
+    "M3",
+    "M5"
+  ],
+  "recovered_bytes_match": true,
+  "automatic_refresh": true,
+  "drafts_preserved": true,
+  "yes_count": 3,
+  "approved": true,
+  "tally_contributors": [
+    "M2",
+    "M4",
+    "M5"
+  ],
+  "hub_relaunch": true
+}
