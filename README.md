@@ -53,6 +53,22 @@ python -m treasury.demo vote --votes 1,0,1,0,0
 
 `vault` verifies M1/M3/M5 and M2/M4/M5 recover identical input bytes; before the third share the operation remains collecting. Changing n/t creates a fresh setup. Voting always requires at least three yes votes, independently of t.
 
+## One-command five-member demonstration (Windows)
+
+From the repository folder, run:
+
+```powershell
+.\start_demo.cmd
+```
+
+The script creates/uses `.venv-dashboard`, installs the dashboard dependencies, initializes a fresh 3-of-5 runtime on first use through separate owner/founder CLIs, and starts **all seven processes**. It opens the central dashboard at **http://127.0.0.1:8500**. Five member cards open M1-M5 on ports 8501-8505; all connect to the same treasury TCP server on 5050. Keep the launch terminal open; Ctrl+C stops its child processes. Existing runtime state is preserved on restart.
+
+In the hub, open M1, M3 and M5. M1 requests **one** vault opening; all three select that same operation ID and independently contribute. Every workspace refreshes its authenticated progress every five seconds and displays accepted contributor names. Two contributions stay collecting; the third enables file retrieval. For voting, use all five member tabs to cast private ballots, then any three valid members decrypt the aggregate. The hub can relaunch a stopped member without restarting the others or reading anyone's credentials.
+
+For a clean evaluation use `.\start_demo.cmd --run-dir runtime/lab-new`. If ports are already occupied, stop the earlier demo or select an alternate block: `.\start_demo.cmd --server-port 6050 --hub-port 8600 --member-base-port 8601`. No unrelated process is terminated automatically. Two launchers cannot own the same runtime. See [demonstration guide](docs/MULTI_MEMBER_DEMO.md).
+
+Linux/macOS (after installing requirements-dashboard.txt in an environment): `python -m treasury.lab`.
+
 ## Streamlit member dashboard
 
 After the fresh owner/founder setup below, start the treasury server in its own terminal. Install the dashboard in a separate environment (the optional PDF builder has different Pillow requirements):
@@ -64,7 +80,7 @@ python -m pip install -r requirements-dashboard.txt
 python -m treasury.dashboard --name M1 --data-dir runtime/live1 --port 8501
 ```
 
-Linux/macOS activation: `. .venv-dashboard/bin/activate`. Open **http://127.0.0.1:8501**, choose a login method, then **Connect / refresh**. Use Overview, Vault, Voting, Activity and Evidence to inspect real state and perform authenticated actions. Refresh after other members act. Each process has one fixed owner:
+Linux/macOS activation: `. .venv-dashboard/bin/activate`. Open **http://127.0.0.1:8501**, choose a login method, then **Connect / refresh**. Use Overview, Vault, Voting, Activity and Evidence to inspect real state and perform authenticated actions. Progress refreshes automatically every five seconds; it can be paused in the sidebar. Each process has one fixed owner:
 
 ```sh
 python -m treasury.dashboard --name M2 --data-dir runtime/live1 --port 8502
